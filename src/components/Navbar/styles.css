@@ -13,6 +13,7 @@ header {
   align-items: center;
   padding-left: 2rem;
   margin-top: -2rem;
+  cursor: pointer;
 }
 .logo h1 {
   font-size: 4rem;

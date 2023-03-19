@@ -1,3 +1,10 @@
+import "./styles.css";
+
 export const NotFound = () => {
-  return <div>404 página não encontrada</div>;
+  return (
+    <section id="not-found">
+      <h1>Oops!</h1>
+      <span>Página não encontrada ¯\_(''/)_/¯</span>
+    </section>
+  );
 };

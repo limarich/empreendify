@@ -19,7 +19,7 @@ const options = [
 ];
 export const Home = () => {
   return (
-    <section>
+    <section id="home">
       <div className="welcome-message">
         <h1>
           Olá Viviani, Bem vinda de volta! <span>✋</span>

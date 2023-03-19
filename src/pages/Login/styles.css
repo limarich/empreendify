@@ -6,12 +6,12 @@
   justify-content: center;
   min-height: 100vh;
 }
-section .logo {
+#login-section .logo {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-section .logo h1 {
+#login-section .logo h1 {
   font-size: 3rem;
 }
 form,

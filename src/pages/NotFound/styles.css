@@ -1,0 +1,15 @@
+#not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+#not-found h1 {
+  font-size: 5rem;
+}
+#not-found span {
+  font-size: 2.5rem;
+  color: var(--dark-gray-2);
+}

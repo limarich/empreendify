@@ -1,14 +1,15 @@
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./styles.css";
 import logo from "../../assets/logo-empreendify.png";
 
 export const Navbar = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   if (location.pathname === "/") return null;
   return (
     <header>
-      <div className="logo">
+      <div className="logo" onClick={() => navigate("/")}>
         <img src={logo} alt="logo" />
         <h1>Simplify</h1>
       </div>
