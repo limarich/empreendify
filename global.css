@@ -1,0 +1,17 @@
+:root {
+  font-family: "montserrat", sans-serif;
+  font-size: 62.5%;
+  color: var(--dark-gray);
+
+  --light-gray: #f2f2f2;
+  --dark-gray: #1e1e1e;
+  --dark-gray-2: #1e1e1ebe;
+  --light-blue: #2cbdeb;
+  --light-green: #6dc98b;
+  --dark-red: #e45e5e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

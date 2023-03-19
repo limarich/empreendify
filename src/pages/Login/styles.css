@@ -1,0 +1,63 @@
+section {
+  background-color: #dfdfdf;
+  background-image: url("../.././assets/login-background.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+section .logo {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+section .logo h1 {
+  font-size: 3rem;
+}
+form,
+.form-body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+
+  border-radius: 20px;
+}
+form {
+  min-height: 600px;
+  min-width: 500px;
+  padding: 4rem;
+}
+.form-header {
+  margin-bottom: 6rem;
+}
+.form-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+.form-header h1 span {
+  transform: rotate(-20deg);
+  display: inline-block;
+}
+.form-header h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.form-body {
+  margin-top: 3rem;
+  width: 100%;
+}
+.form-submit-btn {
+  width: 100%;
+  background-color: var(--light-blue);
+  color: #fff;
+  line-height: 5rem;
+  border: none;
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5rem;
+}

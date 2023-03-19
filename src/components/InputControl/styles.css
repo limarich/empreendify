@@ -1,0 +1,28 @@
+.input-control {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.input-control label {
+  color: var(--dark-gray-2);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.input-control input {
+  width: 100%;
+  border: none;
+  border-radius: 3rem;
+  line-height: 5rem;
+  padding-left: 1rem;
+  background-color: var(--light-gray);
+}
+.input-control input::placeholder {
+  color: #1e1e1e45;
+}
+.input-control span {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
