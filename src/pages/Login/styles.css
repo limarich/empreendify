@@ -1,4 +1,4 @@
-section {
+#login-section {
   background-color: #dfdfdf;
   background-image: url("../.././assets/login-background.png");
   display: flex;
@@ -24,7 +24,7 @@ form,
 
   border-radius: 20px;
 }
-form {
+#login-section form {
   min-height: 600px;
   min-width: 500px;
   padding: 4rem;

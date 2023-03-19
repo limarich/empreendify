@@ -2,9 +2,25 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  margin-top: -2rem;
 }
 .logo h1 {
   font-size: 4rem;
+  color: #32343d;
+}
+.logo img {
+  max-height: 100px;
+  width: auto;
 }
 header ul {
   flex: 1;

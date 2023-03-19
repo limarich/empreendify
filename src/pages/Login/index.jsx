@@ -1,9 +1,11 @@
 import { InputControl } from "../../components/InputControl";
 import "./styles.css";
+import logo from "../../assets/logo-empreendify.png";
 export const Login = () => {
   return (
-    <section>
+    <section id="login-section">
       <div className="logo">
+        <img src={logo} alt="logo" />
         <h1>Simplify</h1>
       </div>
       <form action="/home" method="GET">

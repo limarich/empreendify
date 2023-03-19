@@ -1,6 +1,7 @@
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useLocation } from "react-router-dom";
 import "./styles.css";
+import logo from "../../assets/logo-empreendify.png";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -8,6 +9,7 @@ export const Navbar = () => {
   return (
     <header>
       <div className="logo">
+        <img src={logo} alt="logo" />
         <h1>Simplify</h1>
       </div>
       <ul>
