@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.logo h1 {
+  font-size: 4rem;
+}
+header ul {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul li {
+  list-style: none;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 1rem;
+  cursor: pointer;
+}
+header ul li:hover {
+  font-weight: 700;
+  transition: all 0.5s ease;
+}
+header .search-bar {
+  position: relative;
+  margin-right: 2rem;
+}
+header .search-bar input {
+  background-color: #f3f3f5;
+  line-height: 5rem;
+  border: none;
+  border-radius: 3rem;
+  padding: 0 5rem;
+  margin-right: 4rem;
+  width: 100%;
+}
+header .search-bar input::placeholder {
+  color: #1e1e1e85;
+  font-size: 2rem;
+}
+header .search-bar button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border: none;
+  cursor: pointer;
+}
