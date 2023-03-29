@@ -6,7 +6,7 @@ export const Login = () => {
     <section id="login-section">
       <div className="logo">
         <img src={logo} alt="logo" />
-        <h1>Simplify</h1>
+        <h1>Empreendfy</h1>
       </div>
       <form action="/home" method="GET">
         <div className="form-header">

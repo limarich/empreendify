@@ -22,7 +22,7 @@ export const Home = () => {
     <section id="home">
       <div className="welcome-message">
         <h1>
-          Olá Viviani, Bem vinda de volta! <span>✋</span>
+          Olá, Vivianni! Bem vindo(a) de volta! <span>✋</span>
         </h1>
         <h2>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

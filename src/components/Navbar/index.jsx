@@ -11,7 +11,7 @@ export const Navbar = () => {
     <header>
       <div className="logo" onClick={() => navigate("/")}>
         <img src={logo} alt="logo" />
-        <h1>Simplify</h1>
+        <h1>Empreendfy</h1>
       </div>
       <ul>
         <li>Serviços</li>
