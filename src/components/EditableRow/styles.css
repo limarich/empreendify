@@ -1,0 +1,44 @@
+.editable-row {
+  display: flex;
+  background-color: #f7f7f8;
+}
+.editable-row .input-control {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  width: 300px;
+  min-width: 300px;
+  border: 0.5px solid rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.editable-row .input-control .tag {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  border-radius: 16px;
+  color: #fff;
+  width: 90%;
+  margin: auto;
+}
+.editable-row .input-control:nth-child(even) .tag {
+  background-color: #5ea4e4;
+}
+.editable-row .input-control:nth-child(odd) .tag {
+  background-color: var(--light-green);
+}
+.editable-row .input-control textarea {
+  all: unset;
+  height: 90%;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+.editable-row .input-control .header {
+  all: unset;
+  width: 300px;
+  text-align: center;
+  font-size: 1.6rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}

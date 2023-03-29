@@ -21,3 +21,11 @@ section {
   background-color: #fff;
   min-height: 100%;
 }
+::-webkit-scrollbar {
+  height: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.26);
+}
