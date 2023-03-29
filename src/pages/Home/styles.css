@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 .welcome-message h1 {
-  font-size: 3rem;
+  font-size: var(--h1-font-size);
   font-weight: 600;
 }
 .welcome-message h1 span {

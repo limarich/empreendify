@@ -9,6 +9,8 @@
   --light-blue: #2cbdeb;
   --light-green: #6dc98b;
   --dark-red: #e45e5e;
+
+  --h1-font-size: 3rem;
 }
 * {
   margin: 0;
