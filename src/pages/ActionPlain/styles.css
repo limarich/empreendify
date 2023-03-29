@@ -1,14 +1,14 @@
-.editable-list {
+.editable-rows {
   margin-top: 3rem;
   padding-left: 4rem;
   overflow: auto;
 }
-.editable-list button {
+.editable-rows button {
   all: unset;
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
 }
-.editable-list button:hover {
+.editable-rows button:hover {
   font-weight: 600;
 }
