@@ -5,6 +5,7 @@ import { Login } from "../pages/Login";
 import { NotFound } from "../pages/NotFound";
 import { Swot } from "../pages/Swot";
 import { MenuInfo } from "../pages/MenuInfo";
+import { BusinessModel } from "../pages/BusinessModel";
 
 export const Routes = () => {
   return (
@@ -14,6 +15,7 @@ export const Routes = () => {
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plain" Component={ActionPlain} />
       <Route path="/menu-info" Component={MenuInfo} />
+      <Route path="/business-model" Component={BusinessModel} />
       <Route path="*" Component={NotFound} />
     </Switch>
   );

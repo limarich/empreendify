@@ -1,0 +1,10 @@
+.business-model-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.business-model-container h1 {
+  color: #212121;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}

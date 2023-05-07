@@ -1,0 +1,137 @@
+.canva-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+.canva {
+  width: 55%;
+  filter: drop-shadow(0px 3.68473px 3.68473px rgba(0, 0, 0, 0.25));
+  background: #f1f1f1;
+  border-radius: 50.2px;
+}
+.canva-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.canva-hint-icon:hover {
+  color: var(--identity-blue);
+  cursor: pointer;
+}
+.canva-tag {
+  width: 113px;
+  height: 33.66px;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 223, 129, 0.9) 0%,
+    rgba(125, 223, 182, 0.9) 100%
+  );
+  border-radius: 31.5127px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+.canva-content {
+  margin: 50px;
+}
+.canva-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 25px;
+  color: #1e1e1e;
+  margin-top: 30px;
+  text-align: start;
+}
+.canva-description {
+  margin-top: 20px;
+  text-align: start;
+}
+.canva-input {
+  text-align: initial;
+  margin-top: 30px;
+  background-color: white;
+  height: 175px;
+  width: 85%;
+  padding: 30px;
+  box-shadow: 0px 2.28182px 2.28182px rgba(0, 0, 0, 0.25);
+  border-radius: 24.2596px;
+  border-color: transparent;
+  resize: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.0205px;
+  line-height: 161.52%;
+}
+.canva-input::-webkit-scrollbar {
+  width: 1rem;
+}
+.canva-input:focus {
+  outline: none !important;
+}
+
+/* Cores para as tags de acordo com a categoria */
+
+.what {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 223, 129, 0.9) 0%,
+    rgba(125, 223, 182, 0.9) 100%
+  );
+}
+.how {
+  background: linear-gradient(
+    90deg,
+    rgba(144, 218, 242, 0.9) 0%,
+    rgba(131, 237, 244, 0.9) 100%
+  );
+}
+.to-whom {
+  background: linear-gradient(
+    90deg,
+    rgba(242, 144, 232, 0.9) 0%,
+    rgba(244, 131, 158, 0.9) 100%
+  );
+}
+.how-much {
+  background: linear-gradient(
+    90deg,
+    rgba(242, 135, 134, 0.9) 0%,
+    rgba(244, 161, 117, 0.9) 98.96%
+  );
+}
+
+.btn {
+  background-color: #00b2ff;
+  color: white;
+  border-radius: 60px;
+  border: 2px solid #00b2ff;
+  cursor: pointer;
+  padding: 8px 30px;
+  font-size: 14px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:disabled {
+  background-color: #b6b6b7;
+  border-color: #b6b6b7;
+}
+
+.ph {
+  font-size: 30px;
+}
+.btn:not([disabled]):hover {
+  transform: scale(1.4);
+  transition: 0.2 ease;
+}

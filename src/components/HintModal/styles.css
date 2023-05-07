@@ -1,0 +1,115 @@
+.fade {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.fade.active {
+  display: block;
+}
+.canva-hint-icon.hint-active {
+  color: white;
+  z-index: 2;
+}
+.hint-image {
+  background: #ffffff;
+  border-radius: 22.9265px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 131.31px;
+  height: 131.31px;
+}
+.hint-container {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  align-self: center;
+  background: #f4f4f4;
+  border-radius: 28.0851px;
+  width: 40%;
+  /* height: 27%; */
+  padding: 29px;
+  flex-direction: column;
+}
+.hint-container.active {
+  display: flex;
+}
+.hint-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  gap: 30px;
+}
+.hint-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24.7739px;
+  line-height: 8px;
+}
+.ph-x:hover {
+  color: #4fd6f6;
+  cursor: pointer;
+}
+.hint-description {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24.6808px;
+  line-height: 26px;
+}
+.hint-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hint-header {
+  display: flex;
+  justify-content: end;
+}
+.hint-progress-bar {
+  width: 21.28px;
+  height: 0px;
+  border: 5.10638px solid #929292;
+  border-radius: 5px;
+}
+.hint-progress {
+  display: flex;
+  gap: 10px;
+}
+.hint-next-btn {
+  color: #4fd6f6;
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24.7739px;
+}
+.hint-next-btn:hover {
+  text-decoration-line: underline;
+  transition: 0.8 ease-in;
+}
+.hint-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.active-hint-bar {
+  border: 5.10638px solid #4fd6f6;
+}
