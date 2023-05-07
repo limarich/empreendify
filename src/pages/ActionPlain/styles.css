@@ -8,6 +8,7 @@
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 .editable-rows button:hover {
   font-weight: 600;

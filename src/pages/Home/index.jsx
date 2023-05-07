@@ -9,12 +9,14 @@ const options = [
     title: "Como criar sua empresa?",
     description:
       "Entenda as etapas mais importantes para a criação de um novo negócio.",
+    url: "/menu-info",
   },
   {
     img: imageCard2,
     title: "Sua atividade Empreendedora",
     description:
       "faça uma análise da sua atividade empreendedora e tenha mais clareza sobre o seu negócio.",
+    url: "/menu-info",
   },
 ];
 export const Home = () => {
@@ -37,6 +39,7 @@ export const Home = () => {
               img={option.img}
               title={option.title}
               description={option.description}
+              url={option.url}
             />
           ))}
       </div>

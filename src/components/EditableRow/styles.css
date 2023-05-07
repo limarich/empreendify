@@ -11,6 +11,7 @@
   border: 0.5px solid rgba(0, 0, 0, 0.7);
   padding: 0.5rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0;
 }
 .editable-row .input-control .tag {
   text-align: center;
@@ -30,8 +31,10 @@
 .editable-row .input-control textarea {
   all: unset;
   height: 90%;
+  width: 90%;
   padding-left: 1rem;
   padding-top: 1rem;
+  white-space: pre-wrap;
 }
 .editable-row .input-control .header {
   all: unset;

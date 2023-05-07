@@ -4,6 +4,7 @@ import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { NotFound } from "../pages/NotFound";
 import { Swot } from "../pages/Swot";
+import { MenuInfo } from "../pages/MenuInfo";
 
 export const Routes = () => {
   return (
@@ -12,6 +13,7 @@ export const Routes = () => {
       <Route path="/home" Component={Home} />
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plain" Component={ActionPlain} />
+      <Route path="/menu-info" Component={MenuInfo} />
       <Route path="*" Component={NotFound} />
     </Switch>
   );
