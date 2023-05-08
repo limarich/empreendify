@@ -1,14 +1,17 @@
 import { InputControl } from "../../components/InputControl";
 import "./styles.css";
 import logo from "../../assets/logo-empreendify.png";
+import { useNavigate } from "react-router-dom";
 export const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="login-section">
       <div className="logo">
         <img src={logo} alt="logo" />
         <h1>Empreendfy</h1>
       </div>
-      <form action="/home" method="GET">
+      <form>
         <div className="form-header">
           <h1>
             Bem-vindo! <span>✋</span>
@@ -28,7 +31,14 @@ export const Login = () => {
             description="Senha de 8 digitos"
           />
         </div>
-        <button className="form-submit-btn">Entrar</button>
+        {/* <a href="/home"> */}
+        <button className="form-submit-btn" onClick={() => navigate("/home")}>
+          Entrar
+        </button>
+        {/* <a href="/home" className="form-submit-btn "> */}
+        {/* Entrar
+        </a> */}
+        {/* </a> */}
       </form>
     </section>
   );

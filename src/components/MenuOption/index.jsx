@@ -1,8 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
-export const MenuOption = ({ title, description, img_url = "" }) => {
+export const MenuOption = ({
+  title,
+  description,
+  img_url = "",
+  link = "/home",
+}) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="card-container">
+    <div
+      className="card-container"
+      onClick={() => {
+        navigate(link);
+      }}
+    >
       <div className="card-text-content">
         <div className="card-title">{title}</div>
         <div className="card-description">{description}</div>

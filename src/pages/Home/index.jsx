@@ -16,7 +16,7 @@ const options = [
     title: "Sua atividade Empreendedora",
     description:
       "faça uma análise da sua atividade empreendedora e tenha mais clareza sobre o seu negócio.",
-    url: "/menu-info",
+    url: "/menu-action",
   },
 ];
 export const Home = () => {
