@@ -8,7 +8,7 @@ createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Navbar />
-      <Routes />
+      {/* <Routes /> */}
     </BrowserRouter>
   </React.StrictMode>
 );

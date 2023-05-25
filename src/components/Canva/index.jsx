@@ -50,7 +50,7 @@ const businessModelStep = [
     ],
   },
   {
-    title: "Relacionamento com Clientes",
+    title: "Relaciona",
     description:
       "Estratégias que evitam que seus clientes corram para o concorrente.",
     tag: "to-whom",
