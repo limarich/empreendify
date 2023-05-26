@@ -1,29 +1,56 @@
 .card-option {
   background-image: #fff;
-  min-height: 300px;
-  width: 600px;
+  min-height: 250px;
+  height: 250px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
   border-radius: 3rem;
   cursor: pointer;
   margin: 2rem;
+  
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid red;
 }
 .card-option:hover {
   opacity: 0.85;
   transition: opacity 0.5s ease-out;
 }
-.card-option img {
-  width: 100%;
+
+.information-container {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid blue;
+  padding: 20px;
 }
-.card-option h1,
-.card-option p {
-  margin-top: 1rem;
-  padding-left: 1rem;
-}
-.card-option h1 {
-  font-size: 3rem;
+
+.information-container h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 500;
+  font-size: 27px;
+  line-height: 28px;
 }
-.card-option p {
-  font-size: 2rem;
-  color: var(--dark-gray-2);
+
+.information-container p {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.0309px;
+  line-height: 27px;
+}
+
+.image-container {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.image-container img {
+  width: 95%;
+  height: 95%;
 }

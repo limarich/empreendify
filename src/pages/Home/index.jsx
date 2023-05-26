@@ -1,15 +1,15 @@
 import { MenuCard } from "../../components/MenuCard";
 import "./styles.css";
 // assets
-import imageCard1 from "../../assets/card-image-1.png";
-import imageCard2 from "../../assets/card-image-2.png";
+import imageCard1 from "../../assets/card-img1.png";
+import imageCard2 from "../../assets/card-img2.png";
 const options = [
   {
-    img: imageCard1,
-    title: "Como criar sua empresa?",
+    img: imageCard2,
+    title: "O que é empreender?",
     description:
-      "Entenda as etapas mais importantes para a criação de um novo negócio.",
-    url: "/menu-info",
+      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+    url: "/menu-action",
   },
   {
     img: imageCard2,
@@ -24,11 +24,10 @@ export const Home = () => {
     <section id="home">
       <div className="welcome-message">
         <h1>
-          Olá, Vivianni! Bem vindo(a) de volta! <span>✋</span>
+          Esse é o pontapé inicial para criação da sua empresa <span>🙂</span>
         </h1>
         <h2>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod .
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </h2>
       </div>
       <div className="menu-card-options">

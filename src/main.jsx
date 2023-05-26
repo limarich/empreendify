@@ -7,8 +7,13 @@ import { Routes } from "./routes/routes";
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Navbar />
-      <Routes />
+      <div style={{
+        display: 'flex',
+        
+      }}>
+        <Navbar />
+        <Routes />
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );
