@@ -2,14 +2,14 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 3rem;
   position: sticky;
   top: 0;
   left: 0;
   background-color: #fff;
 
   height: 100vh;
-  width: 400px;
+  width: 700px;
 
   border-right: 2px solid #a8a8a8;
 }
@@ -47,6 +47,8 @@ header ul li {
 
   border: 0px solid yellow;
   border-radius: 10px;
+
+  width: 100%;
 }
 
 header ul li:hover {
@@ -59,4 +61,5 @@ header ul li:hover {
   height: 18px;
   width: 18px;
   margin: 30px;
+  margin-left: 20px;
 }

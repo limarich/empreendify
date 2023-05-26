@@ -13,9 +13,9 @@ const options = [
   },
   {
     img: imageCard2,
-    title: "Sua atividade Empreendedora",
+    title: "O que é empreender?",
     description:
-      "faça uma análise da sua atividade empreendedora e tenha mais clareza sobre o seu negócio.",
+      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
     url: "/menu-action",
   },
 ];
