@@ -20,27 +20,29 @@ export const Navbar = () => {
         <img src={logo} alt="logo" />
       </div>
       <ul>
-        <li>
-          <img className="logosImage" src={img1} alt="" />
+        <li onClick={() => navigate("/swot")}>
+          <img className="logosImage" src={img1} alt=""
+          />
           <p>Análise SWOT</p>
         </li>
-        <li>
-          <img className="logosImage" src={img2} alt="" />
+        <li onClick={() => navigate("/action-plain")}>
+          <img className="logosImage" src={img2} alt=""
+          />
           <p>Plano de ação: 5W2H</p>
         </li>
-        <li>
+        <li onClick={() => navigate("/business-model")}>
           <img className="logosImage" src={img3} alt="" />
           <p>Modelo de Negócios</p>
         </li>
-        <li>
+        <li onClick={() => navigate("/action-plain")}>
           <img className="logosImage" src={img4} alt="" />
           <p>Plano de Negócios</p>
         </li>
-        <li>
+        <li onClick={() => navigate("/action-plain")}>
           <img className="logosImage" src={img5} alt="" />
           <p>Saiba Mais</p>
         </li>
-        <li>
+        <li onClick={() => navigate("/action-plain")}>
           <img className="logosImage" src={img6} alt="" />
           <p>Atividade Empreendedora</p>
         </li>
