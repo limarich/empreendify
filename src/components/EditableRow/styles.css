@@ -1,6 +1,8 @@
 .editable-row {
   display: flex;
   background-color: #f7f7f8;
+
+  border: 0px solid green;
 }
 .editable-row .input-control {
   display: flex;

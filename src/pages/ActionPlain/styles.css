@@ -1,15 +1,23 @@
-.editable-rows {
-  margin-top: 3rem;
-  padding-left: 4rem;
-  overflow: auto;
+#action-plain {
+  background-color: #fff;
+  border: 0px solid red;
+  padding: 40px;
 }
-.editable-rows button {
+
+.editable-rows {
+  overflow: auto;
+
+  max-width: 70vw;
+
+  border: 0px solid blue;
+}
+button {
   all: unset;
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
   margin-top: 0.5rem;
 }
-.editable-rows button:hover {
+button:hover {
   font-weight: 600;
 }

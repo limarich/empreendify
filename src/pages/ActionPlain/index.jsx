@@ -17,25 +17,29 @@ export const ActionPlain = () => {
   };
 
   const [plainItems, setPlainItems] = useState([initialState]);
+
   return (
     <section id="action-plain">
       <SectionHeader
         title="Plano de ação 5W2H "
         description="O plano 5W2H é uma metodologia de planejamento e gestão de projetos que ajuda a identificar e definir as necessidades e objetivos de um projeto.  Ajuda a identificar recursos, etapas e responsabilidades para alcançar os objetivos do projeto."
       />
-      <div className="editable-rows">
-        {plainItems.map((item, index) => (
+
+      {plainItems.map((item, index) => (
+        <div className="editable-rows">
           <EditableRow
             key={index}
             row={item}
             setPlainItems={setPlainItems}
             showHeader={index === 0}
           />
-        ))}
-        <button onClick={() => setPlainItems([...plainItems, initialState])}>
-          Nova linha +
-        </button>
-      </div>
+        </div>
+      ))}
+      
+      <button onClick={() => setPlainItems([...plainItems, initialState])}>
+        Nova linha +
+      </button>
+
     </section>
   );
 };

@@ -12,12 +12,6 @@ export const EditableRow = ({ row, setPlainItems, showHeader }) => {
     }));
   };
 
-  // const handleSave = () => {
-  //   setPlainItems((prevItems) =>
-  //     prevItems.map((item) => (item === row ? values : item))
-  //   );
-  // };
-
   return (
     <div className="editable-row">
       <div className="input-control">

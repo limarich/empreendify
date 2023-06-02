@@ -34,15 +34,15 @@ export const Navbar = () => {
           <img className="logosImage" src={img3} alt="" />
           <p>Modelo de Negócios</p>
         </li>
-        <li onClick={() => navigate("/action-plain")}>
+        <li onClick={() => navigate("/home")}>
           <img className="logosImage" src={img4} alt="" />
           <p>Plano de Negócios</p>
         </li>
-        <li onClick={() => navigate("/action-plain")}>
+        <li onClick={() => navigate("/menu-info")}>
           <img className="logosImage" src={img5} alt="" />
           <p>Saiba Mais</p>
         </li>
-        <li onClick={() => navigate("/action-plain")}>
+        <li onClick={() => navigate("/menu-action")}>
           <img className="logosImage" src={img6} alt="" />
           <p>Atividade Empreendedora</p>
         </li>
