@@ -4,6 +4,8 @@ import { SectionHeader } from "../../components/SectionHeader";
 
 import "./styles.css";
 
+import trashIcon from '../../assets/logos/TrashSimple.svg';
+
 export const ActionPlain = () => {
   const initialState = {
     what: "",
@@ -17,6 +19,7 @@ export const ActionPlain = () => {
   };
 
   const [plainItems, setPlainItems] = useState([initialState]);
+  const [indexOfHoveredItem, setIndexOfHoveredItem] = useState(0);
 
   return (
     <section id="action-plain">
@@ -26,16 +29,29 @@ export const ActionPlain = () => {
       />
 
       {plainItems.map((item, index) => (
-        <div className="editable-rows">
-          <EditableRow
-            key={index}
-            row={item}
-            setPlainItems={setPlainItems}
-            showHeader={index === 0}
-          />
-        </div>
+        <>
+          {
+            index == indexOfHoveredItem
+            &&
+              <a href="#">
+                <img className="trash-icon" alt="Trash Icon" src={
+                  trashIcon
+                }
+                />
+              </a>
+          }
+          
+          <div className="editable-rows">
+            <EditableRow
+              key={index}
+              row={item}
+              setPlainItems={setPlainItems}
+              showHeader={true}
+            />
+          </div>
+        </>
       ))}
-      
+
       <button onClick={() => setPlainItems([...plainItems, initialState])}>
         Nova linha +
       </button>
