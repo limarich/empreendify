@@ -5,6 +5,7 @@ import { SectionHeader } from "../../components/SectionHeader";
 import "./styles.css";
 
 import trashIcon from '../../assets/logos/TrashSimple.svg';
+import trashIconHovered from '../../assets/logos/TrashSimpleFilled.svg';
 
 export const ActionPlain = () => {
   const initialState = {
@@ -20,6 +21,23 @@ export const ActionPlain = () => {
 
   const [plainItems, setPlainItems] = useState([initialState]);
   const [indexOfHoveredItem, setIndexOfHoveredItem] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = (index) => {
+    setIndexOfHoveredItem(index);
+  };
+
+  const handleMouseLeave = () => {
+    setIndexOfHoveredItem(null);
+  }
+
+  const handleDeleteEditableRow = (index) => {
+    let array = [...plainItems];
+    array.splice(index, 1);
+    setPlainItems([...array]);
+
+    setIsHovered(false);
+  }
 
   return (
     <section id="action-plain">
@@ -29,19 +47,29 @@ export const ActionPlain = () => {
       />
 
       {plainItems.map((item, index) => (
-        <>
+        <div style={{
+          display: 'flex',
+          position: 'relative'
+        }}>
           {
             index == indexOfHoveredItem
             &&
-              <a href="#">
+              <a href="#"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                onClick={() => handleDeleteEditableRow(index)}
+              >
                 <img className="trash-icon" alt="Trash Icon" src={
-                  trashIcon
-                }
-                />
+                  isHovered
+                  ? trashIconHovered
+                  : trashIcon
+                }/>
               </a>
           }
           
-          <div className="editable-rows">
+          <div className="editable-rows"
+            onMouseEnter={() => handleMouseEnter(index)}
+          >
             <EditableRow
               key={index}
               row={item}
@@ -49,7 +77,7 @@ export const ActionPlain = () => {
               showHeader={true}
             />
           </div>
-        </>
+        </div>
       ))}
 
       <button onClick={() => setPlainItems([...plainItems, initialState])}>

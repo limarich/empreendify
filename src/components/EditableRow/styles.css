@@ -1,17 +1,20 @@
 .editable-row {
   display: flex;
-  background-color: #f7f7f8;
 
-  border: 2px solid blue;
+  border: 1px solid blue;
+
+  margin-bottom: 20px;
 }
 
-.trash-icon {
-  position: relative;
-  top: 30px;
-  right: 30px;
-
-  height: 25px;
-  width: 25px;
+.editable-row::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f7f7f8;
+  z-index: -1;
 }
 
 .editable-row .input-control {
