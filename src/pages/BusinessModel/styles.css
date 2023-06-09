@@ -1,3 +1,10 @@
+#business-model {
+  background-color: #fff;
+  padding: 40px;
+  
+  width: 77%;
+  border: 1px solid red;
+}
 .business-model-container {
   display: flex;
   flex-direction: column;

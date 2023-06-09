@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./styles.css";
 
 const steps = [
@@ -12,29 +13,42 @@ const steps = [
   "Segmento de mercado",
 ];
 
-export const ProgressBar = ({ active = 0, setActive }) => {
+export const ProgressBar = ({ active = 3, setActive }) => {
+
+  const [progressFlexWidth, setProgressFlexWidth] = useState(0);
+
   return (
     <div className="progress-container">
       <div
         className="progress"
-        id="progress"
-        style={{ width: `${(active / 9) * 100}%` }}
-      ></div>
+      >
+        <div className="progress-item"
+          style={{ flex: progressFlexWidth }}
+        ></div>
+        <div className="notProgress-item"
+          style={{ flex: 1 - progressFlexWidth }}
+        ></div>
+      </div>
 
-      {steps.map((step, index) => (
-        <div
-          className="step"
-          key={step}
-          onClick={() => {
-            setActive(index);
-          }}
-        >
-          <div className={`circle ${active >= index && "active"}`}>
-            {index + 1}
+      <div className="steps-container">
+      {
+        steps.map((step, index) => (
+          <div
+            className="step"
+            key={step}
+            onClick={() => {
+              setActive(index);
+              setProgressFlexWidth((1 / (steps.length - 1)) * index);
+            }}
+          >
+            <div className={`circle ${active >= index && "active"}`}>
+              {index + 1}
+            </div>
+            <div className="label">{step}</div>
           </div>
-          <div className="label">{step}</div>
-        </div>
-      ))}
+        ))
+      }
+      </div>
     </div>
   );
 };

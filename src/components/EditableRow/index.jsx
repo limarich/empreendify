@@ -3,8 +3,19 @@ import "./styles.css";
 
 import trashIcon from '../../assets/logos/TrashSimple.svg';
 
-export const EditableRow = ({ row, setPlainItems, showHeader }) => {
-  const [values, setValues] = useState(row);
+export const EditableRow = ({ showHeader, onStateChange, index }) => {
+  const initialState = {
+    what: "",
+    why: "",
+    where: "",
+    when: "",
+    who: "",
+    how: "",
+    howMany: "",
+    status: "",
+  };
+
+  const [values, setValues] = useState(initialState);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -12,11 +23,15 @@ export const EditableRow = ({ row, setPlainItems, showHeader }) => {
       ...prevValues,
       [name]: value,
     }));
+
+    // Chamando a função de callback do pai com o novo estado
+    onStateChange(values, index);
   };
 
-  useEffect(() => {
-    console.log(values);
-  }, [values]);
+  // // Outros
+  // useEffect(() => {
+  //   console.log(values);
+  // }, [values])
 
   return (
     <>
@@ -33,7 +48,11 @@ export const EditableRow = ({ row, setPlainItems, showHeader }) => {
         <div className="input-control">
           {showHeader && <span className="header"> Por que?</span>}
           <span className="tag">Why</span>
-          <textarea name="why" value={values.why} onChange={handleInputChange} />
+          <textarea
+            name="why" 
+            value={values.why} 
+            onChange={handleInputChange} 
+          />
         </div>
         <div className="input-control">
           {showHeader && <span className="header">Onde?</span>}
@@ -56,12 +75,20 @@ export const EditableRow = ({ row, setPlainItems, showHeader }) => {
         <div className="input-control">
           {showHeader && <span className="header">Quem?</span>}
           <span className="tag">Who</span>
-          <textarea name="who" value={values.who} onChange={handleInputChange} />
+          <textarea 
+            name="who" 
+            value={values.who} 
+            onChange={handleInputChange} 
+          />
         </div>
         <div className="input-control">
           {showHeader && <span className="header">Como?</span>}
           <span className="tag">How</span>
-          <textarea name="how" value={values.how} onChange={handleInputChange} />
+          <textarea 
+            name="how" 
+            value={values.how} 
+            onChange={handleInputChange} 
+          />
         </div>
         <div className="input-control">
           {showHeader && <span className="header">Quanto?</span>}
@@ -81,8 +108,6 @@ export const EditableRow = ({ row, setPlainItems, showHeader }) => {
             onChange={handleInputChange}
           />
         </div>
-
-        {/* <button onCspanck={handleSave}>Salvar</button> */}
       </div>
     </>
   );

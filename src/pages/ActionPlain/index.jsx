@@ -8,6 +8,8 @@ import trashIcon from '../../assets/logos/TrashSimple.svg';
 import trashIconHovered from '../../assets/logos/TrashSimpleFilled.svg';
 
 export const ActionPlain = () => {
+
+  // Controle de estado do contéudo escrito
   const initialState = {
     what: "",
     why: "",
@@ -20,6 +22,20 @@ export const ActionPlain = () => {
   };
 
   const [plainItems, setPlainItems] = useState([initialState]);
+  const [childState, setChildState] = useState('');
+
+  const handleChildStateChange = (newState, index) => {
+    console.log(`Indice de mudança no filho: ${index}`);
+
+    setChildState(newState);
+
+    let array = [...plainItems];
+    array[index] = childState;
+    setPlainItems([...array]);
+  };
+
+
+  // Apagar elementos
   const [indexOfHoveredItem, setIndexOfHoveredItem] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -40,6 +56,7 @@ export const ActionPlain = () => {
     setIsHovered(false);
   }
 
+  // Outros
   useEffect(() => {
     console.log(plainItems);
   }, [plainItems])
@@ -76,11 +93,10 @@ export const ActionPlain = () => {
             onMouseEnter={() => handleMouseEnter(index)}
           >
             <EditableRow
+              onStateChange={handleChildStateChange}
               key={index}
-              row={item}
-              setPlainItems={setPlainItems}
+              index={index}
               showHeader={true}
-              plainItems={plainItems}
             />
           </div>
         </div>
