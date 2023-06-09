@@ -10,10 +10,17 @@
 .editable-list textarea {
   all: unset;
   height: 100%;
-  width: 100%;
+  
+  flex: 1;
+
   font-size: 2rem;
   padding-left: 1rem;
   padding-top: 1rem;
+
+  border: 0px solid red;
+
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 .editable-list .tag {
   text-align: center;

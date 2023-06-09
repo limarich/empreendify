@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 
 import trashIcon from '../../assets/logos/TrashSimple.svg';
@@ -13,6 +13,10 @@ export const EditableRow = ({ row, setPlainItems, showHeader }) => {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    console.log(values);
+  }, [values]);
 
   return (
     <>

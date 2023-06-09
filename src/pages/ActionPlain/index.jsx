@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { EditableRow } from "../../components/EditableRow";
 import { SectionHeader } from "../../components/SectionHeader";
 
@@ -25,6 +25,7 @@ export const ActionPlain = () => {
 
   const handleMouseEnter = (index) => {
     setIndexOfHoveredItem(index);
+    console.log(`IndexOfHoveredItem: ${index}`);
   };
 
   const handleMouseLeave = () => {
@@ -38,6 +39,10 @@ export const ActionPlain = () => {
 
     setIsHovered(false);
   }
+
+  useEffect(() => {
+    console.log(plainItems);
+  }, [plainItems])
 
   return (
     <section id="action-plain">
@@ -57,7 +62,7 @@ export const ActionPlain = () => {
               <a href="#"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                onClick={() => handleDeleteEditableRow(index)}
+                onClick={(index) => handleDeleteEditableRow(index)}
               >
                 <img className="trash-icon" alt="Trash Icon" src={
                   isHovered
@@ -75,6 +80,7 @@ export const ActionPlain = () => {
               row={item}
               setPlainItems={setPlainItems}
               showHeader={true}
+              plainItems={plainItems}
             />
           </div>
         </div>

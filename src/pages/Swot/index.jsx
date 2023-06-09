@@ -13,13 +13,13 @@ export const Swot = () => {
 
       <div className="legend">
         <span>
-          <b style={{ backgroundColor: "#6DC98B" }}></b>Fatores Positivos
+          <b style={{ backgroundColor: "#5EA4E4" }}></b>Fatores Positivos
         </span>
         <span>
           <b style={{ backgroundColor: "#E45E5E" }}></b>Fatores Negativos
         </span>
       </div>
-      
+
       <div className="list-container">
         <div className="list-row">
           <div className="header">Ambiente Interno</div>
