@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./styles.css";
 
 export const EditableList = ({ tag, second }) => {
-  const [list, setList] = useState(["●"]);
+  const [list, setList] = useState(["● "]);
 
   const handleOnChange = (event) => {
     const value = event.target.value;
@@ -15,7 +15,18 @@ export const EditableList = ({ tag, second }) => {
       event.preventDefault();
       const textAreaValue = event.target.value.trim();
       if (textAreaValue !== "") {
-        setList([...list, "●"]);
+        setList([...list, "● "]);
+      }
+
+    } else if(event.key === "Backspace") {
+
+      if (list[list.length - 1] == "● ") {
+        event.preventDefault();
+
+        if(list.length !== 1) {
+          list.pop();
+          setList([...list]);
+        }
       }
     }
   };
@@ -26,7 +37,7 @@ export const EditableList = ({ tag, second }) => {
     <div className="editable-list">
       <span
         className="tag"
-        style={{ backgroundColor: second ? "#e45e5e" : "#6dc98b" }}
+        style={{ backgroundColor: second ? "#e45e5e" : "#5EA4E4" }}
       >
         {tag}
       </span>
