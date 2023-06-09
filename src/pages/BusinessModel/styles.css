@@ -3,7 +3,7 @@
   padding: 40px;
   
   width: 77%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 .business-model-container {
   display: flex;
@@ -11,7 +11,13 @@
   align-items: center;
 }
 .business-model-container h1 {
-  color: #212121;
-  font-size: 3rem;
-  margin-bottom: 3rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34.5141px;
+  line-height: 36px;
+
+  color: #1E1E1E;
+
+  margin-bottom: 40px;
 }

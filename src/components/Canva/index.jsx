@@ -1,5 +1,6 @@
 import { CaretLeft, CaretRight, Lightbulb } from "@phosphor-icons/react";
 import "./styles.css";
+
 import { HintModal } from "../HintModal";
 import { useState } from "react";
 
@@ -132,6 +133,7 @@ export const Canva = ({ step, setStep }) => {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
+
       <button
         class="btn"
         id="previous"
@@ -142,6 +144,7 @@ export const Canva = ({ step, setStep }) => {
       >
         <CaretLeft size={32} color="#fff" style={{ position: "absolute" }} />
       </button>
+
       <div class="canva">
         <div class="canva-content">
           <div class="canva-header">
@@ -152,7 +155,7 @@ export const Canva = ({ step, setStep }) => {
               <Lightbulb
                 size={32}
                 color="#000"
-                style={{ position: "absolute" }}
+                style={{ position: "relative" }}
               />
             </div>
           </div>
@@ -163,6 +166,7 @@ export const Canva = ({ step, setStep }) => {
           <textarea class="canva-input"></textarea>
         </div>
       </div>
+
       <button
         class="btn"
         id="next"
