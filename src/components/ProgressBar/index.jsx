@@ -13,9 +13,7 @@ const steps = [
   "Segmento de mercado",
 ];
 
-export const ProgressBar = ({ active = 3, setActive }) => {
-
-  const [progressFlexWidth, setProgressFlexWidth] = useState(0);
+export const ProgressBar = ({ active = 0, setActive }) => {
 
   return (
     <div className="progress-container">
@@ -23,10 +21,10 @@ export const ProgressBar = ({ active = 3, setActive }) => {
         className="progress"
       >
         <div className="progress-item"
-          style={{ flex: progressFlexWidth }}
+          style={{ flex: (1 / (steps.length - 1)) * active }}
         ></div>
         <div className="notProgress-item"
-          style={{ flex: 1 - progressFlexWidth }}
+          style={{ flex: 1 - ((1 / (steps.length - 1)) * active) }}
         ></div>
       </div>
 
@@ -38,7 +36,6 @@ export const ProgressBar = ({ active = 3, setActive }) => {
             key={step}
             onClick={() => {
               setActive(index);
-              setProgressFlexWidth((1 / (steps.length - 1)) * index);
             }}
           >
             <div className={`circle ${active >= index && "active"}`}>
