@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.61);
-  position: absolute;
+  position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
@@ -11,10 +11,8 @@
 .fade.active {
   display: block;
 }
-.canva-hint-icon.hint-active {
-  color: white;
-  z-index: 2;
-}
+
+
 .hint-image {
   background: #ffffff;
   border-radius: 22.9265px;
@@ -26,18 +24,17 @@
 }
 .hint-container {
   display: none;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
   align-self: center;
   background: #f4f4f4;
   border-radius: 28.0851px;
-  width: 40%;
-  /* height: 27%; */
   padding: 29px;
   flex-direction: column;
+
+  border: 1px solid red;
+
+  position: absolute;
+
+  z-index: 2;
 }
 .hint-container.active {
   display: flex;
@@ -55,10 +52,6 @@
   font-weight: 600;
   font-size: 24.7739px;
   line-height: 8px;
-}
-.ph-x:hover {
-  color: #4fd6f6;
-  cursor: pointer;
 }
 .hint-description {
   font-family: "Montserrat";
@@ -110,6 +103,17 @@
   margin-top: 35px;
 }
 
+.canva-hint-icon.hint-active {
+  color: white;
+  z-index: 2;
+}
+
 .active-hint-bar {
   border: 5.10638px solid #4fd6f6;
+}
+
+
+.ph-x:hover {
+  color: #4fd6f6;
+  cursor: pointer;
 }

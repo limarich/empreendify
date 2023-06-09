@@ -5,10 +5,16 @@ import hintIcon from "../../assets/hint-icon.svg";
 
 export const HintModal = ({ hints, isOpen, setIsOpen }) => {
   const [hint, setHint] = useState(0);
+  const width = 600;
 
   return (
     <>
-      <div className={`hint-container ${isOpen && "active"}`}>
+      <div className={`hint-container ${isOpen && "active"}`}
+        style={{
+          width: width,
+          left: `calc(50% - ${width / 2}px)`
+        }}
+      >
         <hint className="hint-header">
           <X
             size={32}
@@ -48,6 +54,7 @@ export const HintModal = ({ hints, isOpen, setIsOpen }) => {
           </button>
         </div>
       </div>
+
       <div className={`fade ${isOpen && "active"}`}></div>
     </>
   );
