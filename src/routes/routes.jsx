@@ -8,6 +8,7 @@ import { MenuInfo } from "../pages/MenuInfo";
 import { BusinessModel } from "../pages/BusinessModel";
 import { MenuAction } from "../pages/MenuAction";
 import { Blog } from "../pages/Blog";
+import { BusinessPlan } from "../pages/BusinessPlan";
 
 export const Routes = () => {
   return (
@@ -22,6 +23,8 @@ export const Routes = () => {
 
       <Route path="/menu-action" Component={MenuAction} />
       <Route path="/blog" Component={Blog} />
+      <Route path="/business-plan" Component={BusinessPlan} />
+
     </Switch>
   );
 };

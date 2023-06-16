@@ -8,7 +8,7 @@ import Image from '../../assets/card-img3.png';
 export const Blog = () => {
   return(
     <div id="blog">
-      <div className="headerContainer">
+      <div className="header-Container">
         <SectionHeader
           title={"Tipos de Empresas, Porte e Regime Tributário"}
           description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
@@ -19,9 +19,9 @@ export const Blog = () => {
         src={Image}
         alt="Imagem" 
       />
-      <div className="container">
-        <div className="contentContainer">
-          <p className="text">
+      <div className="container-Here">
+        <div className="contentContainer-Here">
+          <p className="text-Here">
             À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
             <br />
             <br />

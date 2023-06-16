@@ -3,7 +3,7 @@
   border: 0px solid red;
 }
 
-.headerContainer {
+.header-Container {
   padding: 40px;
   padding-bottom: 0;
 }
@@ -15,7 +15,7 @@
   object-fit: cover;
 }
 
-.container {
+.container-Here {
   border: 0px solid red;
 
   display: flex;
@@ -24,7 +24,7 @@
   position: relative;
 }
 
-.contentContainer {
+.contentContainer-Here {
   width: 80%;
   padding: 70px;
 
@@ -39,7 +39,7 @@
 
 }
 
-.text {
+.text-Here {
   border: 0px solid green;
 
   font-family: 'Montserrat';

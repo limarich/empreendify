@@ -34,7 +34,7 @@ export const Navbar = () => {
           <img className="logosImage" src={img3} alt="" />
           <p>Modelo de Negócios</p>
         </li>
-        <li onClick={() => navigate("/menu-info")}>
+        <li onClick={() => navigate("/business-plan")}>
           <img className="logosImage" src={img4} alt="" />
           <p>Plano de Negócios</p>
         </li>
