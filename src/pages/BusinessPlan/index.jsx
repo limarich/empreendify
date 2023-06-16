@@ -19,6 +19,26 @@ export const BusinessPlan = () => {
             title={"Sumário Executivo"}
             description={"Organize as principais definições do seu negócio!"}
           />
+          <ProgressCard
+            title={"Sumário Executivo"}
+            description={"Organize as principais definições do seu negócio!"}
+          />
+          <ProgressCard
+            title={"Sumário Executivo"}
+            description={"Organize as principais definições do seu negócio!"}
+          />
+          <ProgressCard
+            title={"Sumário Executivo"}
+            description={"Organize as principais definições do seu negócio!"}
+          />
+          <ProgressCard
+            title={"Sumário Executivo"}
+            description={"Organize as principais definições do seu negócio!"}
+          />
+          <ProgressCard
+            title={"Sumário Executivo"}
+            description={"Organize as principais definições do seu negócio!"}
+          />
         </div>
       </div>
     </div>

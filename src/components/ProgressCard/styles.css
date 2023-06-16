@@ -8,22 +8,37 @@
 
   border: 0px solid red;
 
-  width: 250px;
+  width: 270px;
   height: 220px;
 
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: 20.08px;
+  
+  cursor: pointer;
+}
+
+.container:hover {
+  border: 3px solid #5EA4E4;
 }
 
 h4 {
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .descriptionText {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
   color: #565656;
   padding-right: 30px;
   margin-bottom: 10px;
+
+  position: relative;
+  top: -15px;
 }
 
 .progressContainer {
@@ -38,6 +53,25 @@ h4 {
   justify-content: space-between;
 }
 
+.progressText {
+  color: #565656;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.3647px;
+  line-height: 6px;
+}
+
+.progressNumber {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14.3647px;
+  line-height: 6px;
+
+  color: #1E1E1E;
+}
+
 .relativeContainer {
   border: 0px solid green;
 
@@ -46,11 +80,12 @@ h4 {
   align-items: center;
 
   position: relative;
+  padding-top: 5px;
 }
 
 .not-progress-bar {
   background-color: #DBDBDB;
-  height: 10px;
+  height: 8px;
 
   width: 100%;
 
@@ -60,7 +95,7 @@ h4 {
 
 .progress-bar {
   background-color: #5EA4E4;
-  height: 10px;
+  height: 8px;
 
   width: 10%;
 

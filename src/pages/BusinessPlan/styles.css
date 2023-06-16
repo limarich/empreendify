@@ -1,12 +1,27 @@
 #businessPlan {
   background-color: #fff;
   padding: 40px;
+
+  width: 100%;
 }
 
 .containerProgressCard {
   width: 100%;
+
+  border: 0px solid red;
 }
 
 .contentContainerProgressCard {
-  
+  border: 0px solid blue;
+
+  border-radius: 24px;
+  background-color: #F3F3F5;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 40px;
+
+  justify-content: space-around;
+
+  gap: 30px;
 }
