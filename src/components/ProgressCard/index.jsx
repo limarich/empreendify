@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./styles.css";
 
 export const ProgressCard = ({ title, description}) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="container">
+    <div
+      className="container"
+      onClick={() => navigate("/form")}
+    >
       <h4>{title}</h4>
       <p className="descriptionText">{description}</p>
       <div className="progressContainer">

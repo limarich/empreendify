@@ -1,0 +1,81 @@
+#form-page {
+  width: 100%;
+}
+ 
+.formHeader {
+  height: 80px;
+  width: 100%;
+
+  border: 0px solid red;
+  background-color: #FFFFFF;
+  
+  display: flex;
+  align-items: center;
+}
+
+.topics-list {
+  border: 0px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  list-style: none;
+
+  width: 100%;
+}
+
+.topic-item {
+  border: 0px solid blue;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
+  color: #1E1E1E;
+
+  border-radius: 10px;
+}
+
+.topic-item:hover {
+  text-decoration: underline;
+  color: #FFFFFF;
+  background: #5EA4E4;
+}
+
+.formContainer {
+  border: 1px solid blue;
+  width: 100%;
+  
+  background-color: #F7F7F8;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.formContentContainer {
+  border: 1px solid green;
+  background-color: #FFFFFF;
+
+  width: 800px;
+  padding: 50px;
+}
+
+/* Formulário */
+.title {
+  display: flex;
+  justify-content: center;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 7px;
+}

@@ -9,6 +9,7 @@ import { BusinessModel } from "../pages/BusinessModel";
 import { MenuAction } from "../pages/MenuAction";
 import { Blog } from "../pages/Blog";
 import { BusinessPlan } from "../pages/BusinessPlan";
+import { Form } from "../pages/Form";
 
 export const Routes = () => {
   return (
@@ -24,6 +25,8 @@ export const Routes = () => {
       <Route path="/menu-action" Component={MenuAction} />
       <Route path="/blog" Component={Blog} />
       <Route path="/business-plan" Component={BusinessPlan} />
+
+      <Route path="/form" Component={Form} />
 
     </Switch>
   );
