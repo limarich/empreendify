@@ -3,13 +3,13 @@ import { useNavigate } from "react-router-dom";
 
 import "./styles.css";
 
-export const ProgressCard = ({ title, description}) => {
+export const ProgressCard = ({ index, title, description}) => {
   const navigate = useNavigate();
 
   return (
     <div
       className="container"
-      onClick={() => navigate("/form")}
+      onClick={() => navigate("/form", { formIndex: index })}
     >
       <h4>{title}</h4>
       <p className="descriptionText">{description}</p>

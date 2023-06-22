@@ -13,7 +13,8 @@ const steps = [
   "Segmento de mercado",
 ];
 
-export const ProgressBar = ({ active = 0, setActive }) => {
+export const ProgressBar = ({ active = 0, setActive, enableHint }) => {
+  console.log(enableHint)
 
   return (
     <div className="progress-container">
@@ -34,9 +35,11 @@ export const ProgressBar = ({ active = 0, setActive }) => {
           <div
             className="step"
             key={step}
-            onClick={() => {
-              setActive(index);
-            }}
+            onClick={
+              !enableHint
+              ? () => {setActive(index);}
+              : undefined
+            }
           >
             <div className={`circle ${active >= index && "active"}`}>
               {index + 1}

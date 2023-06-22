@@ -29,7 +29,7 @@
 }
 
 .progress-item {
-  background-color: #00b2ff;
+  background-color: #5EA4E4;
   height: 2px;
 }
 
@@ -56,9 +56,9 @@
 }
 
 .circle.active {
-  border-color: #00b2ff;
+  border-color: #5EA4E4;
   color: white;
-  background-color: #00b2ff;
+  background-color: #5EA4E4;
 }
 
 .label {

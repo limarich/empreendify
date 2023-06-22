@@ -8,8 +8,7 @@ createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <div style={{
-        display: 'flex',
-        
+        display: 'flex'
       }}>
         <Navbar />
         <Routes />

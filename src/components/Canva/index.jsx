@@ -12,7 +12,7 @@ const businessModelStep = [
     tag: "what",
     label: "O que?",
     hints: [
-      "dica 1",
+      "Maconha",
       "dica 1.1",
       "dica 1.2",
       "dica 1.3",
@@ -123,15 +123,15 @@ const businessModelStep = [
   },
 ];
 
-export const Canva = ({ step, setStep }) => {
+export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div class="canva-container">
       <HintModal
         hints={businessModelStep[step].hints}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
+        isOpen={enableHint}
+        setIsOpen={setEnableHint}
       />
 
       <button
@@ -151,7 +151,7 @@ export const Canva = ({ step, setStep }) => {
             <div class={`canva-tag ${businessModelStep[step].tag}`}>
               {businessModelStep[step].label}
             </div>
-            <div class="canva-hint-icon" onClick={() => setIsOpen(true)}>
+            <div class="canva-hint-icon" onClick={() => setEnableHint(true)}>
               <Lightbulb
                 size={32}
                 color="#000"

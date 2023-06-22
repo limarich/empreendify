@@ -67,7 +67,10 @@ export const ActionPlain = () => {
         title="Plano de ação 5W2H "
         description="O plano 5W2H é uma metodologia de planejamento e gestão de projetos que ajuda a identificar e definir as necessidades e objetivos de um projeto.  Ajuda a identificar recursos, etapas e responsabilidades para alcançar os objetivos do projeto."
       />
-
+      
+      <div className="editable-rows"
+        onMouseEnter={() => handleMouseEnter(index)}
+      >
       {plainItems.map((item, index) => (
         <div style={{
           display: 'flex',
@@ -89,18 +92,17 @@ export const ActionPlain = () => {
               </a>
           }
           
-          <div className="editable-rows"
-            onMouseEnter={() => handleMouseEnter(index)}
-          >
+          
             <EditableRow
               onStateChange={handleChildStateChange}
               key={index}
               index={index}
               showHeader={true}
             />
-          </div>
+          
         </div>
       ))}
+      </div>
 
       <button onClick={() => setPlainItems([...plainItems, initialState])}>
         Nova linha +

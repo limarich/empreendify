@@ -1,48 +1,44 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 import "./styles.css";
 
-const forms = [
-  {
-    title: "Sumário Executivo"
-  },
-  {
-    title: "Análise de Mercado"
-  },
-  {
-    title: "Plano de Marketing"
-  },
-  {
-    title: "Processo Operacional"
-  },
-  {
-    title: "Análise Financeira"
-  },
-  {
-    title: "Construção de Cenário"
-  },
-]
+import { forms } from '../BusinessPlan'
 
 export const Form = () => {
   const navigate = useNavigate();
+  const { content } = useParams();
+  console.log(content);
+
+  const [numberOfActivatedForm, setNumberOfActivatedForm] = useState(0);
 
   return (
     <div id="form-page">
       <div className="formHeader">
         <ul className="topics-list">
-          <li className="topic-item">Sumário Executivo</li>
-          <li className="topic-item">Análise de Mercado</li>
-          <li className="topic-item">Plano de Marketing</li>
-          <li className="topic-item">Processo Operacional</li>
-          <li className="topic-item">Análise Financeira</li>
-          <li className="topic-item">Construção de Cenário</li>
+          {
+            forms.map((form, index) => {
+              console.log(index);
+              console.log(`Estado: ${numberOfActivatedForm}`);
+              return(
+                <li 
+                  key={index}
+                  className={`topic-item ${index == numberOfActivatedForm ? "selected" : ""}`}
+                  onClick={() => {
+                    setNumberOfActivatedForm(index);
+                  }}
+                >
+                  {form.title}
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
 
       <div className="formContainer">
         <div className="formContentContainer">
-          <h1 className="title">Sumário executivo</h1>
+          <h1 className="title">{forms[numberOfActivatedForm].title}</h1>
         </div>
       </div>
     </div>

@@ -41,6 +41,12 @@
   border-radius: 10px;
 }
 
+.selected {
+  text-decoration: underline;
+  color: #FFFFFF;
+  background: #5EA4E4;
+}
+
 .topic-item:hover {
   text-decoration: underline;
   color: #FFFFFF;
