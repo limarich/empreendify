@@ -1,11 +1,9 @@
 .editable-list {
   padding-top: 1rem;
-  min-height: 300px;
   display: flex;
   flex-direction: column;
 
-  border-left: 0.5px solid rgba(0, 0, 0, 0.7);
-  border-right: 0.5px solid rgba(0, 0, 0, 0.7);
+  border: 0.5px solid rgba(0, 0, 0, 0.7);
 
   flex: 1;
 }

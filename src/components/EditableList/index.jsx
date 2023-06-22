@@ -34,7 +34,10 @@ export const EditableList = ({ tag, second }) => {
   const textAreaValue = list.join("\n");
 
   return (
-    <div className="editable-list">
+    <div 
+      className="editable-list"
+      style={{  }}
+    >
       <span
         className="tag"
         style={{ backgroundColor: second ? "#e45e5e" : "#5EA4E4" }}
