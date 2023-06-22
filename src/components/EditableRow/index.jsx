@@ -28,10 +28,17 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
     onStateChange(values, index);
   };
 
-  // // Outros
-  // useEffect(() => {
-  //   console.log(values);
-  // }, [values])
+  function resizeRow() {
+    var textarea = document.querySelector(".editable-row .input-control textarea");
+    console.log(textarea.style.height);
+    console.log(textarea.scrollHeight);
+    console.log(textarea.clientHeight);
+
+    textarea.style.height = textarea.style.minHeight;
+    if(textarea.scrollHeight > textarea.clientHeight) {
+      textarea.style.height = textarea.scrollHeight + "px";
+    }
+  }
 
   return (
     <>
@@ -43,6 +50,7 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
             name="what"
             value={values.what}
             onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
         <div className="input-control">
@@ -51,7 +59,8 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
           <textarea
             name="why" 
             value={values.why} 
-            onChange={handleInputChange} 
+            onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
         <div className="input-control">
@@ -61,6 +70,7 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
             name="where"
             value={values.where}
             onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
         <div className="input-control">
@@ -70,6 +80,7 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
             name="when"
             value={values.when}
             onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
         <div className="input-control">
@@ -78,7 +89,8 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
           <textarea 
             name="who" 
             value={values.who} 
-            onChange={handleInputChange} 
+            onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
         <div className="input-control">
@@ -87,7 +99,8 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
           <textarea 
             name="how" 
             value={values.how} 
-            onChange={handleInputChange} 
+            onChange={handleInputChange}
+            onInput={resizeRow} 
           />
         </div>
         <div className="input-control">
@@ -97,6 +110,7 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
             name="howMany"
             value={values.howMany}
             onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
         <div className="input-control">
@@ -106,6 +120,7 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
             name="status"
             value={values.status}
             onChange={handleInputChange}
+            onInput={resizeRow}
           />
         </div>
       </div>

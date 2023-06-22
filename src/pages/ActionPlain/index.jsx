@@ -25,8 +25,6 @@ export const ActionPlain = () => {
   const [childState, setChildState] = useState('');
 
   const handleChildStateChange = (newState, index) => {
-    console.log(`Indice de mudança no filho: ${index}`);
-
     setChildState(newState);
 
     let array = [...plainItems];
@@ -41,7 +39,6 @@ export const ActionPlain = () => {
 
   const handleMouseEnter = (index) => {
     setIndexOfHoveredItem(index);
-    console.log(`IndexOfHoveredItem: ${index}`);
   };
 
   const handleMouseLeave = () => {
@@ -56,10 +53,10 @@ export const ActionPlain = () => {
     setIsHovered(false);
   }
 
-  // Outros
-  useEffect(() => {
-    console.log(plainItems);
-  }, [plainItems])
+  // // Outros
+  // useEffect(() => {
+  //   console.log(plainItems);
+  // }, [plainItems])
 
   return (
     <section id="action-plain">
