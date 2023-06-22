@@ -42,7 +42,7 @@ export const Navbar = () => {
           <img className="logosImage" src={img5} alt="" />
           <p>Saiba Mais</p>
         </li>
-        <li onClick={() => navigate("/menu-action")}>
+        <li onClick={() => navigate("/entrepreneurial-activity")}>
           <img className="logosImage" src={img6} alt="" />
           <p>Atividade Empreendedora</p>
         </li>

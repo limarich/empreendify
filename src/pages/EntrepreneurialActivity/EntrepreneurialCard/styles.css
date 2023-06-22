@@ -1,0 +1,44 @@
+.contentCard {
+  height: 220px;
+  width: 450px;
+
+  border: 1px solid blue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 25px;
+
+  border: 1px solid #5EA4E4;
+  border-radius: 14px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.description {
+  font-size: 15px;
+}
+
+.link {
+  color: #5EA4E4;
+  font-weight: 600;
+  font-size: 15px;
+  width: 100%;
+
+  border: 1px solid #5EA4E4;
+  border-radius: 15px;
+
+  align-items: center;
+  text-align: center;
+
+  height: 33px;
+}
+
+.link:hover {
+  background-color: #5EA4E4;
+  color: #F3F3F5;
+}

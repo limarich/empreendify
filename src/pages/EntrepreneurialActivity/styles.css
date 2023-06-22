@@ -1,0 +1,17 @@
+#entrepreneurial-activity {
+  background-color: #fff;
+  padding: 40px;
+  
+  width: 77%;
+}
+
+.contentContainerCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border: 0px solid red;
+
+  gap: 20px;
+}

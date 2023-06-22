@@ -10,6 +10,7 @@ import { MenuAction } from "../pages/MenuAction";
 import { Blog } from "../pages/Blog";
 import { BusinessPlan } from "../pages/BusinessPlan";
 import { Form } from "../pages/Form";
+import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 
 export const Routes = () => {
   return (
@@ -27,6 +28,7 @@ export const Routes = () => {
       <Route path="/business-plan" Component={BusinessPlan} />
 
       <Route path="/form" Component={Form} />
+      <Route path="/entrepreneurial-activity" Component={EntrepreneurialActivity} />
 
     </Switch>
   );
