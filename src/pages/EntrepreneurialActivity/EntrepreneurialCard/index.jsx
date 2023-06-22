@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./styles.css";
 
 export const EntrepreneurialCard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="contentCard">
       <h3 className="title">Análise da Atividade Empreendedora</h3>
@@ -9,7 +13,9 @@ export const EntrepreneurialCard = () => {
       <button 
         className="link" 
         href="#"
-        onClick={() => {}}
+        onClick={() => {
+          navigate('/entrepreneurial-text')
+        }}
       >
         Saiba Mais
       </button>
