@@ -31,9 +31,9 @@ export const Routes = () => {
       <Route path="/business-plan" Component={BusinessPlan} />
 
       <Route path="/form" Component={Form} />
-      <Route path="/entrepreneurial-activity" Component={EntrepreneurialActivity} />
-      <Route path="/entrepreneurial-text" Component={TextEntreprenaurialActivity} />
 
+      <Route path="/entrepreneurial-activity" Component={EntrepreneurialActivity} />
+      <Route path="/entrepreneurial-activity/:textID" Component={TextEntreprenaurialActivity} />
     </Switch>
   );
 };

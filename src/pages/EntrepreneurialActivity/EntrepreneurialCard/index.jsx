@@ -14,7 +14,7 @@ export const EntrepreneurialCard = () => {
         className="link" 
         href="#"
         onClick={() => {
-          navigate('/entrepreneurial-text')
+          navigate('/entrepreneurial-activity/1')
         }}
       >
         Saiba Mais
