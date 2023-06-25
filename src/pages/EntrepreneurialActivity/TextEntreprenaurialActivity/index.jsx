@@ -4,40 +4,7 @@ import styles from './styles.module.css';
 import { ArrowRight, ArrowLeft } from "@phosphor-icons/react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const texts = [
-  {
-    title: "Análise da atividade empreendedora",
-    text: "Texto 1"
-  },
-  {
-    title: "Quais os setores funcionais da empresa?",
-    text: "Texto 2"
-  },
-  {
-    title: "Entrevista com os coordenadores de cada setor",
-    text: "Texto 3"
-  },
-  {
-    title: "Quais os principais problemas pós observação e diagnóstico?",
-    text: "Texto 4"
-  },
-  {
-    title: "Observação e Diagnóstico",
-    text: "Texto 5"
-  },
-  {
-    title: "Análise da Atividade Empreendedora",
-    text: "Texto 6"
-  },
-  {
-    title: "Ferramentas importantes para melhoria de processos",
-    text: "Texto 7"
-  },
-  {
-    title: "Ativos intangíveis",
-    text: "Texto 8"
-  },
-]
+import { texts } from '../index';
 
 export const TextEntreprenaurialActivity = (props) => {
   const navigate = useNavigate();
