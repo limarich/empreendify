@@ -7,10 +7,9 @@ import { forms } from '../BusinessPlan'
 
 export const Form = () => {
   const navigate = useNavigate();
-  const { content } = useParams();
-  console.log(content);
 
-  const [numberOfActivatedForm, setNumberOfActivatedForm] = useState(0);
+  const { formID } = useParams();
+  console.log(formID);
 
   return (
     <div id="form-page">
@@ -18,19 +17,19 @@ export const Form = () => {
         <ul className="topics-list">
           {
             forms.map((form, index) => {
-              console.log(index);
-              console.log(`Estado: ${numberOfActivatedForm}`);
+              
               return(
                 <li 
                   key={index}
-                  className={`topic-item ${index == numberOfActivatedForm ? "selected" : ""}`}
+                  className={`topic-item ${index == formID ? "selected" : ""}`}
                   onClick={() => {
-                    setNumberOfActivatedForm(index);
+                    navigate(`/business-plan/${index}`);
                   }}
                 >
                   {form.title}
                 </li>
               )
+
             })
           }
         </ul>
@@ -38,7 +37,7 @@ export const Form = () => {
 
       <div className="formContainer">
         <div className="formContentContainer">
-          <h1 className="title">{forms[numberOfActivatedForm].title}</h1>
+          <h1 className="title">{forms[formID].title}</h1>
         </div>
       </div>
     </div>

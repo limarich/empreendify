@@ -9,7 +9,7 @@ export const ProgressCard = ({ index, title, description}) => {
   return (
     <div
       className="container"
-      onClick={() => navigate("/form", { formIndex: index })}
+      onClick={() => navigate(`/business-plan/${index}`)}
     >
       <h4>{title}</h4>
       <p className="descriptionText">{description}</p>

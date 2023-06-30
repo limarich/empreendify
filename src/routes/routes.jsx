@@ -28,9 +28,9 @@ export const Routes = () => {
 
       <Route path="/menu-action" Component={MenuAction} />
       <Route path="/blog" Component={Blog} />
-      <Route path="/business-plan" Component={BusinessPlan} />
 
-      <Route path="/form" Component={Form} />
+      <Route path="/business-plan" Component={BusinessPlan} />
+      <Route path="/business-plan/:formID" Component={Form} />
 
       <Route path="/entrepreneurial-activity" Component={EntrepreneurialActivity} />
       <Route path="/entrepreneurial-activity/:textID" Component={TextEntreprenaurialActivity} />
