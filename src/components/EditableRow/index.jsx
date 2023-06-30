@@ -30,13 +30,16 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
 
   function resizeRow() {
     var textarea = document.querySelector(".editable-row .input-control textarea");
+    var editableRow = document.querySelector(".editable-row");
+    const offset_editableRow = 100;
+
     console.log(textarea.style.height);
     console.log(textarea.scrollHeight);
     console.log(textarea.clientHeight);
 
     textarea.style.height = textarea.style.minHeight;
     if(textarea.scrollHeight > textarea.clientHeight) {
-      textarea.style.height = textarea.scrollHeight + "px";
+      editableRow.style.height = (40 + textarea.scrollHeight) + "px";
     }
   }
 

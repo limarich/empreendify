@@ -1,9 +1,10 @@
 .editable-row {
   display: flex;
 
-  border: 0px solid blue;
-
+  border: 1px solid blue;
+  
   margin-bottom: 20px;
+  min-height: 160px;
 }
 
 .editable-row::after {
@@ -18,11 +19,12 @@
 }
 
 .editable-row .input-control {
+
   margin: 0px;
   
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 
   width: 300px;
@@ -32,6 +34,8 @@
   border-right: 0px;
   
   min-height: 100px;
+  border: 1px solid red;
+
 }
 
 .editable-row .input-control:last-of-type {
@@ -39,12 +43,14 @@
 }
 
 .editable-row .input-control .header {
+  
   all: unset;
   width: 300px;
   text-align: center;
   margin-bottom: 0.5rem;
-
+  
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid red;
 }
 
 .editable-row .input-control .tag {
@@ -54,7 +60,8 @@
   border-radius: 16px;
   color: #fff;
   width: 90%;
-  margin: auto;
+
+  border: 1px solid green;
 }
 
 .editable-row .input-control:nth-child(even) .tag {
@@ -67,12 +74,15 @@
 
 .editable-row .input-control textarea {
   all: unset;
-  min-height: 100px;
+  min-height: 70px;
   width: 90%;
   padding-left: 1 rem;
   padding-top: 1rem;
   white-space: pre-wrap;
   word-break: break-word;
 
-  border: 0px solid red;
+  border: 1px solid red;
+
+  flex: 1;
+  overflow: hidden;
 }
