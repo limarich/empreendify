@@ -14,7 +14,7 @@ import img6 from "../../assets/logos/AtividadeEmpreendedora.svg";
 const navigationLinks = [
   {
 
-  },
+  }
 ]
 
 export const Navbar = () => {

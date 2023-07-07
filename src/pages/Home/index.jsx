@@ -42,6 +42,7 @@ export const Home = () => {
               title={option.title}
               description={option.description}
               url={option.url}
+              activeButton={false}
             />
           ))}
       </div>
