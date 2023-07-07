@@ -23,9 +23,17 @@ export const TextEntreprenaurialActivity = (props) => {
             }
           }}
         >
-          <ArrowLeft size={28} color="#000" style={{
-            margin: 20
-          }} />
+          <ArrowLeft 
+            size={28} 
+            color={
+              textID == 1
+                ? "#A0A0A0"
+                : "#000"
+            }
+            style={{
+              margin: 20
+            }} 
+          />
         </button>
         <button href="#" className={styles.goFoward}
           onClick={() => {
@@ -35,9 +43,17 @@ export const TextEntreprenaurialActivity = (props) => {
             }
           }}
         >
-          <ArrowRight size={28} color="#000" style={{
-            marginRight: 20
-          }} />
+          <ArrowRight 
+            size={28} 
+            color={
+              textID == texts.length
+              ? "#A0A0A0"
+              : "#000"
+            } 
+            style={{
+              marginRight: 20
+            }} 
+          />
         </button>
         <h2 className={styles.title}>
           {texts[textID - 1].title}

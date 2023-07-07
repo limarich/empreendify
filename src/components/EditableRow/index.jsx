@@ -29,18 +29,21 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
   };
 
   function resizeRow() {
-    var textarea = document.querySelector(".editable-row .input-control textarea");
     var editableRow = document.querySelector(".editable-row");
-    const offset_editableRow = 100;
+    
+    var textarea = document.querySelectorAll(".editable-row .input-control textarea");
+    textarea.forEach((area => {
 
-    console.log(textarea.style.height);
-    console.log(textarea.scrollHeight);
-    console.log(textarea.clientHeight);
+      console.log(area.style.height);
+      console.log(area.scrollHeight);
+      console.log(area.clientHeight);
+  
+      area.style.height = area.style.minHeight;
+      if(area.scrollHeight > area.clientHeight) {
+        editableRow.style.height = (70 + area.scrollHeight) + "px";
+      }
 
-    textarea.style.height = textarea.style.minHeight;
-    if(textarea.scrollHeight > textarea.clientHeight) {
-      editableRow.style.height = (40 + textarea.scrollHeight) + "px";
-    }
+    }));
   }
 
   return (

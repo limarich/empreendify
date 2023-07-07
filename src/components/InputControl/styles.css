@@ -5,6 +5,8 @@
   align-items: start;
   width: 100%;
   margin-bottom: 2rem;
+
+  border: 0px solid red;
 }
 .input-control label {
   color: var(--dark-gray-2);
@@ -25,4 +27,20 @@
 .input-control span {
   font-size: 1.2rem;
   font-weight: 500;
+
+  color: #1E1E1EBF;
+  border: 0px solid red;
+}
+
+.input-control a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: auto;
+  height: auto;
+
+  position: relative;
+  left: 0; 
+  
+  color: #1E1E1EBF;
+  border: 0px solid red;
 }
