@@ -1,46 +1,38 @@
 import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import "./styles.css";
 
 import { SectionHeader } from '../../components/SectionHeader';
 
-import Image from '../../assets/card-img3.png';
+import { options } from "../Home";
 
 export const Blog = () => {
+  const navigate = useNavigate();
+
+  const { blogID } = useParams();
+  console.log(blogID);
+
+  if(blogID < 1 || blogID > options.length) {
+    return;
+  }
+
   return(
     <div id="blog">
       <div className="header-Container">
         <SectionHeader
-          title={"Tipos de Empresas, Porte e Regime Tributário"}
-          description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+          title={options[blogID - 1].title}
+          description={options[blogID - 1].description}
         />
       </div>
       <img
         className="imageHeader"
-        src={Image}
+        src={options[blogID - 1].img}
         alt="Imagem" 
       />
       <div className="container-Here">
         <div className="contentContainer-Here">
           <p className="text-Here">
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            <br />
-            <br />
-            <br />
-
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            <br />
-            <br />
-
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-            <br />
-            <br />
-
-            À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+            {options[blogID - 1].text}
           </p>
         </div>
       </div>

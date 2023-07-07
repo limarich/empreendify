@@ -5,20 +5,28 @@ import imageCard1 from "../../assets/card-img1.png";
 import imageCard2 from "../../assets/card-img2.png";
 import { SectionHeader } from "../../components/SectionHeader";
 
-const options = [
+export const options = [
   {
     img: imageCard1,
     title: "O que é empreender?",
     description:
       "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
-    url: "/blog",
+    text: 
+      `À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+      `
   },
   {
     img: imageCard2,
     title: "O que é empreender?",
     description:
       "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
-    url: "/blog",
+    text: 
+      `À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+    
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+      `
   },
 ];
 
@@ -41,7 +49,7 @@ export const Home = () => {
               img={option.img}
               title={option.title}
               description={option.description}
-              url={option.url}
+              url={`/home/${index + 1}`}
               activeButton={false}
             />
           ))}

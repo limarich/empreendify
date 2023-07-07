@@ -18,16 +18,17 @@ from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
 export const Routes = () => {
   return (
     <Switch>
+      <Route path="*" Component={NotFound} />
       <Route exact path="/" Component={Login} />
-      <Route path="/home" Component={Home} />
+      
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plain" Component={ActionPlain} />
       <Route path="/menu-info" Component={MenuInfo} />
       <Route path="/business-model" Component={BusinessModel} />
-      <Route path="*" Component={NotFound} />
-
       <Route path="/menu-action" Component={MenuAction} />
-      <Route path="/blog" Component={Blog} />
+
+      <Route path="/home" Component={Home} />
+      <Route path="/home/:blogID" Component={Blog} />
     
       <Route path="/business-plan" Component={BusinessPlan} />
       <Route path="/business-plan/:formID" Component={Form} />

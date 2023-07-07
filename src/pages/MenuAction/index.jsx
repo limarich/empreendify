@@ -1,9 +1,9 @@
 import { MenuOption } from "../../components/MenuOption";
 import "./styles.css";
 
-import img1 from "../../assets/card-img4.png";
-import img2 from "../../assets/card-img5.png";
-import img3 from "../../assets/card-img6.png";
+import img1 from "../../assets/card-img1.png";
+import img2 from "../../assets/card-img2.png";
+import img3 from "../../assets/card-img3.png";
 
 const menuOptions = [
   {
