@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import "./styles.css";
@@ -10,6 +10,16 @@ export const Form = () => {
 
   const { formID } = useParams();
   console.log(formID);
+  let lengthOfFormPages = [];
+  for(let i = 0; i < forms[formID].totalPages; i++) {
+    lengthOfFormPages.push(i + 1);
+  }
+
+  // Identificador da página do formulário correspondente
+  const [formPageID, setFormPageID] = useState(1);
+  useEffect(() => {
+    setFormPageID(1);
+  }, [formID]);
 
   return (
     <div id="form-page">
@@ -40,51 +50,80 @@ export const Form = () => {
           <h1 className="title">{forms[formID].title}</h1>
 
           <div className="pagesIndex-container">
-            <div className="pageIndicator selected">1</div>
-            <div className="pageIndicator">2</div>
-            <div className="pageIndicator">3</div>
-            <div className="pageIndicator">4</div>
-            <div className="pageIndicator">5</div>
-            <div className="pageIndicator">6</div>
-            <div className="pageIndicator">7</div>
-            <div className="pageIndicator">8</div>
+            {
+              lengthOfFormPages.map((indicator, index) => {
+                const tag = <div className={`pageIndicator`}>{indicator}</div>
+                const selectedTag = <div className={`pageIndicator selected`}>{indicator}</div>
+
+                return(
+                  indicator == formPageID ? selectedTag : tag
+                );
+              })
+            }
           </div>
 
-          <div className="questionContainer">
-            <p className="questionTitle">
-              Descrição do que é o negócio?
-            </p>
-            <textarea name="" id="answer-textarea" cols="30" rows="10">
-            </textarea>
-          </div>
+          {/* Início do formulário dinâmico */}
+          {
+            forms[formID].pages[formPageID - 1] &&
 
-          <div className="questionContainer">
-            <p className="questionTitle">
-              Quais os principais produtos e/ou serviços?
-            </p>
-            <textarea name="" id="answer-textarea" cols="30" rows="10">
-            </textarea>
-          </div>
+            forms[formID].pages[formPageID - 1].map((page, index) => {
+              const textareaQuestion = (
+                <div className="questionContainer">
+                  <p className="questionTitle">
+                    {page.textareaQuestion}
+                  </p>
+                  <textarea name="" id="answer-textarea" cols="30" rows="10"
+                    required
+                  >
+                  </textarea>
+                </div>
+              );
+              const inputQuestion = (
+                <div className="questionContainer">
+                  <p className="questionTitle">
+                    {page.inputQuestion}
+                  </p>
+                  <div className="inputContainer">
+                    <div className="inputType">
+                      {page.symbol}
+                    </div>
+                    <input className="inputElement" type="text" />
+                  </div>
+                </div>
+              );
 
-          <div className="questionContainer">
-            <p className="questionTitle">
-              Qual o montante de capital a ser investido?
-            </p>
-            <div className="inputContainer">
-              <div className="inputType">
-                R$
-              </div>
-              <input className="inputElement" type="text" />
-            </div>
-          </div>
-
+              return (
+                page.textareaQuestion ? textareaQuestion :
+                  page.inputQuestion ? inputQuestion : undefined
+              );
+            })
+          }
+          {/* Finalização do formulário dinâmico */}
 
           <div className="buttonsContainer">
-            <button className="previous-button">
+            <button className="previous-button"
+              onClick={() => {
+                if(formPageID > 1) {
+                  setFormPageID(formPageID - 1);
+                  window.scrollTo(0, 0);
+                  console.log(formPageID);
+                }
+              }}
+            >
               Voltar
             </button>
-            <button className="next-button">
-              Avançar
+            <button className="next-button"
+              onClick={() => {
+                if(formPageID < forms[formID].totalPages) {
+                  setFormPageID(formPageID + 1);
+                  window.scrollTo(0, 0);
+                  console.log(formPageID);
+                }
+              }}
+            >
+              {
+                formPageID == forms[formID].totalPages ? "Finalizar" : "Avançar"
+              }
             </button>
           </div>
 
