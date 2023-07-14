@@ -8,42 +8,98 @@ export const texts = [
   {
     title: "Análise da atividade empreendedora",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 1"
+    text: 
+      `
+      TEXTO 1
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Quais os setores funcionais da empresa?",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 2"
+    text: 
+      `
+      TEXTO 2
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Entrevista com os coordenadores de cada setor",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 3"
+    text: 
+      `
+      TEXTO 3
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Quais os principais problemas pós observação e diagnóstico?",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 4"
+    text: 
+      `
+      TEXTO 4
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Observação e Diagnóstico",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 5"
+    text: 
+      `
+      TEXTO 5
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Análise da Atividade Empreendedora",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 6"
+    text: 
+      `
+      TEXTO 6
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Ferramentas importantes para melhoria de processos",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 7"
+    text: 
+      `
+      TEXTO 7
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
   {
     title: "Ativos intangíveis",
     abstract: "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
-    text: "Texto 8"
+    text: 
+      `
+      TEXTO 8
+      
+      À primeira vista o Business Model Canvas parece um simples diagrama.
+
+      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+      `
   },
 ];
 
