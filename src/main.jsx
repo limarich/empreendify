@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")).render(
         ? 
           <div style={{
             display: 'flex',
-            width: '100vw'
+            width: '100%'
           }}>
             <Navbar />
             <Routes />

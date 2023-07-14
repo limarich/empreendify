@@ -4,7 +4,6 @@ import "./styles.css";
 import { HintModal } from "../HintModal";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useHistory } from 'react-router-dom';
 
 const businessModelStep = [
   {
@@ -129,7 +128,6 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
   const [isOpen, setIsOpen] = useState(false);
   
   const navigate = useNavigate();
-  const history = useHistory();
 
   return (
     <div class="canva-container">

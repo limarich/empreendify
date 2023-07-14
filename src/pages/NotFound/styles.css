@@ -1,15 +1,7 @@
-#not-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5rem;
-}
-
-#not-found h1 {
-  font-size: 5rem;
-}
-#not-found span {
-  font-size: 2.5rem;
-  color: var(--dark-gray-2);
+.notFound {
+  background-color: #fff;
+  padding: 40px;
+  
+  width: 77%;
+  border: 0px solid red;
 }

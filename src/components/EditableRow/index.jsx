@@ -28,10 +28,13 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
     onStateChange(values, index);
   };
 
+  // Essa função não está funcionando apropriadamente ainda
+  // Necessário pensar em uma lógica melhor
   function resizeRow() {
     var editableRow = document.querySelector(".editable-row");
     
-    var textarea = document.querySelectorAll(".editable-row .input-control textarea");
+    var textarea = document
+    .querySelectorAll(".editable-row .input-control textarea");
     textarea.forEach((area => {
 
       console.log(area.style.height);

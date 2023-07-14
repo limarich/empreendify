@@ -53,11 +53,6 @@ export const ActionPlain = () => {
     setIsHovered(false);
   }
 
-  // // Outros
-  // useEffect(() => {
-  //   console.log(plainItems);
-  // }, [plainItems])
-
   return (
     <section id="action-plain">
       <SectionHeader
@@ -89,14 +84,12 @@ export const ActionPlain = () => {
               </a>
           }
           
-          
             <EditableRow
               onStateChange={handleChildStateChange}
               key={index}
               index={index}
               showHeader={true}
             />
-          
         </div>
       ))}
       </div>
