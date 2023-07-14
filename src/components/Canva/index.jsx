@@ -3,6 +3,8 @@ import "./styles.css";
 
 import { HintModal } from "../HintModal";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 const businessModelStep = [
   {
@@ -12,7 +14,7 @@ const businessModelStep = [
     tag: "what",
     label: "O que?",
     hints: [
-      "Maconha",
+      "dica 1",
       "dica 1.1",
       "dica 1.2",
       "dica 1.3",
@@ -125,6 +127,9 @@ const businessModelStep = [
 
 export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const navigate = useNavigate();
+  const history = useHistory();
 
   return (
     <div class="canva-container">
@@ -170,9 +175,17 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
       <button
         class="btn"
         id="next"
-        disabled={step === 8}
         onClick={() => {
-          if (step + 1 <= 8) setStep(step + 1);
+          if(step === 8) {
+            console.log("Redirecionando!");
+            
+            // Deve-se recarregar a página com finishedBusinessModel como 'true'
+            // Essa variável deve ser enviada como parâmetro no redirecionamento
+          }
+          if(step < 8) {
+            console.log(step + 1);
+            setStep(step + 1);
+          }
         }}
       >
         <CaretRight size={32} color="#fff" style={{ position: "absolute" }} />

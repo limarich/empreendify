@@ -38,7 +38,7 @@ export const HintModal = ({ hints, isOpen, setIsOpen }) => {
               <div
                 key={item}
                 className={`hint-progress-bar  ${
-                  index < hint && "active-hint-bar"
+                  index <= hint && "active-hint-bar"
                 }`}
               ></div>
             ))}
@@ -46,7 +46,7 @@ export const HintModal = ({ hints, isOpen, setIsOpen }) => {
           <button
             className="hint-next-btn"
             onClick={() => {
-              if (hint < hints.length) setHint(hint + 1);
+              if (hint < (hints.length - 1)) setHint(hint + 1);
               else setHint(0);
             }}
           >
