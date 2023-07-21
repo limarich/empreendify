@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { ProgressBar } from "../../components/ProgressBar";
 import "./styles.css";
+
+import { ProgressBar } from "../../components/ProgressBar";
 import { Canva } from "../../components/Canva";
+import { SectionHeader } from "../../components/SectionHeader";
 
 import { useLocation } from 'react-router-dom';
+import { CanvaCard } from "../../components/CanvaCard";
 
 export const BusinessModel = () => {
   const [step, setStep] = useState(0);
@@ -13,9 +16,47 @@ export const BusinessModel = () => {
   const { finishedBusinessModel } = location;
 
   // Redirecionamento do modelo de negócios preenchido!
-  if(finishedBusinessModel == true) {
+  if(true) {
     return(
-      <div></div>
+      <div id="business-model">
+        <SectionHeader 
+          title={"Olá Viviani! Esse é o seu Modelo de Negócios 🙂"}
+          description={""}
+        />
+        <div className="business-model-container">
+          <div className="grid-container">
+
+            <div className={`grid-item${1}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${2}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${3}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${4}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${5}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${6}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${7}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${8}`}>
+              <CanvaCard />
+            </div>
+            <div className={`grid-item${9}`}>
+              <CanvaCard />
+            </div>
+
+          </div>
+        </div>
+      </div>
     )
   }
 

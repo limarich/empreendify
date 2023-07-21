@@ -1,0 +1,82 @@
+.canva {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 3.68473px 3.68473px rgba(0, 0, 0, 0.25));
+  background: #f1f1f1;
+  border-radius: 30px;
+  border: 1px solid green;
+}
+
+.canvaHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid red;
+
+  margin-bottom: 10px;
+}
+
+.canvaTag {
+  width: 113px;
+  height: 33.66px;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 223, 129, 0.9) 0%,
+    rgba(125, 223, 182, 0.9) 100%
+  );
+  border-radius: 31.5127px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+
+  border: 0px solid green;
+}
+.canvaContent {
+  margin: 50px;
+  border: 0px solid blue;
+
+}
+.canvaTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25.6329px;
+  color: var(--dark-gray);
+
+  margin-bottom: 10px;
+}
+.canvaDescription {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.2246px;
+
+  margin-bottom: 20px;
+}
+.canvaInput {
+  text-align: initial;
+  background-color: white;
+  height: 175px;
+  width: 100%;
+  padding: 20px 25px;
+  box-shadow: 0px 2.28182px 2.28182px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border-color: transparent;
+  resize: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.0205px;
+  line-height: 161.52%;
+
+  border: 0px solid red;
+}
+.canvaInput::-webkit-scrollbar {
+  width: 1rem;
+}
+.canvaInput:focus {
+  outline: none !important;
+}
