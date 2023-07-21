@@ -27,31 +27,67 @@ export const BusinessModel = () => {
           <div className="grid-container">
 
             <div className={`grid-item${1}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${2}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${3}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${4}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${5}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${6}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${7}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${8}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
             <div className={`grid-item${9}`}>
-              <CanvaCard />
+              <CanvaCard 
+                label={"Como?"}
+                title={"Parceiros Chave"}
+                description={"Quem são os seus principais fornecedores (terceirizados)?"}
+              />
             </div>
 
           </div>

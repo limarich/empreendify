@@ -28,11 +28,11 @@
 .grid-container {
   display: grid;
   width: 100%;
-  min-width: 600px;
+  min-width: 900px;
 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 colunas */
-  grid-template-rows: 200px 200px 200px; /* 3 linhas */
-  gap: 10px; /* Espaçamento de 10px entre os elementos */
+  grid-template-rows: 300px 300px 300px; /* 3 linhas */
+  gap: 20px; /* Espaçamento de 10px entre os elementos */
 }
 
 .grid-item1 {
