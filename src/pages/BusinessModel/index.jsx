@@ -8,6 +8,8 @@ import { SectionHeader } from "../../components/SectionHeader";
 import { useLocation } from 'react-router-dom';
 import { CanvaCard } from "../../components/CanvaCard";
 
+import { DownloadSimple } from "@phosphor-icons/react";
+
 export const BusinessModel = () => {
   const [step, setStep] = useState(0);
   const [enableHint, setEnableHint] = useState(false);
@@ -22,7 +24,19 @@ export const BusinessModel = () => {
         <SectionHeader 
           title={"Olá Viviani! Esse é o seu Modelo de Negócios 🙂"}
           description={""}
-        />
+        >
+          <div className="downloadContainer">
+            <DownloadSimple
+              size={32}
+              color="#000"
+              style={{
+                cursor: 'pointer'
+              }}
+              onClick={() => {}}
+            />
+          </div>
+
+        </SectionHeader>
         <div className="business-model-container">
           <div className="grid-container">
 
