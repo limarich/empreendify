@@ -3,23 +3,27 @@
   font-size: 62.5%;
   color: var(--dark-gray);
 
+  /* Faltou definir alguns tons de branco. EX.: #f1f1f1 */
   --light-gray: #f2f2f2;
-  --dark-gray: #1e1e1e;
-  --dark-gray-2: #1e1e1ebe;
-  --light-blue: #2cbdeb;
-  --light-blue-2: #4fd6f6;
-  --normal-blue: #5EA4E4;
-  --light-green: #6dc98b;
-  --dark-red: #e45e5e;
-
   --light-gray-2: #565656;
-
-  --normal-gray: #a8a8a8;
-  --light-white: #fff;
-
   --light-gray-3: #a0a0a0;
   --light-gray-4: #b6b6b7;
   --light-gray-5: #DBDBDB;
+  --normal-gray: #a8a8a8;
+  --normal-gray-2: #a7cdf033;
+  --dark-gray: #1e1e1e;
+  --dark-gray-2: #1e1e1ebe;
+  --dark-gray-3: #1e1e1e45;
+
+  --light-blue: #2cbdeb;
+  --light-blue-2: #4fd6f6;
+  --normal-blue: #5EA4E4;
+
+  --light-green: #6dc98b;
+
+  --dark-red: #e45e5e;
+
+  --light-white: #fff;
 
   --h1-font-size: 2rem;
   --p-font-size: 1rem;

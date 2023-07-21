@@ -28,7 +28,7 @@ export const TextEntreprenaurialActivity = (props) => {
             size={28} 
             color={
               textID == 1
-                ? "#A0A0A0"
+                ? "var(--light-gray-3)"
                 : "#000"
             }
             style={{
@@ -48,7 +48,7 @@ export const TextEntreprenaurialActivity = (props) => {
             size={28} 
             color={
               textID == texts.length
-              ? "#A0A0A0"
+              ? "var(--light-gray-3)"
               : "#000"
             } 
             style={{

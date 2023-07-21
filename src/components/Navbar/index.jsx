@@ -24,10 +24,10 @@ export const Navbar = () => {
     let lis = document.querySelectorAll(".navigation-li");
     lis.forEach((li) => {
       li.style.background = "transparent";
-      li.style.color = `#1E1E1E`;
+      li.style.color = `var(--dark-gray)`;
     });
     
-    lis[selectedIndex].style.background = "#A7CDF033";
+    lis[selectedIndex].style.background = "var(--normal-gray-2)";
     lis[selectedIndex].style.color = "var(--normal-blue)";
 
   }, [selectedIndex]);

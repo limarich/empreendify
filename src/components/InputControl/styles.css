@@ -22,13 +22,13 @@
   background-color: var(--light-gray);
 }
 .input-control input::placeholder {
-  color: #1e1e1e45;
+  color: var(--dark-gray-3);
 }
 .input-control span {
   font-size: 1.2rem;
   font-weight: 500;
 
-  color: #1E1E1EBF;
+  color: var(--dark-gray-2);
   border: 0px solid red;
 }
 
@@ -41,6 +41,6 @@
   position: relative;
   left: 0; 
   
-  color: #1E1E1EBF;
+  color: var(--dark-gray-2);
   border: 0px solid red;
 }
