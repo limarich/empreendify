@@ -118,6 +118,9 @@ export const Form = () => {
                   setFormPageID(formPageID + 1);
                   window.scrollTo(0, 0);
                   console.log(formPageID);
+
+                } else {
+                  navigate('/business-plan');
                 }
               }}
             >

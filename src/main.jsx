@@ -6,7 +6,7 @@ import { Routes } from "./routes/routes";
 
 import { Login } from "./pages/Login";
 
-export let logged = true;
+export let logged = false;
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

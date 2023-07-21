@@ -14,12 +14,12 @@ import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 
 import { TextEntreprenaurialActivity } 
 from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
+import { logged } from "../main";
 
 export const Routes = () => {
   return (
     <Switch>
       <Route path="*" Component={NotFound} />
-      <Route exact path="/" Component={Login} />
       
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plan" Component={ActionPlan} />
