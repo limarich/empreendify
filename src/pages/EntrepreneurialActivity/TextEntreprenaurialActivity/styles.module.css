@@ -1,6 +1,8 @@
 .textEntreprenaurialActivity {
   border: 0px solid red;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .headerEntreprenaur {
@@ -9,7 +11,7 @@
 
   width: 100%;
   height: 70px;
-  border: 0px solid red;
+  border: 1px solid red;
 
   border-bottom: 1px solid #a8a8a8;
   background-color: #fff;
@@ -41,6 +43,7 @@
   border: 0px solid blue;
 
   padding: 50px 100px;
+
 }
 
 .contentContainer {

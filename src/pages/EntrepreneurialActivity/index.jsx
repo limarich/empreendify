@@ -15,6 +15,24 @@ export const texts = [
       À primeira vista o Business Model Canvas parece um simples diagrama.
 
       À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       `
   },
   {

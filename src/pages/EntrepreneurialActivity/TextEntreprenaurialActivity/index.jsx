@@ -14,6 +14,7 @@ export const TextEntreprenaurialActivity = (props) => {
 
   return(
     <div className={styles.textEntreprenaurialActivity}>
+
       <div className={styles.headerEntreprenaur}>
         <button href="#" className={styles.goBack}
           onClick={() => {
@@ -59,6 +60,7 @@ export const TextEntreprenaurialActivity = (props) => {
           {texts[textID - 1].title}
         </h2>
       </div>
+
       <div className={styles.container}>
         <div className={styles.contentContainer}>
           <p className={styles.text}>
@@ -66,6 +68,7 @@ export const TextEntreprenaurialActivity = (props) => {
           </p>
         </div>
       </div>
+      
     </div>
   )
 }
