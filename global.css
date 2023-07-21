@@ -7,8 +7,19 @@
   --dark-gray: #1e1e1e;
   --dark-gray-2: #1e1e1ebe;
   --light-blue: #2cbdeb;
+  --light-blue-2: #4fd6f6;
+  --normal-blue: #5EA4E4;
   --light-green: #6dc98b;
   --dark-red: #e45e5e;
+
+  --light-gray-2: #565656;
+
+  --normal-gray: #a8a8a8;
+  --light-white: #fff;
+
+  --light-gray-3: #a0a0a0;
+  --light-gray-4: #b6b6b7;
+  --light-gray-5: #DBDBDB;
 
   --h1-font-size: 2rem;
   --p-font-size: 1rem;
@@ -19,7 +30,7 @@
   box-sizing: border-box;
 }
 section {
-  background-color: #fff;
+  background-color: var(--light-white);
   min-height: 100%;
 }
 ::-webkit-scrollbar {

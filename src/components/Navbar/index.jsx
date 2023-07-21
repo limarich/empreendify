@@ -24,11 +24,11 @@ export const Navbar = () => {
     let lis = document.querySelectorAll(".navigation-li");
     lis.forEach((li) => {
       li.style.background = "transparent";
-      li.style.color = "#1E1E1E";
+      li.style.color = `#1E1E1E`;
     });
     
     lis[selectedIndex].style.background = "#A7CDF033";
-    lis[selectedIndex].style.color = "#5EA4E4";
+    lis[selectedIndex].style.color = "var(--normal-blue)";
 
   }, [selectedIndex]);
 
@@ -55,7 +55,7 @@ export const Navbar = () => {
         <li 
           className="navigation-li"
           onClick={() => {
-            navigate("/action-plain");
+            navigate("/action-plan");
             setSelectedIndex(1);
           }}
         >

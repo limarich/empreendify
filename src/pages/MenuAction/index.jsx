@@ -11,7 +11,7 @@ const menuOptions = [
     description:
       "O plano 5W2H é uma metodologia de planejamento e gestão de projetos que ajuda a identificar e definir as necessidades e objetivos de um projeto.  Ajuda a identificar recursos, etapas e responsabilidades para alcançar os objetivos do projeto.",
     img_url: img1,
-    link: "/action-plain",
+    link: "/action-plan",
   },
   {
     title: "Análise SWOT",

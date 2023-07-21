@@ -7,7 +7,7 @@ import "./styles.css";
 import trashIcon from '../../assets/logos/TrashSimple.svg';
 import trashIconHovered from '../../assets/logos/TrashSimpleFilled.svg';
 
-export const ActionPlain = () => {
+export const ActionPlan = () => {
 
   // Controle de estado do contéudo escrito
   const initialState = {
@@ -21,15 +21,15 @@ export const ActionPlain = () => {
     status: "",
   };
 
-  const [plainItems, setPlainItems] = useState([initialState]);
+  const [planItems, setplanItems] = useState([initialState]);
   const [childState, setChildState] = useState('');
 
   const handleChildStateChange = (newState, index) => {
     setChildState(newState);
 
-    let array = [...plainItems];
+    let array = [...planItems];
     array[index] = childState;
-    setPlainItems([...array]);
+    setplanItems([...array]);
   };
 
 
@@ -46,15 +46,15 @@ export const ActionPlain = () => {
   }
 
   const handleDeleteEditableRow = (index) => {
-    let array = [...plainItems];
+    let array = [...planItems];
     array.splice(index, 1);
-    setPlainItems([...array]);
+    setplanItems([...array]);
 
     setIsHovered(false);
   }
 
   return (
-    <section id="action-plain">
+    <section id="action-plan">
       <SectionHeader
         title="Plano de ação 5W2H "
         description="O plano 5W2H é uma metodologia de planejamento e gestão de projetos que ajuda a identificar e definir as necessidades e objetivos de um projeto.  Ajuda a identificar recursos, etapas e responsabilidades para alcançar os objetivos do projeto."
@@ -63,7 +63,7 @@ export const ActionPlain = () => {
       <div className="editable-rows"
         onMouseEnter={() => handleMouseEnter(index)}
       >
-      {plainItems.map((item, index) => (
+      {planItems.map((item, index) => (
         <div style={{
           display: 'flex',
           position: 'relative'
@@ -94,7 +94,7 @@ export const ActionPlain = () => {
       ))}
       </div>
 
-      <button onClick={() => setPlainItems([...plainItems, initialState])}>
+      <button onClick={() => setplanItems([...planItems, initialState])}>
         Nova linha +
       </button>
 

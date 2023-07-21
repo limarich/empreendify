@@ -6,8 +6,8 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #fff;
-  border-right: 1px solid #a8a8a8;
+  background-color: var(--light-white);
+  border-right: 1px solid var(--normal-gray);
 
   height: 100vh;
 
@@ -55,7 +55,7 @@ header ul li {
 
 header ul li:hover {
   background-color: #A7CDF033;
-  color: #5EA4E4;
+  color: var(--normal-blue);
   transition: all 0.5s ease;
 }
 

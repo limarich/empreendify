@@ -55,14 +55,14 @@
   font-size: 1.6rem;
   padding: 0.5rem 0;
   border-radius: 16px;
-  color: #fff;
+  color: var(--light-white);
   width: 90%;
 
   border: 0px solid green;
 }
 
 .editable-row .input-control:nth-child(even) .tag {
-  background-color: #5ea4e4;
+  background-color: var(--normal-blue);
 }
 
 .editable-row .input-control:nth-child(odd) .tag {

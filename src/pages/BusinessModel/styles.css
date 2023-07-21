@@ -1,5 +1,5 @@
 #business-model {
-  background-color: #fff;
+  background-color: var(--light-white);
   padding: 40px;
   
   width: 77%;
@@ -17,7 +17,7 @@
   font-size: 34.5141px;
   line-height: 36px;
 
-  color: #1E1E1E;
+  color: var(--dark-gray);
 
   margin-bottom: 40px;
 }

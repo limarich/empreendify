@@ -1,5 +1,5 @@
 #blog {
-  background-color: #fff;
+  background-color: var(--light-white);
   border: 0px solid red;
 }
 
@@ -32,7 +32,7 @@
 
   position: relative;
   top: -70px;
-  background-color: #fff;
+  background-color: var(--light-white);
 
   border: 1px solid rgba(0, 0, 0, 0.26);
   text-align: justify;

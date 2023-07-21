@@ -13,10 +13,10 @@ export const Swot = () => {
 
       <div className="legend">
         <span>
-          <b style={{ backgroundColor: "#5EA4E4" }}></b>Fatores Positivos
+          <b style={{ backgroundColor: "var(--normal-blue)" }}></b>Fatores Positivos
         </span>
         <span>
-          <b style={{ backgroundColor: "#E45E5E" }}></b>Fatores Negativos
+          <b style={{ backgroundColor: "var(--dark-red)" }}></b>Fatores Negativos
         </span>
       </div>
 

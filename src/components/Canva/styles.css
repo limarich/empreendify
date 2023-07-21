@@ -61,7 +61,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 25.6329px;
-  color: #1e1e1e;
+  color: var(--dark-gray);
 
   margin-bottom: 10px;
 }
@@ -130,13 +130,13 @@
 }
 
 .btn {
-  background-color: #5EA4E4;
+  background-color: var(--normal-blue);
   color: white;
   cursor: pointer;
   padding: 8px;
   font-size: 14px;
   
-  border: 2px solid #5EA4E4;
+  border: 2px solid var(--normal-blue);
   border-radius: 50px;
   height: 32px;
   width: 32px;
@@ -147,8 +147,8 @@
   align-items: center;
 }
 button:disabled {
-  background-color: #b6b6b7;
-  border-color: #b6b6b7;
+  background-color: var(--light-gray-4);
+  border-color: var(--light-gray-4);
 }
 
 .ph {

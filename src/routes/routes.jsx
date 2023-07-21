@@ -1,5 +1,5 @@
 import { Route, Routes as Switch } from "react-router-dom";
-import { ActionPlain } from "../pages/ActionPlain";
+import { ActionPlan } from "../pages/ActionPlan";
 import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import { NotFound } from "../pages/NotFound";
@@ -22,7 +22,7 @@ export const Routes = () => {
       <Route exact path="/" Component={Login} />
       
       <Route path="/swot" Component={Swot} />
-      <Route path="/action-plain" Component={ActionPlain} />
+      <Route path="/action-plan" Component={ActionPlan} />
       <Route path="/menu-info" Component={MenuInfo} />
       <Route path="/business-model" Component={BusinessModel} />
       <Route path="/menu-action" Component={MenuAction} />

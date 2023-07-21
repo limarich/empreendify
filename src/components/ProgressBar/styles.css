@@ -29,21 +29,21 @@
 }
 
 .progress-item {
-  background-color: #5EA4E4;
+  background-color: var(--normal-blue);
   height: 2px;
 }
 
 .notProgress-item {
-  background-color: #b6b6b7;
+  background-color: var(--light-gray-4);
   height: 2px;
 }
 
 .circle {
   width: 40px;
   height: 40px;
-  background: #ffffff;
-  border: 3px solid #b6b6b7;
-  color: #b6b6b7;
+  background: var(--light-white);
+  border: 3px solid var(--light-gray-4);
+  color: var(--light-gray-4);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -56,9 +56,9 @@
 }
 
 .circle.active {
-  border-color: #5EA4E4;
+  border-color: var(--normal-blue);
   color: white;
-  background-color: #5EA4E4;
+  background-color: var(--normal-blue);
 }
 
 .label {

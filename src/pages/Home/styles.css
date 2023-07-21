@@ -1,5 +1,5 @@
 #home {
-  background-color: #fff;
+  background-color: var(--light-white);
   border: 0px solid red;
   padding: 40px;
 }

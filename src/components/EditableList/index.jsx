@@ -40,7 +40,7 @@ export const EditableList = ({ tag, second }) => {
     >
       <span
         className="tag"
-        style={{ backgroundColor: second ? "#e45e5e" : "#5EA4E4" }}
+        style={{ backgroundColor: second ? "var(--dark-red)" : "var(--normal-blue)" }}
       >
         {tag}
       </span>

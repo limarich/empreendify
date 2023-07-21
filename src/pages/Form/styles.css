@@ -7,7 +7,7 @@
   width: 100%;
 
   border: 0px solid red;
-  background-color: #FFFFFF;
+  background-color: var(--light-white);
   
   display: flex;
   align-items: center;
@@ -36,21 +36,21 @@
   padding: 10px;
   cursor: pointer;
 
-  color: #1E1E1E;
+  color: var(--dark-gray);
 
   border-radius: 10px;
 }
 
 .selected {
   text-decoration: underline;
-  color: #FFFFFF;
-  background: #5EA4E4;
+  color: var(--light-white);
+  background: var(--normal-blue);
 }
 
 .topic-item:hover {
   text-decoration: underline;
-  color: #FFFFFF;
-  background: #5EA4E4;
+  color: var(--light-white);
+  background: var(--normal-blue);
 }
 
 .formContainer {
@@ -69,7 +69,7 @@
 .formContentContainer {
   border: 0px solid green;
   border-radius: 20px;
-  background-color: #FFFFFF;
+  background-color: var(--light-white);
 
   width: 800px;
   padding: 50px;
@@ -100,7 +100,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #A0A0A0;
+  border: 1px solid var(--light-gray-3);
 
   font-size: 18px;
   font-weight: 500;
@@ -114,8 +114,8 @@
 }
 
 .selected {
-  color: #fff;
-  background-color: #5EA4E4;
+  color: var(--light-white);
+  background-color: var(--normal-blue);
   border: 0px;
 
   text-decoration: none;
@@ -138,7 +138,7 @@
   padding: 10px;
 
   border-radius: 10px;
-  border: 1px solid #A0A0A0;
+  border: 1px solid var(--light-gray-3);
   resize: vertical;
 
   font-family: Source Sans Pro;
@@ -152,7 +152,7 @@
 }
 
 #answer-textarea:focus {
-  outline-color: #5EA4E4;
+  outline-color: var(--normal-blue);
 }
 
 .inputContainer {
@@ -163,7 +163,7 @@
 }
 
 .inputType {
-  border: 1px solid #A0A0A0;
+  border: 1px solid var(--light-gray-3);
   border-radius: 10px 0 0 10px;
 
   width: 50px;
@@ -179,7 +179,7 @@
 }
 
 .inputElement {
-  border: 1px solid #A0A0A0;
+  border: 1px solid var(--light-gray-3);
   border-radius: 0 10px 10px 0;
 
   width: 100%;
@@ -195,7 +195,7 @@
 }
 
 .inputElement:focus {
-  outline-color: #5EA4E4;
+  outline-color: var(--normal-blue);
 }
 
 .buttonsContainer {
@@ -207,7 +207,7 @@
 }
 
 .previous-button, .next-button {
-  border: 1px solid #1E1E1E;
+  border: 1px solid var(--dark-gray);
 
   border-radius: 10px;
 
@@ -217,12 +217,12 @@
   justify-content: center;
   text-align: center;
 
-  color: #1E1E1E;
+  color: var(--dark-gray);
   font-size: bold;
 }
 
 .next-button {
-  background-color: #5EA4E4;
-  color: #fff;
+  background-color: var(--normal-blue);
+  color: var(--light-white);
   border: 0;
 }

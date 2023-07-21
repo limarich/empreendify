@@ -1,5 +1,5 @@
 #login-section {
-  background-color: #5EA4E4;
+  background-color: var(--normal-blue);
   background-image: url("../.././assets/login-background.png");
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@
 }
 form,
 .form-body {
-  background-color: #fff;
+  background-color: var(--light-white);
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -51,8 +51,8 @@ form,
 }
 .form-submit-btn {
   width: 100%;
-  background-color:#5EA4E4;
-  color: #fff;
+  background-color:var(--normal-blue);
+  color: var(--light-white);
   line-height: 5rem;
   border: none;
   border-radius: 3rem;

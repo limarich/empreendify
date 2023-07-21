@@ -21,7 +21,7 @@
   align-items: center;
   text-align: center;
 
-  color: #1e1e1e;
+  color: var(--dark-gray);
   padding-bottom: 40px;
 }
 .card-description {
@@ -31,7 +31,7 @@
   font-size: 16px;
   line-height: 27px;
   width: 559px;
-  color: #1e1e1e;
+  color: var(--dark-gray);
 }
 .card-img {
   width: 35%;
