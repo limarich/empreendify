@@ -6,7 +6,7 @@ import amico from "../../assets/amico.png";
 
 export const LandingPage = () => {
   return(
-    <div id="landingPage">
+    <div className={styles.landingPage}>
       <header className={styles.headerLandingPage}>
         <div className={styles.logoContainer}>
           <img src={logo} alt="Logo" />
@@ -33,7 +33,9 @@ export const LandingPage = () => {
             Começar agora!
           </a>
         </div>
-        <img src={amico} alt="Imagem" />
+        <img src={amico} alt="Imagem" 
+          className={styles.backgroundImage}
+        />
       </div>
       <div className={styles.toolsSection}>
 
