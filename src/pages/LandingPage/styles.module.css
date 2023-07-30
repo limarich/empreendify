@@ -76,7 +76,11 @@
   align-items: center;
 
   padding: 20px;
+
+  border: 1px solid red;
+
 }
+
 .title {
   font-family: Montserrat;
   font-size: 42px;
@@ -101,4 +105,36 @@
 
 .backgroundImage {
   width: 400px;
+}
+
+.toolsSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 0;
+
+  border: 1px solid red;
+}
+
+.toolsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+  position: relative;
+  
+  width: 550px;
+  border: 1px solid blue;
+}
+
+.Ellipse {
+  position: absolute;
+  left: 0;
+
+  z-index: -1;
+
+  height: 900px;
 }

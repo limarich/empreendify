@@ -3,6 +3,9 @@ import styles from "./styles.module.css";
 
 import logo from "../../assets/logo-empreendify.png";
 import amico from "../../assets/amico.png";
+import Ellipse from "../../assets/Ellipse.svg";
+import { Message } from "./Message";
+import { ToolCard } from "./ToolCard";
 
 export const LandingPage = () => {
   return(
@@ -22,26 +25,51 @@ export const LandingPage = () => {
         </div>
       </header>
       <div className={styles.messageSection}>
-        <div className={styles.message}>
-          <h1 className={styles.title}>
-            Planeje seu trabalho, trabalhe seu plano!
-          </h1>
-          <p className={styles.description}>
-            Organize as principais definições do seu negócio! Identifique quem são seus fornecedores, clientes e consumidores!
-          </p>
-          <a href="#" className={styles.registerButton}>
-            Começar agora!
-          </a>
-        </div>
+        <Message 
+          title={"Planeje seu trabalho, trabalhe seu plano!"}
+          description={"Organize as principais definições do seu negócio! Identifique quem são seus fornecedores, clientes e consumidores!"}
+        />
         <img src={amico} alt="Imagem" 
           className={styles.backgroundImage}
         />
       </div>
-      <div className={styles.toolsSection}>
-
+      <div 
+        className={styles.toolsSection}
+        style={{}}
+      >
+        <img 
+          src={Ellipse} 
+          alt="Ellipse" 
+          className={styles.Ellipse}
+        />
+        <div className={styles.toolsContainer}>
+          <ToolCard
+            title={"Plano de negócios"}
+            description={"Guiamos empreendedores na construção de um novo negócio"}
+          />
+          <ToolCard
+            title={"Análise SWOT"}
+            description={"Guiamos empreendedores na construção de um novo negócio"}
+          />
+          <ToolCard
+            title={"5W2H"}
+            description={"Guiamos empreendedores na construção de um novo negócio"}
+          />
+          <ToolCard
+            title={"Plano de negócios"}
+            description={"Guiamos empreendedores na construção de um novo negócio"}
+          />
+        </div>
+        <Message 
+          title={"Tudo que você precisa em um só lugar!"}
+          description={"Organize as principais definições do seu negócio! Identifique quem são seus fornecedores, clientes e consumidores!"}
+        />
       </div>
       <div className={styles.formSection}>
-
+        <Message 
+          title={"Um Plano de Negócios para quem tem pressa!"}
+          description={"Um plano rápido e dinâmico para quem tem pressa. visualize, planeje e execute cada etapa fundamental do seu plano de negócios com facilidade."}
+        />
       </div>
       <div className={styles.advantagesSection}>
 

@@ -1,0 +1,28 @@
+
+.message {
+  margin: 20px;
+  width: 220px;
+  height: 160px;
+  padding: 10px;
+  
+  border-radius: 10px;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  background-color: var(--light-white);
+}
+
+.title {
+
+}
+
+.button {
+  font-family: Source Sans Pro;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: left;
+}
