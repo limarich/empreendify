@@ -11,9 +11,10 @@ import { Blog } from "../pages/Blog";
 import { BusinessPlan } from "../pages/BusinessPlan";
 import { Form } from "../pages/Form";
 import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
-
+import { LandingPage } from "../pages/LandingPage";
 import { TextEntreprenaurialActivity } 
 from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
+
 import { logged } from "../main";
 
 export const Routes = () => {
@@ -21,6 +22,7 @@ export const Routes = () => {
     <Switch>
       <Route path="*" Component={NotFound} />
       
+      <Route path="/landing-page" Component={LandingPage} />
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plan" Component={ActionPlan} />
       <Route path="/menu-info" Component={MenuInfo} />

@@ -72,6 +72,7 @@ export const ActionPlan = () => {
             index == indexOfHoveredItem
             &&
               <a href="#"
+                className="linkReference"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={(index) => handleDeleteEditableRow(index)}

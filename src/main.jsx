@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { Routes } from "./routes/routes";
 
 import { Login } from "./pages/Login";
+import { LandingPage } from "./pages/LandingPage";
 
 export let logged = false;
 
@@ -22,7 +23,7 @@ createRoot(document.getElementById("root")).render(
             <Routes />
           </div>
         : 
-          <Login />
+          <LandingPage />
       }
       
     </BrowserRouter>

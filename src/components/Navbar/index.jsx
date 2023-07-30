@@ -36,7 +36,7 @@ export const Navbar = () => {
   const location = useLocation();
   if (location.pathname === "/") return null;
   return (
-    <header>
+    <header className="headerNavBar">
       <div className="logo" onClick={() => navigate("/")}>
         <img src={logo} alt="logo" />
       </div>

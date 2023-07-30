@@ -23,6 +23,18 @@ export const forms = [
           symbol: "R$",
         },
       ],
+      [
+        {
+          textareaQuestion: "Descrição do que é o negócio?",
+        },
+        {
+          textareaQuestion: "Quais os principais produtos e/ou serviços?",
+        },
+        {
+          inputQuestion: "Qual o montante de capital a ser investido?",
+          symbol: "R$",
+        },
+      ],
     ]
   },
   {

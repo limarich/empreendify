@@ -1,4 +1,4 @@
-header {
+.headerNavBar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
