@@ -4,6 +4,7 @@ import "./styles.css";
 import img1 from "../../assets/card-img1.png";
 import img2 from "../../assets/card-img2.png";
 import img3 from "../../assets/card-img3.png";
+import { Container } from "../../components/Container";
 
 const menuOptions = [
   {
@@ -28,15 +29,17 @@ const menuOptions = [
 
 export const MenuInfo = () => {
   return (
-    <div className="menu-info">
-      {menuOptions.map((option, index) => (
-        <MenuOption
-          key={index}
-          title={option.title}
-          description={option.description}
-          img_url={option.img_url}
-        />
-      ))}
-    </div>
+    <Container>
+      <div className="menu-info">
+        {menuOptions.map((option, index) => (
+          <MenuOption
+            key={index}
+            title={option.title}
+            description={option.description}
+            img_url={option.img_url}
+          />
+        ))}
+      </div>
+    </Container>
   );
 };

@@ -12,17 +12,16 @@ import { BusinessPlan } from "../pages/BusinessPlan";
 import { Form } from "../pages/Form";
 import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 import { LandingPage } from "../pages/LandingPage";
-import { TextEntreprenaurialActivity } 
-from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
-
-import { logged } from "../main";
+import { TextEntreprenaurialActivity } from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
 
 export const Routes = () => {
   return (
     <Switch>
       <Route path="*" Component={NotFound} />
-      
+
       <Route path="/landing-page" Component={LandingPage} />
+      <Route path="/login" Component={Login} />
+
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plan" Component={ActionPlan} />
       <Route path="/menu-info" Component={MenuInfo} />
@@ -31,14 +30,17 @@ export const Routes = () => {
 
       <Route path="/home" Component={Home} />
       <Route path="/home/:blogID" Component={Blog} />
-    
+
       <Route path="/business-plan" Component={BusinessPlan} />
       <Route path="/business-plan/:formID" Component={Form} />
 
-      <Route path="/entrepreneurial-activity" Component={EntrepreneurialActivity} />
-      <Route 
+      <Route
+        path="/entrepreneurial-activity"
+        Component={EntrepreneurialActivity}
+      />
+      <Route
         path="/entrepreneurial-activity/:textID"
-        Component={TextEntreprenaurialActivity} 
+        Component={TextEntreprenaurialActivity}
       />
     </Switch>
   );

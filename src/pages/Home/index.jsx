@@ -4,6 +4,7 @@ import "./styles.css";
 import imageCard1 from "../../assets/card-img1.png";
 import imageCard2 from "../../assets/card-img2.png";
 import { SectionHeader } from "../../components/SectionHeader";
+import { Container } from "../../components/Container";
 
 export const options = [
   {
@@ -11,49 +12,47 @@ export const options = [
     title: "O que é empreender?",
     description:
       "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
-    text: 
-      `À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+    text: `À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
 
       À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-      `
+      `,
   },
   {
     img: imageCard2,
     title: "O que é empreender?",
     description:
       "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
-    text: 
-      `À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+    text: `À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
     
       À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
-      `
+      `,
   },
 ];
 
 export const Home = () => {
   return (
-    <section id="home">
-      <SectionHeader
-        title={
-          "Esse é o pontapé inicial para criação da sua empresa 🙂"
-        }
-        description={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-        }
-      />
-      <div className="menu-card-options">
-        {options &&
-          options.map((option, index) => (
-            <MenuCard
-              key={index}
-              img={option.img}
-              title={option.title}
-              description={option.description}
-              url={`/home/${index + 1}`}
-              activeButton={false}
-            />
-          ))}
-      </div>
-    </section>
+    <Container>
+      <section id="home">
+        <SectionHeader
+          title={"Esse é o pontapé inicial para criação da sua empresa 🙂"}
+          description={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+          }
+        />
+        <div className="menu-card-options">
+          {options &&
+            options.map((option, index) => (
+              <MenuCard
+                key={index}
+                img={option.img}
+                title={option.title}
+                description={option.description}
+                url={`/home/${index + 1}`}
+                activeButton={false}
+              />
+            ))}
+        </div>
+      </section>
+    </Container>
   );
 };
