@@ -1,4 +1,7 @@
 import { createStore, combineReducers } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
 import CalculatorReducer from './Calculator/Calculator.reducer';
 import FormsReducer from './Foms/Forms.reducer';
 
@@ -7,6 +10,10 @@ const rootReducer = combineReducers({
   forms: FormsReducer
 });
 
-const store = createStore(rootReducer);
+const persistedReducer = persistReducer({
+  key: 'root',
+  storage
+}, rootReducer);
 
-export default store;
+export const store = createStore(persistedReducer);
+export const persistedStore = persistStore(store);

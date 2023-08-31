@@ -80,9 +80,9 @@ export const Form = () => {
                         cols="30"
                         rows="10"
                         required
+                        value={page.textareaQuestion.answer}
                         onChange={(event) => {
                           dispatch(alterForms(event.target.value, formID, formPageID - 1, index));
-                          console.log(forms);
                         }}
                       ></textarea>
                     </div>
@@ -97,10 +97,12 @@ export const Form = () => {
                       <div className="inputContainer">
                         <div className="inputType">{page.symbol}</div>
                         <input className="inputElement" type="text"
+
+                          value={"Outra coisa"}
                           onChange={(event) => {
                             dispatch(alterForms(event.target.value, formID, formPageID - 1, index));
-                            console.log(forms);
                           }}
+
                         />
                       </div>
                     </div>
