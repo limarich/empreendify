@@ -19,7 +19,7 @@ export const BusinessModel = () => {
   const { finishedBusinessModel } = location;
 
   // Redirecionamento do modelo de negócios preenchido!
-  if (true) {
+  if(true) {
     return (
       <Container>
         <div id="business-model">
@@ -43,6 +43,7 @@ export const BusinessModel = () => {
               <div className={`grid-item${1}`}>
                 <CanvaCard
                   label={"Como?"}
+                  type={"how"}
                   title={"Parceiros Chave"}
                   description={
                     "Quem são os seus principais fornecedores (terceirizados)?"
@@ -52,72 +53,80 @@ export const BusinessModel = () => {
               <div className={`grid-item${2}`}>
                 <CanvaCard
                   label={"Como?"}
-                  title={"Parceiros Chave"}
+                  type={"how"}
+                  title={"Atividades Chave"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Quais atividades mais importantes para o seu negócio ?"
                   }
                 />
               </div>
               <div className={`grid-item${3}`}>
                 <CanvaCard
                   label={"Como?"}
-                  title={"Parceiros Chave"}
+                  type={"how"}
+                  title={"Recursos Chave"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Quais os ativos fundamentais para fazer o negócio funcionar?"
                   }
                 />
               </div>
               <div className={`grid-item${4}`}>
                 <CanvaCard
-                  label={"Como?"}
-                  title={"Parceiros Chave"}
+                  label={"O que?"}
+                  type={"what"}
+                  title={"Proposta de Valor"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Quais beneficios seu produto (ou serviço) entrega para seus clientes?"
                   }
                 />
               </div>
               <div className={`grid-item${5}`}>
                 <CanvaCard
-                  label={"Como?"}
-                  title={"Parceiros Chave"}
+                  label={"Pra quem?"}
+                  type={"to-whom"}
+                  title={"Relacionamento com Clientes"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Estratégias que evitam que seus clientes corram para o concorrente."
                   }
                 />
               </div>
               <div className={`grid-item${6}`}>
                 <CanvaCard
-                  label={"Como?"}
-                  title={"Parceiros Chave"}
+                  label={"Pra quem?"}
+                  type={"to-whom"}
+                  title={"Canais"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Caminhos pelos quais a empresa comunica e entrega valor para o cliente."
                   }
                 />
               </div>
               <div className={`grid-item${7}`}>
                 <CanvaCard
-                  label={"Como?"}
-                  title={"Parceiros Chave"}
+                  label={"Pra quem?"}
+                  type={"to-whom"}
+                  title={"Segmento de Mercado"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "É necessário que você defina um nicho de clientes."
                   }
                 />
               </div>
               <div className={`grid-item${8}`}>
                 <CanvaCard
-                  label={"Como?"}
-                  title={"Parceiros Chave"}
+                  label={"Quanto?"}
+                  type={"how-much"}
+                  title={"Estrutura de Custo"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Quais os principais custos que têm peso no financeiro e são derivados da operacionalização do negócio?"
                   }
                 />
               </div>
               <div className={`grid-item${9}`}>
                 <CanvaCard
-                  label={"Como?"}
-                  title={"Parceiros Chave"}
+                  label={"Quanto?"}
+                  type={"how-much"}
+                  title={"Fontes de Receita"}
                   description={
-                    "Quem são os seus principais fornecedores (terceirizados)?"
+                    "Por quais maneiras o cliente pagará pelos benefícios recebidos?"
                   }
                 />
               </div>
@@ -130,21 +139,23 @@ export const BusinessModel = () => {
 
   // Redirecionametno do modelo de negócios não-preenchido!
   return (
-    <div id="business-model">
-      <div className="business-model-container">
-        <h1>Modelo de Negócios</h1>
-        <ProgressBar
-          enableHint={enableHint}
-          active={step}
-          setActive={setStep}
-        />
-        <Canva
-          enableHint={enableHint}
-          setEnableHint={setEnableHint}
-          step={step}
-          setStep={setStep}
-        />
+    <Container>
+      <div id="business-model">
+        <div className="business-model-container">
+          <h1>Modelo de Negócios</h1>
+          <ProgressBar
+            enableHint={enableHint}
+            active={step}
+            setActive={setStep}
+          />
+          <Canva
+            enableHint={enableHint}
+            setEnableHint={setEnableHint}
+            step={step}
+            setStep={setStep}
+          />
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
