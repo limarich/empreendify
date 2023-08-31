@@ -1,6 +1,6 @@
 .message {
   border: 0px solid red;
-  padding: 30px;
+  padding-left: 20px;
 }
 
 .title {
@@ -10,7 +10,7 @@
   letter-spacing: 0em;
   text-align: left;
 
-  width: 500px;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
@@ -21,7 +21,7 @@
   letter-spacing: 0em;
   text-align: left;
 
-  width: 350px;
+  max-width: 350px;
   margin-bottom: 50px;
 }
 

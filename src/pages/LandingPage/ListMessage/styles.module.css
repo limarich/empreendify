@@ -1,6 +1,6 @@
 .message {
   border: 0px solid red;
-  padding: 30px;
+  padding-left: 20px;
 }
 
 .title {
@@ -16,4 +16,5 @@
 
 .unorderedList {
   font-size: 20px;
+  padding-left: 30px;
 }

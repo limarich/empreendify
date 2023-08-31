@@ -11,7 +11,7 @@ export function ToolCard({ title, description }) {
         {description}
       </p>
       <a href="#" className={styles.button}>
-        Saiba mais!
+        Saiba mais
       </a>
     </div>
   );

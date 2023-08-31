@@ -2,16 +2,18 @@
 .landingPage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  padding: 0 100px;
-  border: 1px solid blue;
+  border: 0px solid blue;
 }
 
 .headerLandingPage {
-  width: 100%;
+  width: 1050px;
   height: 70px;
 
-  border: 1px solid red;
+  border: 0px solid red;
+  padding: 0 100px;
 
   display: flex;
   flex-direction: row;
@@ -72,13 +74,10 @@
 .messageSection {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 
-  padding: 20px;
-
-  border: 1px solid red;
-
+  padding: 50px 50px;
+  border: 0px solid red;
 }
 
 .title {
@@ -105,47 +104,38 @@
 
 .backgroundImage {
   width: 400px;
+  margin: 10px;
 }
 
 .toolsContainer {
   display: grid;
 
-  grid-template-columns: 1fr 1fr; /* 2 colunas */
-  grid-template-rows: 1fr 1fr; /* 2 linhas */
-  gap: 20px; /* Espaçamento de 20px entre os elementos */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
 
-  border: 1px solid blue;
+  border: 0px solid blue;
+  margin-right: 60px;
+  margin-left: 20px;
 }
 
 .ToolCardContainer1 {
-  /* Ocupa linhas 1 */
   grid-row: 1 / 2; 
-
-  /* Ocupa colunas 1 */
   grid-column: 1 / 2; 
 }
 
 .ToolCardContainer2 {
-  /* Ocupa linhas 1 */
   grid-row: 1 / 2; 
-
-  /* Ocupa colunas 2 */
   grid-column: 2 / 3; 
 }
 
 .ToolCardContainer3 {
-  /* Ocupa linhas 2 */
   grid-row: 2 / 3; 
-
-  /* Ocupa colunas 1 */
   grid-column: 1 / 2; 
 }
 
 .ToolCardContainer4 {
-  /* Ocupa linhas 2 */
   grid-row: 2 / 3; 
-
-  /* Ocupa colunas 2 */
   grid-column: 2 / 3; 
 }
 
@@ -164,21 +154,21 @@
   justify-content: center;
   align-items: center;
 
-  padding: 150px 0;
+  padding: 150px 50px;
 
-  border: 1px solid red;
+  border: 0px solid red;
 }
 
 .advantagesSection {
-  border: 1px solid red;
+  border: 0px solid red;
   display: flex;
-  padding: 50px 0;
+  padding: 50px 50px;
 }
 
 .formSection {
-  border: 1px solid blue;
+  border: 0px solid blue;
   display: flex;
-  padding: 50px 0;
+  padding: 50px 50px;
 }
 
 .imageContainer {
@@ -192,16 +182,25 @@
   margin: auto;
 }
 
-.navSection {
-  background-color: var(--normal-blue);
-  height: 200px;
+.navSectionContainer {
 
+  background-color: var(--normal-blue); 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navSection {
+  width: 1050px;
+  height: 200px;
   display: flex;
   
   font-family: Source Sans Pro;
   font-size: 18px;
   font-weight: 400;
   color: var(--light-white);
+
+  border: 0px solid green;
 }
 
 .navMessage {
@@ -214,7 +213,7 @@
 }
 
 .navLogoContainer {
-  border: 1px solid red;
+  border: 0px solid red;
 }
 
 .navLogo {

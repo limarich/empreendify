@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-export function Message({ title, description }) {
+export function Message({ title, description, width }) {
   return(
-    <div className={styles.message}>
+    <div className={styles.message}
+      style={{
+        width: width
+      }}
+    >
       <h1 className={styles.title}>
         {title}
       </h1>
