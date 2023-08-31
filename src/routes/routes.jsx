@@ -12,7 +12,9 @@ import { BusinessPlan } from "../pages/BusinessPlan";
 import { Form } from "../pages/Form";
 import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 import { LandingPage } from "../pages/LandingPage";
-import { TextEntreprenaurialActivity } from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
+
+import { TextEntreprenaurialActivity } 
+from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
 
 export const Routes = () => {
   return (

@@ -3,14 +3,22 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import "./styles.css";
 
-import { forms } from "../BusinessPlan";
 import { Container } from "../../components/Container";
 
+import { useSelector, useDispatch } from "react-redux";
+import { alterForms } from "../../store/Foms/Forms.actions";
+
 export const Form = () => {
+
+  const dispatch = useDispatch();
+  const forms = useSelector(state => {
+    return state.forms
+  });
+
   const navigate = useNavigate();
 
   const { formID } = useParams();
-  console.log(formID);
+
   let lengthOfFormPages = [];
   for (let i = 0; i < forms[formID].totalPages; i++) {
     lengthOfFormPages.push(i + 1);
@@ -61,33 +69,46 @@ export const Form = () => {
             {/* Início do formulário dinâmico */}
             {forms[formID].pages[formPageID - 1] &&
               forms[formID].pages[formPageID - 1].map((page, index) => {
-                const textareaQuestion = (
-                  <div className="questionContainer">
-                    <p className="questionTitle">{page.textareaQuestion}</p>
-                    <textarea
-                      name=""
-                      id="answer-textarea"
-                      cols="30"
-                      rows="10"
-                      required
-                    ></textarea>
-                  </div>
-                );
-                const inputQuestion = (
-                  <div className="questionContainer">
-                    <p className="questionTitle">{page.inputQuestion}</p>
-                    <div className="inputContainer">
-                      <div className="inputType">{page.symbol}</div>
-                      <input className="inputElement" type="text" />
-                    </div>
-                  </div>
-                );
 
-                return page.textareaQuestion
-                  ? textareaQuestion
-                  : page.inputQuestion
-                  ? inputQuestion
-                  : undefined;
+                if(page.textareaQuestion) {
+                  const textareaQuestion = (
+                    <div className="questionContainer">
+                      <p className="questionTitle">{page.textareaQuestion}</p>
+                      <textarea
+                        name=""
+                        id="answer-textarea"
+                        cols="30"
+                        rows="10"
+                        required
+                        onChange={(event) => {
+                          dispatch(alterForms(event.target.value, formID, formPageID - 1, index));
+                          console.log(forms);
+                        }}
+                      ></textarea>
+                    </div>
+                  );
+                  return textareaQuestion;
+                }
+
+                if(page.inputQuestion) {
+                  const inputQuestion = (
+                    <div className="questionContainer">
+                      <p className="questionTitle">{page.inputQuestion}</p>
+                      <div className="inputContainer">
+                        <div className="inputType">{page.symbol}</div>
+                        <input className="inputElement" type="text"
+                          onChange={(event) => {
+                            dispatch(alterForms(event.target.value, formID, formPageID - 1, index));
+                            console.log(forms);
+                          }}
+                        />
+                      </div>
+                    </div>
+                  );
+                  return inputQuestion;
+                }
+
+                return undefined;
               })}
             {/* Finalização do formulário dinâmico */}
 
