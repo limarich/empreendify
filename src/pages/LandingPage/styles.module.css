@@ -72,7 +72,7 @@
 .messageSection {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   padding: 20px;
@@ -113,14 +113,14 @@
   justify-content: center;
   align-items: center;
 
-  padding: 100px 0;
+  padding: 150px 0;
 
   border: 1px solid red;
 }
 
 .toolsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   flex-wrap: wrap;
@@ -136,5 +136,19 @@
 
   z-index: -1;
 
-  height: 900px;
+  height: 700px;
+}
+
+.advantagesSection {
+  border: 1px solid red;
+}
+
+.advantagesImage {
+  height: 350px;
+  position: absolute;
+}
+
+.circleBackground {
+  height: 350px;
+  position: absolute;
 }

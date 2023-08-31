@@ -1,5 +1,6 @@
 .message {
   border: 1px solid red;
+  padding: 30px;
 }
 
 .title {
@@ -13,7 +14,7 @@
   margin-bottom: 20px;
 }
 
-.description {
+.description { 
   font-family: Source Sans Pro;
   font-size: 22px;
   font-weight: 400;

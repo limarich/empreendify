@@ -4,6 +4,9 @@ import styles from "./styles.module.css";
 import logo from "../../assets/logo-empreendify.png";
 import amico from "../../assets/amico.png";
 import Ellipse from "../../assets/Ellipse.svg";
+import Circle from "../../assets/Circle.svg";
+import advantagesImage from '../../assets/advantagesImage.png';
+
 import { Message } from "./Message";
 import { ToolCard } from "./ToolCard";
 
@@ -72,7 +75,16 @@ export const LandingPage = () => {
         />
       </div>
       <div className={styles.advantagesSection}>
-
+        <div className="advantagesImages">
+          <img
+            src={Circle} alt="circleBackground" 
+            className={styles.circleBackground}
+          />
+          <img 
+            src={advantagesImage} alt="AdvantagesImage" 
+            className={styles.advantagesImage}
+          />
+        </div>
       </div>
       <nav className={styles.navSection}>
 
