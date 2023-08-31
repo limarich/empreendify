@@ -4,7 +4,7 @@
   flex-direction: column;
 
   padding: 0 100px;
-  border: 2px solid blue;
+  border: 1px solid blue;
 }
 
 .headerLandingPage {
@@ -108,15 +108,45 @@
 }
 
 .toolsContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
 
-  flex-wrap: wrap;
-  position: relative;
-  
-  width: 550px;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  grid-template-rows: 1fr 1fr; /* 2 linhas */
+  gap: 20px; /* Espaçamento de 20px entre os elementos */
+
   border: 1px solid blue;
+}
+
+.ToolCardContainer1 {
+  /* Ocupa linhas 1 */
+  grid-row: 1 / 2; 
+
+  /* Ocupa colunas 1 */
+  grid-column: 1 / 2; 
+}
+
+.ToolCardContainer2 {
+  /* Ocupa linhas 1 */
+  grid-row: 1 / 2; 
+
+  /* Ocupa colunas 2 */
+  grid-column: 2 / 3; 
+}
+
+.ToolCardContainer3 {
+  /* Ocupa linhas 2 */
+  grid-row: 2 / 3; 
+
+  /* Ocupa colunas 1 */
+  grid-column: 1 / 2; 
+}
+
+.ToolCardContainer4 {
+  /* Ocupa linhas 2 */
+  grid-row: 2 / 3; 
+
+  /* Ocupa colunas 2 */
+  grid-column: 2 / 3; 
 }
 
 .Ellipse {
@@ -162,3 +192,50 @@
   margin: auto;
 }
 
+.navSection {
+  background-color: var(--normal-blue);
+  height: 200px;
+
+  display: flex;
+  
+  font-family: Source Sans Pro;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--light-white);
+}
+
+.navMessage {
+  flex: 1;
+  padding-left: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navLogoContainer {
+  border: 1px solid red;
+}
+
+.navLogo {
+  height: 70px;
+}
+
+.navDescription {
+  padding-left: 30px;
+  width: 300px;
+}
+
+.navContact {
+  flex: 1;
+  padding-left: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navDescriptionContact {
+  width: 250px;
+  margin-bottom: 10px;
+}

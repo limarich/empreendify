@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 
 import logo from "../../assets/logo-empreendify.png";
+import logoWhite from "../../assets/logo-white.png";
 
 import Ellipse from "../../assets/Ellipse.svg";
 
@@ -15,7 +16,7 @@ import { ToolCard } from "./ToolCard";
 
 export const LandingPage = () => {
   return(
-    <div className={styles.landingPage}>advantagesImage
+    <div className={styles.landingPage}>
       <header className={styles.headerLandingPage}>
         <div className={styles.logoContainer}>
           <img src={logo} alt="Logo" />
@@ -50,22 +51,35 @@ export const LandingPage = () => {
           className={styles.Ellipse}
         />
         <div className={styles.toolsContainer}>
-          <ToolCard
-            title={"Plano de negócios"}
-            description={"Guiamos empreendedores na construção de um novo negócio"}
-          />
-          <ToolCard
-            title={"Análise SWOT"}
-            description={"Guiamos empreendedores na construção de um novo negócio"}
-          />
-          <ToolCard
-            title={"5W2H"}
-            description={"Guiamos empreendedores na construção de um novo negócio"}
-          />
-          <ToolCard
-            title={"Plano de negócios"}
-            description={"Guiamos empreendedores na construção de um novo negócio"}
-          />
+
+          <div className={styles.ToolCardContainer1}>
+            <ToolCard
+              title={"Plano de negócios"}
+              description={"Guiamos empreendedores na construção de um novo negócio"}
+            />
+          </div>
+
+          <div className={styles.ToolCardContainer2}>
+            <ToolCard
+              title={"Análise SWOT"}
+              description={"Guiamos empreendedores na construção de um novo negócio"}
+            />
+          </div>
+          
+          <div className={styles.ToolCardContainer3}>
+            <ToolCard
+              title={"5W2H"}
+              description={"Guiamos empreendedores na construção de um novo negócio"}
+            />
+          </div>
+          
+          <div className={styles.ToolCardContainer4}>
+            <ToolCard
+              title={"Plano de negócios"}
+              description={"Guiamos empreendedores na construção de um novo negócio"}
+            />
+          </div>
+
         </div>
         <Message 
           title={"Tudo que você precisa em um só lugar!"}
@@ -107,6 +121,36 @@ export const LandingPage = () => {
       </div>
 
       <nav className={styles.navSection}>
+        <div className={styles.navMessage}>
+
+          <div className={styles.navLogoContainer}>
+            <img src={logoWhite} alt="Logo" 
+              className={styles.navLogo}
+            />
+          </div>
+          <p className={styles.navDescription}>
+            Desbloquear seu potencial empresarial é a nossa missão
+          </p>
+
+        </div>
+
+        <div className={styles.navContact}>
+
+          <p className={styles.navDescriptionContact}>
+            Deixe seu <b>email</b> ou <b>telefone</b>, entraremos em contato em breve!
+          </p>
+          <div>
+            <p 
+              style={{
+                fontSize: 12
+              }}
+            >
+              Email ou Telefone
+            </p>
+            <input type="text"/>
+          </div>
+
+        </div>
       </nav>
     </div>
   )
