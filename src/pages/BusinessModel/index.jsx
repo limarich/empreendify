@@ -19,7 +19,7 @@ export const BusinessModel = () => {
   const { finishedBusinessModel } = location;
 
   // Redirecionamento do modelo de negócios preenchido!
-  if(true) {
+  if(false) {
     return (
       <Container>
         <div id="business-model">

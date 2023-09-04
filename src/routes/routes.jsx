@@ -12,10 +12,10 @@ import { BusinessPlan } from "../pages/BusinessPlan";
 import { Form } from "../pages/Form";
 import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 import { LandingPage } from "../pages/LandingPage";
-
 import { TextEntreprenaurialActivity } 
 from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
 import { Perfil } from "../pages/Perfil";
+import { EntrepreneurialProfile } from "../pages/EntrepreneurialProfile";
 
 export const Routes = () => {
   return (
@@ -48,6 +48,10 @@ export const Routes = () => {
       <Route
         path="/perfil"
         Component={Perfil}
+      />
+      <Route
+        path="/entrepreneurial-profile"
+        Component={EntrepreneurialProfile}
       />
     </Switch>
   );
