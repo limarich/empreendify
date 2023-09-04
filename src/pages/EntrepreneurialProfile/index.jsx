@@ -23,6 +23,24 @@ export const EntrepreneurialProfile = () => {
           <ObjectiveQuestion 
             description={"Você acha que esta é a hora de mudar de lado deixando de ser empregado para ser empregador, empreendedor?"}
           />
+          <ObjectiveQuestion 
+            description={"Você já escolheu um nicho ou segmento para seu negócio?"}
+          />
+          <ObjectiveQuestion 
+            description={"Você se relaciona bem com as pessoas em geral?"}
+          />
+          <ObjectiveQuestion 
+            description={"Sente que precisa crescer na questão relacional, pois sendo empreendedor você precisará lidar bem com as pessoas e seu conflitos dentro e fora de sua empresa (funcionários, clientes). Você se sente pronto?"}
+          />
+
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <button
+              className={styles.submitButton}
+              onClick={() => {}}
+            >
+              Finalizar
+            </button>
+          </div>
         </div>
       </div>
     </Container>

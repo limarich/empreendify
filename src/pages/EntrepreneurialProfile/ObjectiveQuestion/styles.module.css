@@ -1,0 +1,27 @@
+
+.description {
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+
+  margin-bottom: 50px;
+}
+
+.button {
+  border: 1px solid var(--light-gray-5);
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin-right: 10px;
+
+  font-family: Source Sans Pro;
+  font-size: 19px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
