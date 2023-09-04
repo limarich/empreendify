@@ -1,5 +1,6 @@
 .message {
-  border: 1px solid red;
+  border: 0px solid red;
+  padding-left: 20px;
 }
 
 .title {
@@ -9,18 +10,18 @@
   letter-spacing: 0em;
   text-align: left;
 
-  width: 500px;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
-.description {
+.description { 
   font-family: Source Sans Pro;
   font-size: 22px;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
 
-  width: 350px;
+  max-width: 350px;
   margin-bottom: 50px;
 }
 

@@ -1,22 +1,22 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 
-export function CanvaCard({ label, title, description }) {
+export function CanvaCard({ label, title, description, type }) {
   return(
-    <div class={styles.canva}>
-      <div class={styles.canvaContent}>
-        <div class={styles.canvaHeader}>
-          <div class={styles.canvaTag}>
+    <div className={styles.canva}>
+      <div className={styles.canvaContent}>
+        <div className={styles.canvaHeader}>
+          <div className={`canvaTag ${type}`}>
             {label}
           </div>
         </div>
-        <div class={styles.canvaTitle}>
+        <div className={styles.canvaTitle}>
           {title}
         </div>
-        <div class={styles.canvaDescription}>
+        <div className={styles.canvaDescription}>
           {description}
         </div>
-        <textarea class={styles.canvaInput}></textarea>
+        <textarea className={styles.canvaInput}></textarea>
       </div>
     </div>
   );
