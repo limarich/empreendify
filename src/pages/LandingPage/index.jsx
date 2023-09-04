@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import styles from "./styles.module.css";
 
 import logo from "../../assets/logo-empreendify.png";
@@ -13,9 +15,21 @@ import Image3 from '../../assets/LandingPage/Image3.png';
 import { Message } from "./Message";
 import { ListMessage } from "./ListMessage";
 import { ToolCard } from "./ToolCard";
+import { InputControl } from "../../components/InputControl";
 
 export const LandingPage = () => {
+
+  const [showPopup, setShowPopup] = useState(false);
+  const widthOfPopup = 500;
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
   return(
+    <>
     <div className={styles.landingPage}>
       <header className={styles.headerLandingPage}>
         <div className={styles.logoContainer}>
@@ -27,8 +41,24 @@ export const LandingPage = () => {
           <a href="" className={styles.reference}>Contato</a>
         </div>
         <div className={styles.autenticationContainer}>
-          <a href="#" className={styles.registerButton}>Começar agora!</a>
-          <a href="#" className={styles.loginButton}>Entrar</a>
+          <a 
+            href="#" 
+            className={styles.registerButton}
+            onClick={() => {
+              setShowPopup(true)
+            }}
+          >
+            Começar agora!
+          </a>
+          <a 
+            href="#" 
+            className={styles.loginButton}
+            onClick={() => {
+              navigate("/login")
+            }}
+          >
+            Entrar
+          </a>
         </div>
       </header>
 
@@ -158,5 +188,80 @@ export const LandingPage = () => {
         </nav>
       </div>
     </div>
+
+    {
+      showPopup && 
+      <div 
+        id="Fade"
+        className={styles.fade}
+        style={showPopup && {
+          display: 'flex',
+          border: '0px solid blue'
+        }}
+        onClick={(event) => {
+          const popup = document.getElementById("popup");
+          if (!popup.contains(event.target)) {
+            setShowPopup(false);
+          }
+        }}
+      >
+        <div 
+          id="popup"
+          className={styles.popup}
+          style={{
+            width: widthOfPopup,
+            left: `calc(50% - ${widthOfPopup / 2}px)`
+          }}
+        >
+          <h4 className={styles.popupTitle}>
+            Preencha os campos
+          </h4>
+          
+          <div className="form-body">
+            <InputControl
+              name="login"
+              title="Nome"
+              value={name}
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+            />
+            <InputControl
+              name="login"
+              title="Email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="email@gmail.com"
+            />
+            <InputControl
+              name="password"
+              title="Senha"
+              type="password"
+              description="Senha de 8 digitos"
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </div>
+
+          <a 
+            href="#" 
+            className={styles.popupButton}
+            style={{
+              height: 40,
+              fontSize: 13,
+              borderRadius: 30
+            }}
+            onClick={() => setShowPopup(false)}
+          >
+            Continuar
+          </a>
+        </div>
+      </div>
+    }
+    </>
   )
 }
