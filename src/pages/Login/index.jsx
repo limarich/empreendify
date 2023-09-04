@@ -1,12 +1,18 @@
-import { InputControl } from "../../components/InputControl";
-import logo from "../../assets/logo-white.png";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./styles.css";
 
-import { useNavigate } from "react-router-dom";
+import { InputControl } from "../../components/InputControl";
+import { PopUp } from "./PopUp";
+
+import logo from "../../assets/logo-white.png";
+
 import api from "../../api";
-import { useState } from "react";
 
 export const Login = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -58,7 +64,10 @@ export const Login = () => {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            retrive_password_field
+            passwordHelp
+            passwordHelpFunction={() => {
+              setShowPopup(true);
+            }}
           />
         </div>
         <button
@@ -71,6 +80,12 @@ export const Login = () => {
           Entrar
         </button>
       </form>
+
+      <PopUp
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+      />
+
     </section>
   );
 };

@@ -5,7 +5,8 @@ export const InputControl = ({
   title,
   placeholder = "",
   description = "",
-  retrive_password_field,
+  passwordHelp,
+  passwordHelpFunction,
   value,
   onChange,
 }) => {
@@ -19,8 +20,27 @@ export const InputControl = ({
         onChange={onChange}
         placeholder={placeholder}
       />
-      <span>{description}</span>
-      {retrive_password_field && <a href="#">Esqueci a senha</a>}
+      <div className="others"
+        style={{
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'space-between',
+        }}
+      >
+        <span>{description}</span>
+        <a
+          style={{
+            color: 'var(--normal-blue)',
+            cursor: 'pointer'
+          }}
+          onClick={() => {
+            passwordHelpFunction();
+          }}
+        >
+          {passwordHelp && "Esqueci a senha"}
+        </a>
+      </div>
+      
     </div>
   );
 };
