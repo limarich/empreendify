@@ -4,7 +4,7 @@ import { Container } from "../../components/Container";
 import styles from "./styles.module.css";
 import './styles.module.css';
 
-export const Perfil = () => {
+export const Profile = () => {
   const [showPopup, setShowPopup] = useState(false);
   const width = 320;
 

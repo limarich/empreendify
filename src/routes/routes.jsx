@@ -14,7 +14,7 @@ import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 import { LandingPage } from "../pages/LandingPage";
 import { TextEntreprenaurialActivity } 
 from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
-import { Perfil } from "../pages/Perfil";
+import { Profile } from "../pages/Profile";
 import { EntrepreneurialProfile } from "../pages/EntrepreneurialProfile";
 
 export const Routes = () => {
@@ -46,8 +46,8 @@ export const Routes = () => {
         Component={TextEntreprenaurialActivity}
       />
       <Route
-        path="/perfil"
-        Component={Perfil}
+        path="/profile"
+        Component={Profile}
       />
       <Route
         path="/entrepreneurial-profile"

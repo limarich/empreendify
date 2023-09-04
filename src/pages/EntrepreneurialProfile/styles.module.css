@@ -1,0 +1,17 @@
+.contentContainer {
+  background-color: #f7f7f8;
+  padding: 40px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  background-color: var(--light-white);
+  border: 1px solid var(--light-gray-3);
+  border-radius: 10px;
+  padding: 30px 40px;
+
+  display: flex;
+  flex-direction: column;
+}
