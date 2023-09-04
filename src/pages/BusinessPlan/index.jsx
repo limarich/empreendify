@@ -5,23 +5,26 @@ import { SectionHeader } from "../../components/SectionHeader";
 import { ProgressCard } from "../../components/ProgressCard";
 import { Container } from "../../components/Container";
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 
 export const BusinessPlan = () => {
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
+  const userName = userData.user.name ?? "";
 
   const dispatch = useDispatch();
   const result = useSelector((state) => {
-    return state.calculator
+    return state.calculator;
   });
   const forms = useSelector((state) => {
-    return state.forms
+    return state.forms;
   });
 
   return (
     <Container>
       <div id="businessPlan">
         <SectionHeader
-          title={"Olá Viviani! Esse é o seu Plano de Negócios 🙂"}
+          title={`Olá ${userName}! Esse é o seu Plano de Negócios 🙂`}
           description={
             "Você precisa finalizar o preenchimento das seguintes etapas do seu plano de négocios"
           }
