@@ -18,13 +18,17 @@ export const BusinessModel = () => {
   const location = useLocation();
   const { finishedBusinessModel } = location;
 
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
+  const userName = userData.user.name ?? "";
+
   // Redirecionamento do modelo de negócios preenchido!
   if (true) {
     return (
       <Container>
         <div id="business-model">
           <SectionHeader
-            title={"Olá Viviani! Esse é o seu Modelo de Negócios 🙂"}
+            title={`Olá ${userName}! Esse é o seu Modelo de Negócios 🙂`}
             description={""}
           >
             <div className="downloadContainer">

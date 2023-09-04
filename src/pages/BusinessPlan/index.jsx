@@ -80,11 +80,15 @@ export const forms = [
 ];
 
 export const BusinessPlan = () => {
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
+  const userName = userData.user.name ?? "";
+
   return (
     <Container>
       <div id="businessPlan">
         <SectionHeader
-          title={"Olá Viviani! Esse é o seu Plano de Negócios 🙂"}
+          title={`Olá ${userName}! Esse é o seu Plano de Negócios 🙂`}
           description={
             "Você precisa finalizar o preenchimento das seguintes etapas do seu plano de négocios"
           }
