@@ -2,11 +2,10 @@ import { useState } from "react";
 import { Container } from "../../components/Container";
 
 import styles from "./styles.module.css";
-import './styles.module.css';
 
 export const Profile = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const width = 320;
+  const widthOfPopup = 320;
 
   return (
     <Container>
@@ -48,32 +47,32 @@ export const Profile = () => {
               border: '0px solid blue'
             }}
           >
-          <div className={styles.popup}
-            style={{
-              width: width,
-              left: `calc(50% - ${width / 2}px)`
-            }}
-          >
-            <h4 className={styles.popupTitle}>
-              Sucesso! 🎉
-            </h4>
-            <p className={styles.popupDescription}>
-              Suas informações foram salvas com sucesso. 
-              Clique em continuar para prosseguir!
-            </p>
-            <a 
-              href="#" 
-              className={styles.button}
+            <div className={styles.popup}
               style={{
-                height: 30,
-                fontSize: 13,
-                borderRadius: 30
+                width: widthOfPopup,
+                left: `calc(50% - ${widthOfPopup / 2}px)`
               }}
-              onClick={() => setShowPopup(false)}
             >
-              Continuar
-            </a>
-          </div>
+              <h4 className={styles.popupTitle}>
+                Sucesso! 🎉
+              </h4>
+              <p className={styles.popupDescription}>
+                Suas informações foram salvas com sucesso. 
+                Clique em continuar para prosseguir!
+              </p>
+              <a 
+                href="#" 
+                className={styles.button}
+                style={{
+                  height: 30,
+                  fontSize: 13,
+                  borderRadius: 30
+                }}
+                onClick={() => setShowPopup(false)}
+              >
+                Continuar
+              </a>
+            </div>
           </div>
         </>
       }

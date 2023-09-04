@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container } from "../../components/Container";
 import { SectionHeader } from '../../components/SectionHeader';
 
@@ -6,6 +7,10 @@ import { ObjectiveQuestion } from './ObjectiveQuestion';
 import styles from "./styles.module.css";
 
 export const EntrepreneurialProfile = () => {
+
+  const [showPopup, setShowPopup] = useState(false);
+  const widthOfPopup = 500;
+
   return (
     <Container>
       <div className={styles.contentContainer}>
@@ -36,13 +41,53 @@ export const EntrepreneurialProfile = () => {
           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <button
               className={styles.submitButton}
-              onClick={() => {}}
+              onClick={() => {
+                setShowPopup(true)
+              }}
             >
               Finalizar
             </button>
           </div>
         </div>
       </div>
+
+      {
+        showPopup &&
+        <>
+          <div className={styles.fade}
+            style={showPopup && {
+              display: 'flex',
+              border: '0px solid blue'
+            }}
+          >
+            <div className={styles.popup}
+              style={{
+                width: widthOfPopup,
+                left: `calc(50% - ${widthOfPopup / 2}px)`
+              }}
+            >
+              <h4 className={styles.popupTitle}>
+                Cada um tem o seu tempo!
+              </h4>
+              <p className={styles.popupDescription}>
+                À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.
+              </p>
+              <a 
+                href="#" 
+                className={styles.popupButton}
+                style={{
+                  height: 30,
+                  fontSize: 13,
+                  borderRadius: 30
+                }}
+                onClick={() => setShowPopup(false)}
+              >
+                Continuar
+              </a>
+            </div>
+          </div>
+        </>
+      }
     </Container>
   );
 };
