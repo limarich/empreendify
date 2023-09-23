@@ -9,8 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 export const BusinessPlan = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
-
-  const userName = userData.user.name ?? "";
+  const userName = "userData.user.name" ?? "";
 
   const dispatch = useDispatch();
   const result = useSelector((state) => {
@@ -21,7 +20,7 @@ export const BusinessPlan = () => {
   });
 
   return (
-    <Container>
+    <Container referenceTo={3}>
       <div id="businessPlan">
         <SectionHeader
           title={`Olá ${userName}! Esse é o seu Plano de Negócios 🙂`}

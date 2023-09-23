@@ -6,12 +6,14 @@ export const MenuCard = ({ img, title, description, url, activeButton }) => {
   return (
     <div className="card-option" onClick={() => navigate(url)}>
       <div className="information-container">
-        <h3>{title}</h3>
+        <h3>
+          {title}
+        </h3>
         <p>{description}</p>
         {
           activeButton &&
           <div className="button-container">
-            <button
+            <button 
               className="link"
             >
               Faça o teste

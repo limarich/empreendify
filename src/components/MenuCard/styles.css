@@ -39,6 +39,9 @@
   line-height: 28px;
 
   margin-bottom: 10px;
+
+  width: 80%;
+  text-align: initial !important;
 }
 
 .information-container p {
@@ -67,4 +70,7 @@
   border-radius: 1rem;
 }
 
-.button-container {}
+.button-container .link {
+  width: 75%;
+  border-radius: 50px;
+}

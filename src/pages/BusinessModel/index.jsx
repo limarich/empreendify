@@ -5,7 +5,6 @@ import { ProgressBar } from "../../components/ProgressBar";
 import { Canva } from "../../components/Canva";
 import { SectionHeader } from "../../components/SectionHeader";
 
-import { useLocation } from "react-router-dom";
 import { CanvaCard } from "../../components/CanvaCard";
 
 import { DownloadSimple } from "@phosphor-icons/react";
@@ -15,12 +14,8 @@ export const BusinessModel = () => {
   const [step, setStep] = useState(0);
   const [enableHint, setEnableHint] = useState(false);
 
-  const location = useLocation();
-  const { finishedBusinessModel } = location;
-
   const userData = JSON.parse(localStorage.getItem("userData"));
-
-  const userName = userData.user.name ?? "";
+  const userName = "userData.user.name" ?? "";
 
   // Redirecionamento do modelo de negócios preenchido!
   if(false) {
