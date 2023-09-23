@@ -124,7 +124,7 @@ export const texts = [
 
 export const EntrepreneurialActivity = () => {
   return (
-    <Container>
+    <Container referenceTo={5}>
       <div id="entrepreneurial-activity">
         <SectionHeader
           title={"Esse é o pontapé inicial para criação da sua empresa 🙂"}

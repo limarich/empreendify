@@ -18,7 +18,7 @@ export const Blog = () => {
   }
 
   return (
-    <Container>
+    <Container referenceTo={4} >
       <div id="blog">
         <div className="header-Container">
           <SectionHeader

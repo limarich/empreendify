@@ -1,3 +1,4 @@
+
 .headerNavBar {
   display: flex;
   flex-direction: column;
@@ -18,18 +19,18 @@
   z-index: 1000;
 }
 
-.logo {
+.logoContainer {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.logo img {
+.logoImage {
   max-height: 100px;
   width: auto;
 }
 
-header ul {
+.navUnorderedList {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -39,7 +40,7 @@ header ul {
   padding-top: 20px;
 }
 
-header ul li {
+.navigationLi {
   list-style: none;
   font-size: 1.2rem;
   font-weight: 500;
@@ -55,10 +56,10 @@ header ul li {
   width: 100%;
 }
 
-header ul li:hover {
-  background-color: var(--normal-gray-2);
-  color: var(--normal-blue);
-  transition: all 0.5s ease;
+.navigationLi:hover {
+  background-color: var(--normal-gray-2) !important;
+  color: var(--normal-blue) !important;
+  transition: all 0.5s ease !important;
 }
 
 .selected {

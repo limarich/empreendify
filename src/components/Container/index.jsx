@@ -1,6 +1,6 @@
 import { Navbar } from "../Navbar";
 
-export const Container = ({ children }) => {
+export const Container = ({ children, referenceTo }) => {
   return (
     <div
       style={{
@@ -8,7 +8,7 @@ export const Container = ({ children }) => {
         width: "100%",
       }}
     >
-      <Navbar />
+      <Navbar referenceTo={referenceTo}/>
       {children}
     </div>
   );

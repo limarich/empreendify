@@ -25,7 +25,7 @@ export const BusinessModel = () => {
   // Redirecionamento do modelo de negócios preenchido!
   if(false) {
     return (
-      <Container>
+      <Container referenceTo={2}>
         <div id="business-model">
           <SectionHeader
             title={`Olá ${userName}! Esse é o seu Modelo de Negócios 🙂`}
@@ -143,7 +143,7 @@ export const BusinessModel = () => {
 
   // Redirecionametno do modelo de negócios não-preenchido!
   return (
-    <Container>
+    <Container referenceTo={2}>
       <div id="business-model">
         <div className="business-model-container">
           <h1>Modelo de Negócios</h1>

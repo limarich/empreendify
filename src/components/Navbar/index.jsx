@@ -1,5 +1,5 @@
-import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./styles.css";
 
 import logo from "../../assets/logo-empreendify.png";
@@ -11,98 +11,71 @@ import img4 from "../../assets/logos/PlanoDeNegocios.svg";
 import img5 from "../../assets/logos/SaibaMais.svg";
 import img6 from "../../assets/logos/AtividadeEmpreendedora.svg";
 
+const imagesForNavigation = [
+  img1, img2, img3, img4, img5, img6
+];
 const navigationLinks = [
-  {
-
-  }
+  "/swot",
+  "/action-plan",
+  "/business-model",
+  "/business-plan",
+  "/home",
+  "/entrepreneurial-activity"
+];
+const namesForDescription = [
+  "Análise SWOT",
+  "Plano de ação: 5W2H",
+  "Modelo de Negócios",
+  "Plano de Negócios",
+  "Saiba Mais",
+  "Atividade Empreendedora"
 ]
 
-export const Navbar = () => {
-  const [selectedIndex, setSelectedIndex] = useState(4);
-
-  useEffect(() => {
-    let lis = document.querySelectorAll(".navigation-li");
-    lis.forEach((li) => {
-      li.style.background = "transparent";
-      li.style.color = `var(--dark-gray)`;
-    });
-    
-    lis[selectedIndex].style.background = "var(--normal-gray-2)";
-    lis[selectedIndex].style.color = "var(--normal-blue)";
-
-  }, [selectedIndex]);
-
+export const Navbar = ({ referenceTo }) => {
+  const [selectedIndex, setSelectedIndex] = useState(referenceTo);
   const navigate = useNavigate();
-  const location = useLocation();
-  if (location.pathname === "/") return null;
+
+  const handleItemClick = (index) => {
+    console.log(index);
+    setSelectedIndex(index);
+
+    navigate(navigationLinks[index]);
+  }
+
   return (
     <header className="headerNavBar">
-      <div className="logo" onClick={() => navigate("/")}>
-        <img src={logo} alt="logo" />
+      <div className="logoContainer" onClick={() => navigate("/")}>
+        <img className="logoImage" src={logo} alt="logo" />
       </div>
-      <ul>
-        <li
-          className="navigation-li"
-          onClick={() => {
-            navigate("/swot");
-            setSelectedIndex(0);
-          }}
-        >
-          <img className="logosImage" src={img1} alt=""
-          />
-          <p>Análise SWOT</p>
-        </li>
-        <li 
-          className="navigation-li"
-          onClick={() => {
-            navigate("/action-plan");
-            setSelectedIndex(1);
-          }}
-        >
-          <img className="logosImage" src={img2} alt=""
-          />
-          <p>Plano de ação: 5W2H</p>
-        </li>
-        <li
-          className="navigation-li"
-          onClick={() => {
-            navigate("/business-model");
-            setSelectedIndex(2);
-          }}
-        >
-          <img className="logosImage" src={img3} alt="" />
-          <p>Modelo de Negócios</p>
-        </li>
-        <li
-          className="navigation-li"
-          onClick={() => {
-            navigate("/business-plan");
-            setSelectedIndex(3);
-          }}
-        >
-          <img className="logosImage" src={img4} alt="" />
-          <p>Plano de Negócios</p>
-        </li>
-        <li
-          className="navigation-li"
-          onClick={() => {
-            navigate("/home");
-            setSelectedIndex(4);
-          }}
-        >
-          <img className="logosImage" src={img5} alt="" />
-          <p>Saiba Mais</p>
-        </li>
-        <li
-          className="navigation-li"
-          onClick={() => {
-            navigate("/entrepreneurial-activity");
-            setSelectedIndex(5);
-          }}
-        >
-          <img className="logosImage" src={img6} alt="" />
-          <p>Atividade Empreendedora</p>
-        </li>
+      <ul className="navUnorderedList">
+        {
+          navigationLinks.map((item, index) => {
+            return(
+              <li
+                key={index}
+                className="navigationLi"
+                onClick={() => {
+                  handleItemClick(index);
+                }}
+                style={
+                  index === selectedIndex
+                  ? {
+                      backgroundColor: 'var(--normal-gray-2)',
+                      color: 'var(--normal-blue)'
+                    }
+                  : {}  
+                }
+              >
+                <img 
+                  className="logosImage" 
+                  src={imagesForNavigation[index]} 
+                  alt="INavigationImage"
+                />
+                <p>{namesForDescription[index]}</p>
+              </li>
+            );
+          })
+        }
       </ul>
     </header>
   );

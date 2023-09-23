@@ -32,6 +32,7 @@ export const Routes = () => {
       <Route path="/menu-action" Component={MenuAction} />
 
       <Route path="/home" Component={Home} />
+
       <Route path="/home/:blogID" Component={Blog} />
 
       <Route path="/business-plan" Component={BusinessPlan} />
