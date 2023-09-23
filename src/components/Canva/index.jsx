@@ -176,9 +176,7 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
         onClick={() => {
           if(step === 8) {
             console.log("Redirecionando!");
-            
-            // Deve-se recarregar a página com finishedBusinessModel como 'true'
-            // Essa variável deve ser enviada como parâmetro no redirecionamento
+            navigate('/business-model', { state: { finished: true } });
           }
           if(step < 8) {
             console.log(step + 1);

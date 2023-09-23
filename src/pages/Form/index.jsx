@@ -16,7 +16,6 @@ export const Form = () => {
   });
 
   const navigate = useNavigate();
-
   const { formID } = useParams();
 
   let lengthOfFormPages = [];
@@ -29,6 +28,15 @@ export const Form = () => {
   useEffect(() => {
     setFormPageID(1);
   }, [formID]);
+
+  const handleUpdateResponse = (event, index) => {
+    dispatch(alterForms(
+      event.target.value, formID, formPageID - 1, index
+    ));
+
+    console.log(`Indices: ${formID} ${formPageID - 1} ${index}`);
+
+  }
 
   return (
     <Container>
@@ -72,7 +80,10 @@ export const Form = () => {
 
                 if(page.textareaQuestion) {
                   const textareaQuestion = (
-                    <div className="questionContainer">
+                    <div 
+                      key={`${formID}${formPageID - 1}${index}`}
+                      className="questionContainer"
+                    >
                       <p className="questionTitle">{page.textareaQuestion}</p>
                       <textarea
                         name=""
@@ -82,8 +93,10 @@ export const Form = () => {
                         required
                         value={page.textareaQuestion.answer}
                         onChange={(event) => {
-                          dispatch(alterForms(event.target.value, formID, formPageID - 1, index));
-                        }}
+                            handleUpdateResponse(event, index)
+                          }
+                        }
+
                       ></textarea>
                     </div>
                   );
@@ -92,25 +105,27 @@ export const Form = () => {
 
                 if(page.inputQuestion) {
                   const inputQuestion = (
-                    <div className="questionContainer">
+                    <div
+                      key={`${formID}${formPageID - 1}${index}`}
+                      className="questionContainer"
+                    >
                       <p className="questionTitle">{page.inputQuestion}</p>
                       <div className="inputContainer">
                         <div className="inputType">{page.symbol}</div>
-                        <input className="inputElement" type="text"
-
-                          value={"Outra coisa"}
+                        <input 
+                          className="inputElement"
+                          type="text"
+                          value={page.inputQuestion.answer}
                           onChange={(event) => {
-                            dispatch(alterForms(event.target.value, formID, formPageID - 1, index));
-                          }}
-
+                              handleUpdateResponse(event, index)
+                            }
+                          }
                         />
                       </div>
                     </div>
                   );
                   return inputQuestion;
                 }
-
-                return undefined;
               })}
             {/* Finalização do formulário dinâmico */}
 

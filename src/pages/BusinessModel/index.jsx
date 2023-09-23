@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import "./styles.css";
 
 import { ProgressBar } from "../../components/ProgressBar";
@@ -7,18 +8,30 @@ import { SectionHeader } from "../../components/SectionHeader";
 
 import { CanvaCard } from "../../components/CanvaCard";
 
-import { DownloadSimple } from "@phosphor-icons/react";
+import { DownloadSimple, PencilSimple } from "@phosphor-icons/react";
 import { Container } from "../../components/Container";
 
 export const BusinessModel = () => {
   const [step, setStep] = useState(0);
   const [enableHint, setEnableHint] = useState(false);
+  const navigate = useNavigate();
 
   const userData = JSON.parse(localStorage.getItem("userData"));
   const userName = "userData.user.name" ?? "";
 
+  const location = useLocation();
+  const state = location.state;
+  let finished = false;
+  if(!state) {
+    finished = false;
+  } else {
+    finished = state.finished;
+  }
+  
+  console.log(`Página de redirecionamento: ${finished}`);
+  
   // Redirecionamento do modelo de negócios preenchido!
-  if(false) {
+  if(finished) {
     return (
       <Container referenceTo={2}>
         <div id="business-model">
@@ -26,7 +39,17 @@ export const BusinessModel = () => {
             title={`Olá ${userName}! Esse é o seu Modelo de Negócios 🙂`}
             description={""}
           >
-            <div className="downloadContainer">
+            <div className="iconsContainer">
+              <PencilSimple
+                size={32}
+                color="#000"
+                style={{
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  navigate('/business-model', { state: { finished: false }});
+                }}
+              />
               <DownloadSimple
                 size={32}
                 color="#000"

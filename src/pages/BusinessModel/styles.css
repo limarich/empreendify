@@ -83,13 +83,10 @@
   grid-column: 3 / 6;
 }
 
-.downloadContainer {
+.iconsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 30px;
-  height: 30px;
 
   position: absolute;
   top: 0;
