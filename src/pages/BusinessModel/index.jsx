@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import "./styles.css";
+
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
 
 import { ProgressBar } from "../../components/ProgressBar";
 import { Canva } from "../../components/Canva";
@@ -15,6 +18,7 @@ export const BusinessModel = () => {
   const [step, setStep] = useState(0);
   const [enableHint, setEnableHint] = useState(false);
   const navigate = useNavigate();
+  const pdfRef = useRef();
 
   const userData = JSON.parse(localStorage.getItem("userData"));
   const userName = "userData.user.name" ?? "";
@@ -27,6 +31,24 @@ export const BusinessModel = () => {
   } else {
     finished = state.finished;
   }
+
+  const downloadPDF = () => {
+    const input = pdfRef.current;
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4', true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+      const imgY = 30;
+
+      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+      pdf.save('Modelo de negócios.pdf');
+    })
+  }
   
   console.log(`Página de redirecionamento: ${finished}`);
   
@@ -34,7 +56,7 @@ export const BusinessModel = () => {
   if(finished) {
     return (
       <Container referenceTo={2}>
-        <div id="business-model">
+        <div id="business-model" ref={pdfRef}>
           <SectionHeader
             title={`Olá ${userName}! Esse é o seu Modelo de Negócios 🙂`}
             description={""}
@@ -56,7 +78,7 @@ export const BusinessModel = () => {
                 style={{
                   cursor: "pointer",
                 }}
-                onClick={() => {}}
+                onClick={downloadPDF}
               />
             </div>
           </SectionHeader>

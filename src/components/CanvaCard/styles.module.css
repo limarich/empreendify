@@ -3,23 +3,21 @@
   height: 100%;
   filter: drop-shadow(0px 3.68473px 3.68473px rgba(0, 0, 0, 0.25));
   background: #f1f1f1;
-  border-radius: 30px;
+  border-radius: 18px;
   border: 0px solid var(--light-gray);
 }
 
 .canvaContent {
-  /* padding: 20px; */
+  padding: 10px;
 
   border: 0px solid blue;
-  height: 80%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
 }
 
 .canvaHeader {
-  padding: 10px 0 0 20px;
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,23 +25,6 @@
   border: 0px solid red;
 
   margin-bottom: 10px;
-}
-
-.canvaTag {
-  padding: 0 20px;
-
-  width: 50px;
-  height: 20px;
-  border-radius: 31.5127px;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: 700;
-  font-size: 8px;
-
-  border: 10px solid green;
 }
 
 /* Cores para as tags de acordo com a categoria */
@@ -77,8 +58,6 @@
 }
 
 .canvaTitle {
-  padding: 0 20px;
-
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
@@ -89,8 +68,6 @@
 }
 
 .canvaDescription {
-  padding: 0 20px;
-  
   font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
@@ -106,25 +83,25 @@
   background-color: white;
 
   width: 100%;
-  height: 100%;
   resize: none;
+  height: 100%;
+  padding: 10px;
 
-  padding: 10px 10px;
-  box-shadow: 0px 2.28182px 2.28182px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
   border: 0px solid red;
-  border-radius: 20px;
-  border-color: transparent;
+  border-radius: 18px;
 
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  font-size: 16.0205px;
-  line-height: 161.52%;
+  font-size: 12px;
 }
+
 .canvaInput::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.5rem;
 }
+
 .canvaInput:focus {
   outline: none !important;
 }
