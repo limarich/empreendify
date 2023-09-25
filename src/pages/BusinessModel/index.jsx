@@ -33,22 +33,44 @@ export const BusinessModel = () => {
   }
 
   const downloadPDF = () => {
+
+    // Tentativa
+    // function diminuirZoom() {
+    //   const currentZoom = parseFloat(document.body.style.zoom) || 1;
+    //   const newZoom = currentZoom - 0.1;
+    //   document.body.style.zoom = newZoom;
+    // }
+
     const input = pdfRef.current;
     html2canvas(input).then((canvas) => {
+
+      const pdf = new jsPDF('l', 'mm', 'a4', false);
+
+      canvas.style.width = '20px';
       const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'mm', 'a4', true);
+
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = pdf.internal.pageSize.getHeight();
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
       const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
       const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 30;
+      const imgY = 0;
 
+      /*
+      pdf.addImage(imgData, 'PNG', 0, 0, 0, 0);
+      */
       pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
       pdf.save('Modelo de negócios.pdf');
     })
   }
+
+  const items = [
+    "Comprar coisas coisadas",
+    "Tudo pode ser resolvido com base na porradaria",
+    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
+    "Às vezes podemos fazer várias coisas, às vezes não"
+  ]
   
   console.log(`Página de redirecionamento: ${finished}`);
   
@@ -92,6 +114,7 @@ export const BusinessModel = () => {
                   description={
                     "Quem são os seus principais fornecedores (terceirizados)?"
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${2}`}>
@@ -102,6 +125,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais atividades mais importantes para o seu negócio ?"
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${3}`}>
@@ -112,6 +136,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais os ativos fundamentais para fazer o negócio funcionar?"
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${4}`}>
@@ -122,6 +147,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais beneficios seu produto (ou serviço) entrega para seus clientes?"
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${5}`}>
@@ -132,6 +158,7 @@ export const BusinessModel = () => {
                   description={
                     "Estratégias que evitam que seus clientes corram para o concorrente."
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${6}`}>
@@ -142,6 +169,7 @@ export const BusinessModel = () => {
                   description={
                     "Caminhos pelos quais a empresa comunica e entrega valor para o cliente."
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${7}`}>
@@ -152,6 +180,7 @@ export const BusinessModel = () => {
                   description={
                     "É necessário que você defina um nicho de clientes."
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${8}`}>
@@ -162,6 +191,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais os principais custos que têm peso no financeiro e são derivados da operacionalização do negócio?"
                   }
+                  items={items}
                 />
               </div>
               <div className={`grid-item${9}`}>
@@ -172,6 +202,7 @@ export const BusinessModel = () => {
                   description={
                     "Por quais maneiras o cliente pagará pelos benefícios recebidos?"
                   }
+                  items={items}
                 />
               </div>
             </div>

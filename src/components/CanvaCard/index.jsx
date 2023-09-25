@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 import './styles.module.css';
 
-export function CanvaCard({ label, title, description, type }) {
+export function CanvaCard({ label, title, description, type, items }) {
   return(
     <div className={styles.canva}>
       <div className={styles.canvaContent}>
@@ -31,7 +31,17 @@ export function CanvaCard({ label, title, description, type }) {
         <div className={styles.canvaDescription}>
           {description}
         </div>
-        <textarea className={styles.canvaInput}></textarea>
+        <ol className={styles.canvaInput}>
+          {
+            items && items.map((item) => {
+              return (
+                <li className={styles.canvaLi}>
+                  {item}
+                </li>
+              )
+            })
+          }
+        </ol>
       </div>
     </div>
   );
