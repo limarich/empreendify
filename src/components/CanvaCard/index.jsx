@@ -33,9 +33,9 @@ export function CanvaCard({ label, title, description, type, items }) {
         </div>
         <ol className={styles.canvaInput}>
           {
-            items && items.map((item) => {
+            items && items.map((item, index) => {
               return (
-                <li className={styles.canvaLi}>
+                <li key={index} className={styles.canvaLi}>
                   {item}
                 </li>
               )

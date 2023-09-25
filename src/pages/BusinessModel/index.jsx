@@ -34,13 +34,6 @@ export const BusinessModel = () => {
 
   const downloadPDF = () => {
 
-    // Tentativa
-    // function diminuirZoom() {
-    //   const currentZoom = parseFloat(document.body.style.zoom) || 1;
-    //   const newZoom = currentZoom - 0.1;
-    //   document.body.style.zoom = newZoom;
-    // }
-
     const input = pdfRef.current;
     html2canvas(input).then((canvas) => {
 
@@ -69,7 +62,23 @@ export const BusinessModel = () => {
     "Comprar coisas coisadas",
     "Tudo pode ser resolvido com base na porradaria",
     "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
-    "Às vezes podemos fazer várias coisas, às vezes não"
+    "Às vezes podemos fazer várias coisas, às vezes não",
+    "Comprar coisas coisadas",
+    "Tudo pode ser resolvido com base na porradaria",
+    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
+    "Às vezes podemos fazer várias coisas, às vezes não",
+    "Comprar coisas coisadas",
+    "Tudo pode ser resolvido com base na porradaria",
+    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
+    "Às vezes podemos fazer várias coisas, às vezes não",
+    "Comprar coisas coisadas",
+    "Tudo pode ser resolvido com base na porradaria",
+    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
+    "Às vezes podemos fazer várias coisas, às vezes não",
+    "Comprar coisas coisadas",
+    "Tudo pode ser resolvido com base na porradaria",
+    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
+    "Às vezes podemos fazer várias coisas, às vezes não",
   ]
   
   console.log(`Página de redirecionamento: ${finished}`);
@@ -104,6 +113,7 @@ export const BusinessModel = () => {
               />
             </div>
           </SectionHeader>
+
           <div className="business-model-container">
             <div className="grid-container">
               <div className={`grid-item${1}`}>
@@ -215,7 +225,7 @@ export const BusinessModel = () => {
   // Redirecionametno do modelo de negócios não-preenchido!
   return (
     <Container referenceTo={2}>
-      <div id="business-model">
+      <div id="business-model-initial">
         <div className="business-model-container">
           <h1>Modelo de Negócios</h1>
           <ProgressBar
