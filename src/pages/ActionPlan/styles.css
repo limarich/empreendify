@@ -1,25 +1,12 @@
 #action-plan {
   background-color: var(--light-white);
-  padding: 40px;
   
   width: 77%;
 }
 
-.trash-icon {  
-  border: 0px solid red;
-  height: 25px;
-  width: 25px;
-}
-
-.linkReference {
-  position: absolute;
-  left: -30px;  
-
-  height: 25px;
-  width: 25px;
-  border: 0px solid green;
-
-  display: inline-block;
+.sectionPadding {
+  padding: 40px;
+  padding-bottom: 10px;
 }
 
 .editable-rows {
@@ -27,16 +14,21 @@
   max-width: 100%;
   
   border: 0px solid blue;
+
+  padding: 0 40px;
+  padding: 0 40px;
 }
 
-button {
+.editableRowButton {
   all: unset;
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
   margin-top: 0.5rem;
+
+  margin-left: 40px;
 }
 
-button:hover {
+.editableRowButton:hover {
   font-weight: 600;
 }

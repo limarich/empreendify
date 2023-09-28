@@ -4,8 +4,6 @@ import { SectionHeader } from "../../components/SectionHeader";
 
 import "./styles.css";
 
-import trashIcon from "../../assets/logos/TrashSimple.svg";
-import trashIconHovered from "../../assets/logos/TrashSimpleFilled.svg";
 import { Container } from "../../components/Container";
 
 export const ActionPlan = () => {
@@ -34,7 +32,6 @@ export const ActionPlan = () => {
 
   // Apagar elementos
   const [indexOfHoveredItem, setIndexOfHoveredItem] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = (index) => {
     setIndexOfHoveredItem(index);
@@ -55,49 +52,31 @@ export const ActionPlan = () => {
   return (
     <Container referenceTo={1}>
       <section id="action-plan">
-        <SectionHeader
-          title="Plano de ação 5W2H "
-          description="O plano 5W2H é uma metodologia de planejamento e gestão de projetos que ajuda a identificar e definir as necessidades e objetivos de um projeto.  Ajuda a identificar recursos, etapas e responsabilidades para alcançar os objetivos do projeto."
-        />
+        <div className="sectionPadding">
+          <SectionHeader
+            title="Plano de ação 5W2H "
+            description="O plano 5W2H é uma metodologia de planejamento e gestão de projetos que ajuda a identificar e definir as necessidades e objetivos de um projeto.  Ajuda a identificar recursos, etapas e responsabilidades para alcançar os objetivos do projeto."
+          />
+        </div>
 
-        <div
-          className="editable-rows"
-          onMouseEnter={() => handleMouseEnter(index)}
-        >
-          {planItems.map((item, index) => (
-            <div
-              style={{
-                display: "flex",
-                position: "relative",
-              }}
-            >
-              {index == indexOfHoveredItem && (
-                <a
-                  href="#"
-                  className="linkReference"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  onClick={(index) => handleDeleteEditableRow(index)}
-                >
-                  <img
-                    className="trash-icon"
-                    alt="Trash Icon"
-                    src={isHovered ? trashIconHovered : trashIcon}
-                  />
-                </a>
-              )}
-
+        <div className="editable-rows">
+          {
+            planItems.map((item, index) => (
               <EditableRow
                 onStateChange={handleChildStateChange}
                 key={index}
                 index={index}
                 showHeader={true}
+                onMouseEnter={() => handleMouseEnter(index)}
               />
-            </div>
-          ))}
+            ))
+          }
         </div>
 
-        <button onClick={() => setplanItems([...planItems, initialState])}>
+        <button
+          className="editableRowButton"
+          onClick={() => setplanItems([...planItems, initialState])}
+        >
           Nova linha +
         </button>
       </section>

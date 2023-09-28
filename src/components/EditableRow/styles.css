@@ -1,10 +1,19 @@
-.editable-row {
-  display: flex;
+.content-container-editable-row {
+  position: relative;
+}
 
-  border: 0px solid blue;
-  
-  margin-bottom: 20px;
+.general-editable-row {
+  border: 0px solid red;
+  overflow: auto;
+}
+
+.editable-row {
+
+  display: flex;
   min-height: 160px;
+  
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .editable-row::after {
@@ -81,5 +90,24 @@
   border: 0px solid red;
 
   flex: 1;
-  /* overflow: hidden; */
+}
+
+.trash-icon {  
+  border: 0px solid red;
+  height: 25px;
+  width: 25px;
+}
+
+.linkReference {
+  position: absolute;
+  top: 20px;
+  left: -30px;
+
+  height: 25px;
+  width: 25px;
+  border: 0px solid green;
+
+  display: inline-block;
+
+  z-index: 99999;
 }

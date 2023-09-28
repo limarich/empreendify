@@ -1,7 +1,10 @@
 .notFound {
-  background-color: var(--light-white);
   padding: 40px;
   
-  width: 77%;
   border: 0px solid red;
+}
+
+.EditableRowContainer {
+  border: 0px solid red;
+
 }
