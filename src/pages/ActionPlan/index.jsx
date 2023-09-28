@@ -26,27 +26,16 @@ export const ActionPlan = () => {
     setChildState(newState);
 
     let array = [...planItems];
-    array[index] = childState;
+    array[index] = newState;
     setplanItems([...array]);
-  };
 
-  // Apagar elementos
-  const [indexOfHoveredItem, setIndexOfHoveredItem] = useState(0);
-
-  const handleMouseEnter = (index) => {
-    setIndexOfHoveredItem(index);
-  };
-
-  const handleMouseLeave = () => {
-    setIndexOfHoveredItem(null);
+    console.log(newState);
   };
 
   const handleDeleteEditableRow = (index) => {
     let array = [...planItems];
     array.splice(index, 1);
     setplanItems([...array]);
-
-    setIsHovered(false);
   };
 
   return (
@@ -68,6 +57,7 @@ export const ActionPlan = () => {
                 index={index}
                 showHeader={true}
                 onMouseEnter={() => handleMouseEnter(index)}
+                removeEditableRow={handleDeleteEditableRow}
               />
             ))
           }

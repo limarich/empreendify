@@ -4,7 +4,7 @@ import "./styles.css";
 import trashIcon from "../../assets/logos/TrashSimple.svg";
 import trashIconHovered from "../../assets/logos/TrashSimpleFilled.svg";
 
-export const EditableRow = ({ showHeader, onStateChange, index }) => {
+export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRow }) => {
   const initialState = {
     what: "",
     why: "",
@@ -21,13 +21,12 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
 
+    let array = {...values, [name]: value };
+    setValues(array);
+    
     // Chamando a função de callback do pai com o novo estado
-    onStateChange(values, index);
+    onStateChange(array, index);
   };
 
   // Essa função não está funcionando apropriadamente ainda
@@ -142,7 +141,7 @@ export const EditableRow = ({ showHeader, onStateChange, index }) => {
         className="linkReference"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onClick={(index) => handleDeleteEditableRow(index)}
+        onClick={() => removeEditableRow()}
       >
         <img
           className="trash-icon"
