@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./styles.css";
 
 import trashIcon from "../../assets/logos/TrashSimple.svg";
 import trashIconHovered from "../../assets/logos/TrashSimpleFilled.svg";
+
+import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 
 export const EditableRow = (
   { showHeader, handleChildStateChange, index, handleDeleteEditableRow, state }
@@ -10,30 +12,63 @@ export const EditableRow = (
 
   const [isHovered, setIsHovered] = useState(false);
 
-  const handleInputChange = (event) => {
+  const [minHeightForInput, setMinHeightForInput] = useState(7);
+  const [maxHeightForInput, setMaxHeightForInput] = useState(15);
+  const [textareaHeights, setTextareaHeights] = useState([
+    minHeightForInput,
+    minHeightForInput,
+    minHeightForInput,
+    minHeightForInput,
+    minHeightForInput,
+    minHeightForInput,
+    minHeightForInput,
+    minHeightForInput,
+  ])
+
+  let textareaRefs = []
+  for(let i = 0; i < 8; i++) {
+    textareaRefs[i] = useRef(null);
+  }
+
+  function encontrarMaximo(numeros) {
+    if (numeros.length === 0) {
+      return NaN; // Retorna NaN se nenhum número for fornecido
+    }
+  
+    let maximo = numeros[0]; // Inicializa o máximo com o primeiro número
+  
+    for (let i = 1; i < numeros.length; i++) {
+      if (numeros[i] > maximo) {
+        maximo = numeros[i];
+      }
+    }
+  
+    return maximo;
+  }
+
+  const handleInputChange = (event, indexOfTextarea) => {
     const { name, value } = event.target;
 
     let array = {...state, [name]: value };
     // Chamando a função de callback do pai com o novo estado
     handleChildStateChange(array, index);
-  };
 
-  // Essa função não está funcionando apropriadamente ainda
-  // Necessário pensar em uma lógica melhor
-  function resizeRow() {
-    var editableRow = document.querySelector(".editable-row");
+    // Atualizar tamanho das caixas de texto
+    let arrayHeights = [...textareaHeights]
+    let heightOfThisTextarea = 7;
+
+    arrayHeights[indexOfTextarea] = heightOfThisTextarea;
+    setTextareaHeights([...arrayHeights]);
+    console.log(arrayHeights);
     
-    var textarea = document
-    .querySelectorAll(".editable-row .input-control textarea");
-    textarea.forEach((area => {
-  
-      area.style.height = area.style.minHeight;
-      if(area.scrollHeight > area.clientHeight) {
-        editableRow.style.height = (70 + area.scrollHeight) + "px";
-      }
+    let maxArrayHeight = encontrarMaximo(arrayHeights);
+    console.log(maxArrayHeight);
 
-    }));
-  }
+    if(maxArrayHeight >= minHeightForInput && maxArrayHeight <= maxHeightForInput) {
+      setMinHeightForInput(maxArrayHeight);
+      console.log("Entrou")
+    }
+  };
 
   const [editableRowHover, setEditableRowHover] = useState(false);
 
@@ -60,81 +95,108 @@ export const EditableRow = (
           <div className="input-control">
             {showHeader && <span className="header">O que?</span>}
             <span className="tag">What</span>
-            <textarea
-              name="what"
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.what}
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[0]}
+
+              name="what"
+              onChange={(event) => {
+                handleInputChange(event, 0)
+              }}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header"> Por que?</span>}
             <span className="tag">Why</span>
-            <textarea
-              name="why" 
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.why} 
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[1]}
+
+              name="why" 
+              onChange={(event) => handleInputChange(event, 1)}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header">Onde?</span>}
             <span className="tag">Where</span>
-            <textarea
-              name="where"
+            <TextareaAutosize
+              className="input-control-autosize"
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.where}
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[2]}
+
+              name="where"
+              onChange={(event) => handleInputChange(event, 2)}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header">Quando?</span>}
             <span className="tag">When</span>
-            <textarea
-              name="when"
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.when}
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[3]}
+
+              name="when"
+              onChange={(event) => handleInputChange(event, 3)}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header">Quem?</span>}
             <span className="tag">Who</span>
-            <textarea 
-              name="who" 
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.who} 
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[4]}
+              
+              name="who" 
+              onChange={(event) => handleInputChange(event, 4)}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header">Como?</span>}
             <span className="tag">How</span>
-            <textarea 
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
+              value={state.how}
+              ref={textareaRefs[5]}
+              
               name="how" 
-              value={state.how} 
-              onChange={handleInputChange}
-              onInput={resizeRow} 
+              onChange={(event) => handleInputChange(event, 5)}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header">Quanto?</span>}
             <span className="tag">How Many</span>
-            <textarea
-              name="howMany"
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.howMany}
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[6]}
+
+              name="howMany"
+              onChange={(event) => handleInputChange(event, 6)}
             />
           </div>
           <div className="input-control">
             {showHeader && <span className="header">Status</span>}
             <span className="tag">Status</span>
-            <textarea
-              name="status"
+            <TextareaAutosize
+              minRows={minHeightForInput}
+              maxRows={maxHeightForInput}
               value={state.status}
-              onChange={handleInputChange}
-              onInput={resizeRow}
+              ref={textareaRefs[7]}
+
+              name="status"
+              onChange={(event) => handleInputChange(event, 7)}
             />
           </div>
         </div>
@@ -156,7 +218,6 @@ export const EditableRow = (
           />
         </a>
       }
-      
     </div>
   );
 };

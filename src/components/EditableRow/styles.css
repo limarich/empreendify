@@ -30,21 +30,21 @@
 }
 
 .editable-row .input-control {
-
-  margin: 0px;
-  
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
 
   width: 300px;
+  height: 100%;
+
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  min-width: 300px;
   border: 0.5px solid rgba(0, 0, 0, 0.7);
   border-right: 0px;
-  
-  min-height: 100px;
+}
+
+.input-control-autosize {
+  border: 1px solid red;
 }
 
 .editable-row .input-control:last-of-type {
@@ -82,16 +82,13 @@
 
 .editable-row .input-control textarea {
   all: unset;
-  min-height: 70px;
   width: 90%;
-  padding-left: 1 rem;
+  padding-left: 1rem;
   padding-top: 1rem;
   white-space: pre-wrap;
   word-break: break-word;
 
   border: 0px solid red;
-
-  flex: 1;
 }
 
 .trash-icon {  
