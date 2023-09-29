@@ -4,29 +4,18 @@ import "./styles.css";
 import trashIcon from "../../assets/logos/TrashSimple.svg";
 import trashIconHovered from "../../assets/logos/TrashSimpleFilled.svg";
 
-export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRow }) => {
-  const initialState = {
-    what: "",
-    why: "",
-    where: "",
-    when: "",
-    who: "",
-    how: "",
-    howMany: "",
-    status: "",
-  };
+export const EditableRow = (
+  { showHeader, handleChildStateChange, index, handleDeleteEditableRow, state }
+) => {
 
-  const [values, setValues] = useState(initialState);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
-    let array = {...values, [name]: value };
-    setValues(array);
-    
+    let array = {...state, [name]: value };
     // Chamando a função de callback do pai com o novo estado
-    onStateChange(array, index);
+    handleChildStateChange(array, index);
   };
 
   // Essa função não está funcionando apropriadamente ainda
@@ -37,10 +26,6 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
     var textarea = document
     .querySelectorAll(".editable-row .input-control textarea");
     textarea.forEach((area => {
-
-      console.log(area.style.height);
-      console.log(area.scrollHeight);
-      console.log(area.clientHeight);
   
       area.style.height = area.style.minHeight;
       if(area.scrollHeight > area.clientHeight) {
@@ -50,16 +35,34 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
     }));
   }
 
+  const [editableRowHover, setEditableRowHover] = useState(false);
+
+  function onMouseEnter() {
+    setEditableRowHover(true);
+  }
+
+  function onMouseLeave() {
+    if(isHovered == false) {
+      setEditableRowHover(false);
+    }
+  }
+
   return (
-    <div className="content-container-editable-row">
-      <div className="general-editable-row">
+    <div 
+      className="content-container-editable-row"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <div 
+        className="general-editable-row"
+      >
         <div className="editable-row">
           <div className="input-control">
             {showHeader && <span className="header">O que?</span>}
             <span className="tag">What</span>
             <textarea
               name="what"
-              value={values.what}
+              value={state.what}
               onChange={handleInputChange}
               onInput={resizeRow}
             />
@@ -69,7 +72,7 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">Why</span>
             <textarea
               name="why" 
-              value={values.why} 
+              value={state.why} 
               onChange={handleInputChange}
               onInput={resizeRow}
             />
@@ -79,7 +82,7 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">Where</span>
             <textarea
               name="where"
-              value={values.where}
+              value={state.where}
               onChange={handleInputChange}
               onInput={resizeRow}
             />
@@ -89,7 +92,7 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">When</span>
             <textarea
               name="when"
-              value={values.when}
+              value={state.when}
               onChange={handleInputChange}
               onInput={resizeRow}
             />
@@ -99,7 +102,7 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">Who</span>
             <textarea 
               name="who" 
-              value={values.who} 
+              value={state.who} 
               onChange={handleInputChange}
               onInput={resizeRow}
             />
@@ -109,7 +112,7 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">How</span>
             <textarea 
               name="how" 
-              value={values.how} 
+              value={state.how} 
               onChange={handleInputChange}
               onInput={resizeRow} 
             />
@@ -119,7 +122,7 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">How Many</span>
             <textarea
               name="howMany"
-              value={values.howMany}
+              value={state.howMany}
               onChange={handleInputChange}
               onInput={resizeRow}
             />
@@ -129,26 +132,31 @@ export const EditableRow = ({ showHeader, onStateChange, index, removeEditableRo
             <span className="tag">Status</span>
             <textarea
               name="status"
-              value={values.status}
+              value={state.status}
               onChange={handleInputChange}
               onInput={resizeRow}
             />
           </div>
         </div>
       </div>
-      <a
-        href="#"
-        className="linkReference"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onClick={() => removeEditableRow()}
-      >
-        <img
-          className="trash-icon"
-          alt="Trash Icon"
-          src={isHovered ? trashIconHovered : trashIcon}
-        />
-      </a>
+
+      {
+        editableRowHover &&
+        <a
+          href="#"
+          className="linkReference"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          onClick={() => handleDeleteEditableRow()}
+        >
+          <img
+            className="trash-icon"
+            alt="Trash Icon"
+            src={isHovered ? trashIconHovered : trashIcon}
+          />
+        </a>
+      }
+      
     </div>
   );
 };

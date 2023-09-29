@@ -20,18 +20,15 @@ export const ActionPlan = () => {
   };
 
   const [planItems, setplanItems] = useState([initialState]);
-  const [childState, setChildState] = useState("");
 
   const handleChildStateChange = (newState, index) => {
-    setChildState(newState);
-
     let array = [...planItems];
     array[index] = newState;
     setplanItems([...array]);
 
-    console.log(newState);
+    console.log(array);
   };
-
+  
   const handleDeleteEditableRow = (index) => {
     let array = [...planItems];
     array.splice(index, 1);
@@ -50,16 +47,21 @@ export const ActionPlan = () => {
 
         <div className="editable-rows">
           {
-            planItems.map((item, index) => (
-              <EditableRow
-                onStateChange={handleChildStateChange}
-                key={index}
-                index={index}
-                showHeader={true}
-                onMouseEnter={() => handleMouseEnter(index)}
-                removeEditableRow={handleDeleteEditableRow}
-              />
-            ))
+            planItems.map((values, index) => {
+              return (
+                <EditableRow
+                  key={index}
+                  index={index}
+
+                  showHeader={true}
+
+                  state={values}
+                  handleChildStateChange={handleChildStateChange}
+
+                  handleDeleteEditableRow={() => handleDeleteEditableRow(index)}
+                />
+              )
+            })
           }
         </div>
 
