@@ -5,6 +5,10 @@ import "./styles.css";
 export const EditableList = ({ tag, second }) => {
   const [list, setList] = useState(["● "]);
 
+  useEffect(() => {
+    console.log(list);
+  }, [list])
+
   const handleOnChange = (event) => {
     const value = event.target.value;
     setList(value.split("\n"));

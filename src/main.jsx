@@ -10,11 +10,11 @@ import { store, persistedStore } from "./store/store";
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate persistor={persistedStore}>
+      {/* <PersistGate persistor={persistedStore}> */}
         <BrowserRouter>
           <Routes />
         </BrowserRouter>
-      </PersistGate>
+      {/* </PersistGate> */}
     </Provider>
   </React.StrictMode>
 );
