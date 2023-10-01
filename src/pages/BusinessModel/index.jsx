@@ -87,7 +87,7 @@ export const BusinessModel = () => {
   if(finished) {
     return (
       <Container referenceTo={2}>
-        <div id="business-model" ref={pdfRef}>
+        <div id="business-model">
           <SectionHeader
             title={`Olá ${userName}! Esse é o seu Modelo de Negócios 🙂`}
             description={""}
@@ -114,7 +114,7 @@ export const BusinessModel = () => {
             </div>
           </SectionHeader>
 
-          <div className="business-model-container">
+          <div className="business-model-container" ref={pdfRef}>
             <div className="grid-container">
               <div className={`grid-item${1}`}>
                 <CanvaCard
