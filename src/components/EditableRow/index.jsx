@@ -12,18 +12,10 @@ export const EditableRow = (
 
   const [isHovered, setIsHovered] = useState(false);
 
-  const [minHeightForInput, setMinHeightForInput] = useState(7);
-  const [maxHeightForInput, setMaxHeightForInput] = useState(15);
-  const [textareaHeights, setTextareaHeights] = useState([
-    minHeightForInput,
-    minHeightForInput,
-    minHeightForInput,
-    minHeightForInput,
-    minHeightForInput,
-    minHeightForInput,
-    minHeightForInput,
-    minHeightForInput,
-  ])
+  const initialMinHeightForInput = 7;
+  const maxHeightForInput = 10;
+  const [minHeightForInput, setMinHeightForInput] = useState(initialMinHeightForInput);
+  const [textareaHeights, setTextareaHeights] = useState([0,0,0,0,0,0,0,0])
 
   let textareaRefs = []
   for(let i = 0; i < 8; i++) {
@@ -32,18 +24,24 @@ export const EditableRow = (
 
   function encontrarMaximo(numeros) {
     if (numeros.length === 0) {
-      return NaN; // Retorna NaN se nenhum número for fornecido
+      return NaN;
     }
-  
-    let maximo = numeros[0]; // Inicializa o máximo com o primeiro número
-  
+
+    let maximo = numeros[0];
     for (let i = 1; i < numeros.length; i++) {
       if (numeros[i] > maximo) {
         maximo = numeros[i];
       }
     }
-  
+
     return maximo;
+  }
+
+  function calculateRowsInTextarea(indexOfTextarea) {
+
+    let rows = 7
+    return rows;
+
   }
 
   const handleInputChange = (event, indexOfTextarea) => {
@@ -55,7 +53,7 @@ export const EditableRow = (
 
     // Atualizar tamanho das caixas de texto
     let arrayHeights = [...textareaHeights]
-    let heightOfThisTextarea = 7;
+    let heightOfThisTextarea = calculateRowsInTextarea(indexOfTextarea);
 
     arrayHeights[indexOfTextarea] = heightOfThisTextarea;
     setTextareaHeights([...arrayHeights]);
@@ -64,9 +62,11 @@ export const EditableRow = (
     let maxArrayHeight = encontrarMaximo(arrayHeights);
     console.log(maxArrayHeight);
 
-    if(maxArrayHeight >= minHeightForInput && maxArrayHeight <= maxHeightForInput) {
+    if(
+      maxArrayHeight >= initialMinHeightForInput && 
+      maxArrayHeight <= maxHeightForInput
+      ) {
       setMinHeightForInput(maxArrayHeight);
-      console.log("Entrou")
     }
   };
 

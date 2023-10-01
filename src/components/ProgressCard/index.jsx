@@ -8,10 +8,17 @@ export const ProgressCard = ({
 }) => {
   const navigate = useNavigate();
 
+  function handleNavigate() {
+    navigate(
+      `/business-plan/${index}`, 
+      { state: { completedPages: completedPages } }
+    );
+  }
+
   return (
     <div
       className="container"
-      onClick={() => navigate(`/business-plan/${index}`)}
+      onClick={handleNavigate}
     >
       <h4>{title}</h4>
       <p className="descriptionText">{description}</p>

@@ -83,7 +83,6 @@
 .editable-row .input-control textarea {
   all: unset;
   width: 90%;
-  padding-left: 1rem;
   padding-top: 1rem;
   white-space: pre-wrap;
   word-break: break-word;

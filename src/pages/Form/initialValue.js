@@ -8,30 +8,46 @@ export const forms = [
     pages: [
       [
         {
-          textareaQuestion: "Descrição do que é o negócio (maybeee)?",
+          textareaQuestion: "1.1",
           answer: ""
         },
         {
-          textareaQuestion: "Quais os principais produtos e/ou serviços?",
+          textareaQuestion: "1.2",
           answer: ""
         },
         {
-          inputQuestion: "Qual o montante de capital a ser investido?",
+          inputQuestion: "1.3",
           symbol: "R$",
           answer: ""
         },
       ],
       [
         {
-          textareaQuestion: "Aqui é uma pergunta?",
+          textareaQuestion: "2.1",
           answer: ""
         },
         {
-          textareaQuestion: "Aqui é outra pergunta?",
+          inputQuestion: "2.2",
+          symbol: "R$",
           answer: ""
         },
         {
-          inputQuestion: "Opa, mais uma?",
+          inputQuestion: "2.3",
+          symbol: "R$",
+          answer: ""
+        },
+      ],
+      [
+        {
+          textareaQuestion: "5.1",
+          answer: ""
+        },
+        {
+          textareaQuestion: "5.2",
+          answer: ""
+        },
+        {
+          inputQuestion: "5.3",
           symbol: "R$",
           answer: ""
         },
@@ -44,23 +60,7 @@ export const forms = [
       "Identifique quem são seus fornecedores, clientes e consumidores!",
     totalPages: 10,
     completedPages: 0,
-    pages: [
-      [
-        {
-          textareaQuestion: "Descrição do que é o negócio?",
-          answer: ""
-        },
-        {
-          textareaQuestion: "Quais os principais produtos e/ou serviços?",
-          answer: ""
-        },
-        {
-          inputQuestion: "Qual o montante de capital a ser investido?",
-          symbol: "R$",
-          answer: ""
-        },
-      ],
-    ],
+    pages: [],
   },
   {
     title: "Plano de Marketing",

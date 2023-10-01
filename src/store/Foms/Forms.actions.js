@@ -10,3 +10,13 @@ export function alterForms(value, formIndex, pageIndex, questionIndex) {
     }
   }
 }
+
+export function updateCompletedFormsNumber(formIndex, value) {
+  return {
+    type: 'UPDATE_COMPLETED_FORMS_NUMBER',
+    payload: {
+      formIndex: formIndex,
+      value: value
+    }
+  }
+}

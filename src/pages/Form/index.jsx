@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 import "./styles.css"; 
 
 import { Container } from "../../components/Container";
 
 import { useSelector, useDispatch } from "react-redux";
-import { alterForms } from "../../store/Foms/Forms.actions";
+import { alterForms, updateCompletedFormsNumber } from "../../store/Foms/Forms.actions";
 
 export const Form = () => {
 
@@ -16,32 +16,34 @@ export const Form = () => {
 
   // Recuperar formulários do Redux
   const dispatch = useDispatch();
-  const forms = useSelector(state => {
+  let forms = useSelector(state => {
     return state.forms
   });
 
   // Array auxliar para visualização dos formulários
-  let lengthOfFormPagesArray = [];
+  let formPagesArray = [];
   for (let i = 0; i < forms[formID].totalPages; i++) {
-    lengthOfFormPagesArray.push(i + 1);
+    formPagesArray.push(i + 1);
   }
 
   // Identificador da página do formulário correspondente
-  const [formPageID, setFormPageID] = useState(1);
+  const [formPageID, setFormPageID] = useState(0);
   useEffect(() => {
-    setFormPageID(1);
+    dispatch(updateCompletedFormsNumber(formID, 0));
+  }, []);
+  useEffect(() => {
+    setFormPageID(0);
   }, [formID]);
-
 
   // HANDLES
   // Para atualizar a resposta
   const handleUpdateResponse = (event, index) => {
     dispatch(alterForms(
-      event.target.value, formID, formPageID - 1, index
+      event.target.value, formID, formPageID, index
     ));
     
     console.log(event.target.value);
-    console.log(`Indices: ${formID} ${formPageID - 1} ${index}`);
+    console.log(`Indices: ${formID} ${formPageID} ${index}`);
   }
 
   const handleToPage = (index) => {
@@ -50,10 +52,16 @@ export const Form = () => {
 
   // Para navegar para a próxima página
   const handleNextPage = () => {
-    if (formPageID < forms[formID].totalPages) {
+
+    dispatch(updateCompletedFormsNumber(
+      formID, formPageID + 1
+    ));
+    console.log(`Páginas completadas: ${forms[formID].completedPages}`);
+
+    if (formPageID < (forms[formID].totalPages - 1)) {
       setFormPageID(formPageID + 1);
+
       window.scrollTo(0, 0);
-      console.log(formPageID);
     } else {
       navigate("/business-plan");
     }
@@ -61,10 +69,18 @@ export const Form = () => {
 
   // Para navegar para a página anterior
   const handlePreviousPage = () => {
-    if (formPageID > 1) {
+    if (formPageID > 0) {
+
+      dispatch(updateCompletedFormsNumber(
+        formID, formPageID - 1
+      ));
+      console.log(`Páginas completadas: ${forms[formID].completedPages}`);
+
       setFormPageID(formPageID - 1);
+
       window.scrollTo(0, 0);
-      console.log(formPageID);
+    } else {
+      navigate('/business-plan');
     }
   }
 
@@ -92,7 +108,7 @@ export const Form = () => {
             <h1 className="title">{forms[formID].title}</h1>
 
             <div className="pagesIndex-container">
-              {lengthOfFormPagesArray.map((indicator, index) => {
+              {formPagesArray.map((indicator, index) => {
 
                 const tag = (
                   <div className={`pageIndicator`} key={index}>
@@ -105,29 +121,29 @@ export const Form = () => {
                   </div>
                 );
 
-                return indicator == formPageID ? selectedTag : tag;
+                return index == formPageID ? selectedTag : tag;
               })}
             </div>
 
             {/* Início do formulário dinâmico */}
             {
-              forms[formID].pages[formPageID - 1] &&
-              forms[formID].pages[formPageID - 1].map((page, index) => {
+              forms[formID].pages[formPageID] &&
+              forms[formID].pages[formPageID].map((question, index) => {
 
-                if(page.textareaQuestion) {
+                if(question.textareaQuestion) {
                   const textareaQuestion = (
                     <div 
                       key={index}
                       className="questionContainer"
                     >
-                      <p className="questionTitle">{page.textareaQuestion}</p>
+                      <p className="questionTitle">{question.textareaQuestion}</p>
                       <textarea
                         id="answer-textarea"
                         cols={30}
                         rows={10}
                         required
 
-                        value={page.textareaQuestion.answer}
+                        value={question.textareaQuestion.answer}
                         onChange={(event) => {
                             handleUpdateResponse(event, index)
                           }
@@ -139,20 +155,20 @@ export const Form = () => {
                   return textareaQuestion;
                 }
 
-                if(page.inputQuestion) {
+                if(question.inputQuestion) {
                   const inputQuestion = (
                     <div
                       key={index}
                       className="questionContainer"
                     >
-                      <p className="questionTitle">{page.inputQuestion}</p>
+                      <p className="questionTitle">{question.inputQuestion}</p>
                       <div className="inputContainer">
-                        <div className="inputType">{page.symbol}</div>
+                        <div className="inputType">{question.symbol}</div>
                         <input 
                           className="inputElement"
                           type="text"
 
-                          value={page.inputQuestion.answer}
+                          value={question.inputQuestion.answer}
                           onChange={(event) => {
                               handleUpdateResponse(event, index)
                             }
@@ -179,7 +195,7 @@ export const Form = () => {
                 className="next-button"
                 onClick={handleNextPage}
               >
-                {formPageID == forms[formID].totalPages
+                {formPageID == (forms[formID].totalPages - 1)
                   ? "Finalizar"
                   : "Avançar"}
               </button>

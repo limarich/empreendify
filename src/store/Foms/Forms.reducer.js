@@ -15,7 +15,16 @@ export default function(state = forms, action) {
       .answer = action.payload.value;
 
       console.log(state);
+      return state;
+    
+    case 'UPDATE_COMPLETED_FORMS_NUMBER':
+      let totalPages = state[action.payload.formIndex].totalPages;
 
+      if(action.payload.value <= totalPages && action.payload.value >= 0) {
+        state[action.payload.formIndex].completedPages = action.payload.value;
+      }
+
+      console.log(state);
       return state;
 
     default:
