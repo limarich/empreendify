@@ -8,7 +8,7 @@ const api = axios.create({
 
 api.interceptors.request.use(
   async (config) => {
-    const accessToken = await localStorage.getItem("@insight: accessToken");
+    const accessToken = await localStorage.getItem("accessToken");
     if (accessToken) {
       config.headers!.Authorization = `Bearer ${accessToken}`;
     }

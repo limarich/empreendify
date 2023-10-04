@@ -9,6 +9,7 @@ import { PopUp } from "./PopUp";
 import logo from "../../assets/logo-white.png";
 
 import api from "../../api";
+import message from "../../utils/message";
 
 export const Login = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -27,6 +28,7 @@ export const Login = () => {
 
       navigate("/home");
     } catch (err) {
+      message("Verifique as suas credenciais", "error");
       console.error(err);
     }
   };
@@ -81,11 +83,7 @@ export const Login = () => {
         </button>
       </form>
 
-      <PopUp
-        showPopup={showPopup}
-        setShowPopup={setShowPopup}
-      />
-
+      <PopUp showPopup={showPopup} setShowPopup={setShowPopup} />
     </section>
   );
 };
