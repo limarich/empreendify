@@ -57,18 +57,19 @@
   border: 0.5px solid rgba(0, 0, 0, 0.7);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-
-  font-family: 'Montserrat';
 }
+
 .list-row .content {
   display: flex;
   border: 0px solid green;
 
   height: 200px;
 }
+
 .list-row:nth-child(even) .header {
   border-radius: 0;
 }
+
 .list-row:nth-child(even) .content {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;

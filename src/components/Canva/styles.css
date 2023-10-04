@@ -57,7 +57,6 @@
 
 }
 .canva-title {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 25.6329px;
@@ -65,11 +64,14 @@
 
   margin-bottom: 10px;
 }
+
 .canva-description {
   font-family: 'Source Sans Pro';
+  color: rgba(30, 30, 30, 0.75);
+
+  font-size: 19.225px;
   font-style: normal;
   font-weight: 400;
-  font-size: 19.2246px;
 
   margin-bottom: 20px;
 }

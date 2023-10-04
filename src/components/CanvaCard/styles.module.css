@@ -58,7 +58,6 @@
 }
 
 .canvaTitle {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -95,7 +94,6 @@
   border: 0px solid red;
   border-radius: 18px;
 
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;

@@ -47,14 +47,12 @@
   gap: 30px;
 }
 .hint-title {
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24.7739px;
   line-height: 8px;
 }
 .hint-description {
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 24.6808px;
@@ -87,7 +85,6 @@
   display: inline-block;
   cursor: pointer;
 
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 24.7739px;

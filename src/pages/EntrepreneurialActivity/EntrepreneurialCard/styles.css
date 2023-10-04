@@ -15,16 +15,21 @@
   border-radius: 14px;
 }
 
-.title {
+.title-card {
   font-size: 20px;
   line-height: 22px;
+
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
 }
 
-.description {
+.description-card {
   font-size: 15px;
 }
 
-.link {
+.link-card {
   color: var(--normal-blue);
   font-weight: 600;
   font-size: 15px;
@@ -37,6 +42,7 @@
   text-align: center;
 
   height: 33px;
+  font-family: "montserrat", sans-serif;
 }
 
 .link:hover {

@@ -55,7 +55,6 @@ h4 {
 
 .progressText {
   color: var(--light-gray-2);
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 14.3647px;
@@ -63,7 +62,6 @@ h4 {
 }
 
 .progressNumber {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 14.3647px;

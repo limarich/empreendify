@@ -10,10 +10,10 @@ export const EntrepreneurialCard = (props) => {
 
   return (
     <div className="contentCard">
-      <h3 className="title">{props.title}</h3>
-      <p className="description">{props.abstract}</p>
+      <h3 className="title-card">{props.title}</h3>
+      <p className="description-card">{props.abstract}</p>
       <button 
-        className="link" 
+        className="link-card" 
         href="#"
         onClick={() => {
           navigate(`/entrepreneurial-activity/${Number(props.index) + 1}`)
