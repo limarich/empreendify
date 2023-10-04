@@ -1,21 +1,23 @@
 #login-section {
   background-color: var(--normal-blue);
-  background-image: url("../.././assets/login-background.png");
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
+
 #login-section .logo {
   position: absolute;
   top: 4rem;
   left: 4rem;
+  background-image: url("../.././assets/logo-white.png");
 }
+
 #login-section .logo h1 {
   font-size: 3rem;
 }
-form,
-.form-body {
+
+form, .form-body {
   background-color: var(--light-white);
   display: flex;
   flex-direction: column;
@@ -23,32 +25,41 @@ form,
   justify-content: start;
 
   border-radius: 20px;
+
+  z-index: 2;
 }
+
 #login-section form {
   min-height: 600px;
   min-width: 500px;
   padding: 4rem;
 }
+
 .form-header {
   margin-bottom: 6rem;
 }
+
 .form-header h1 {
   font-size: 3rem;
   margin-bottom: 1em;
   font-weight: 600;
 }
+
 .form-header h1 span {
   transform: rotate(-20deg);
   display: inline-block;
 }
+
 .form-header h3 {
   font-size: 1.6rem;
   font-weight: 500;
 }
+
 .form-body {
   margin-top: 3rem;
   width: 100%;
 }
+
 .form-submit-btn {
   width: 100%;
   background-color:var(--normal-blue);

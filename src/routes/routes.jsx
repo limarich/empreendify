@@ -25,19 +25,13 @@ export const Routes = () => {
       <Route path="/landing-page" Component={LandingPage} />
       <Route path="/login" Component={Login} />
 
+      <Route path="/home" Component={Home} />
+      <Route path="/home/:blogID" Component={Blog} />
       <Route path="/swot" Component={Swot} />
       <Route path="/action-plan" Component={ActionPlan} />
-      <Route path="/menu-info" Component={MenuInfo} />
       <Route path="/business-model" Component={BusinessModel} />
-      <Route path="/menu-action" Component={MenuAction} />
-
-      <Route path="/home" Component={Home} />
-
-      <Route path="/home/:blogID" Component={Blog} />
-
       <Route path="/business-plan" Component={BusinessPlan} />
       <Route path="/business-plan/:formID" Component={Form} />
-
       <Route
         path="/entrepreneurial-activity"
         Component={EntrepreneurialActivity}
@@ -46,6 +40,9 @@ export const Routes = () => {
         path="/entrepreneurial-activity/:textID"
         Component={TextEntreprenaurialActivity}
       />
+
+      {/* <Route path="/menu-action" Component={MenuAction} /> */}
+      {/* <Route path="/menu-info" Component={MenuInfo} /> */}
       <Route
         path="/profile"
         Component={Profile}

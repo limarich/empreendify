@@ -30,6 +30,8 @@
 
   color: var(--dark-gray);
   font-size: bold;
+
+  font-family: "Montserrat", sans-serif;
 }
 
 .fade {

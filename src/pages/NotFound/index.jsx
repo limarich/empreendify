@@ -12,7 +12,6 @@ export const NotFound = () => {
       <SectionHeader 
         title={`Oops! Página não encontrada!`}
       />
-      <TextareaAutosize/>
     </div>
   );
 };
