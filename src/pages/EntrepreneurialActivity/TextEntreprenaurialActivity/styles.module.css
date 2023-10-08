@@ -20,12 +20,10 @@
   top: 0px;
 }
 
-.goBack .goFoward {
+.goBack, .goFoward {
   border: 0px solid green;
-  width: 32px;
-  height: 32px;
-
-  padding: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .title {

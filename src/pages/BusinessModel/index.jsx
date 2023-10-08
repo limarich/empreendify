@@ -58,28 +58,7 @@ export const BusinessModel = () => {
     })
   }
 
-  const items = [
-    "Comprar coisas coisadas",
-    "Tudo pode ser resolvido com base na porradaria",
-    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
-    "Às vezes podemos fazer várias coisas, às vezes não",
-    "Comprar coisas coisadas",
-    "Tudo pode ser resolvido com base na porradaria",
-    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
-    "Às vezes podemos fazer várias coisas, às vezes não",
-    "Comprar coisas coisadas",
-    "Tudo pode ser resolvido com base na porradaria",
-    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
-    "Às vezes podemos fazer várias coisas, às vezes não",
-    "Comprar coisas coisadas",
-    "Tudo pode ser resolvido com base na porradaria",
-    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
-    "Às vezes podemos fazer várias coisas, às vezes não",
-    "Comprar coisas coisadas",
-    "Tudo pode ser resolvido com base na porradaria",
-    "As vezes as coisas acontecem, e é isso. As coisas são coisadas, mas uma coisa eu digo. Tudo pode ser resolvido com base na porradaria",
-    "Às vezes podemos fazer várias coisas, às vezes não",
-  ]
+  const items = []
   
   console.log(`Página de redirecionamento: ${finished}`);
   

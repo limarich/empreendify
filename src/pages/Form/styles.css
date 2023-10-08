@@ -205,6 +205,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  margin-top: 40px;
 }
 
 .previous-button, .next-button {
@@ -221,6 +223,7 @@
   color: var(--dark-gray);
 
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 
 }
 

@@ -43,9 +43,11 @@
 
   height: 33px;
   font-family: "montserrat", sans-serif;
+
+  cursor: pointer;
 }
 
-.link:hover {
+.link-card:hover {
   background-color: var(--normal-blue);
   color: #F3F3F5;
 }
