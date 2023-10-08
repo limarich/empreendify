@@ -26,7 +26,7 @@ export interface ActionPlan {
 }
 
 export const getActionPlan = async (id: string) => {
-  const { data } = await api.post<GetActionPlanResponse>(
+  const { data } = await api.get<GetActionPlanResponse>(
     `/action-plan?id=${id}`
   );
   return data;

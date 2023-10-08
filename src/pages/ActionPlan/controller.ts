@@ -22,14 +22,14 @@ export const getActionPlanController = async (id: string) => {
 };
 
 const actionPlanItemSchema = yup.object().shape({
-  what: yup.string().required('O campo "what" é obrigatório'),
-  why: yup.string().required('O campo "why" é obrigatório'),
-  who: yup.string().required('O campo "who" é obrigatório'),
-  when: yup.string().required('O campo "when" é obrigatório'),
-  where: yup.string().required('O campo "where" é obrigatório'),
-  how: yup.string().required('O campo "how" é obrigatório'),
-  howMuch: yup.string().required('O campo "howMuch" é obrigatório'),
-  actionPlanId: yup.string().required('O campo "actionPlanId" é obrigatório'),
+  what: yup.string(),
+  why: yup.string(),
+  who: yup.string(),
+  when: yup.string(),
+  where: yup.string(),
+  how: yup.string(),
+  howMuch: yup.string(),
+  actionPlanId: yup.string(),
 });
 
 export const updateActionPlanController = async (
@@ -42,6 +42,7 @@ export const updateActionPlanController = async (
     });
     await schema.validate(props);
     await updateActionPlan(props);
+    message("plano de ação salvo com sucesso!", "success");
   } catch (error) {
     if (error instanceof yup.ValidationError) {
       message(error.message, "warning");
