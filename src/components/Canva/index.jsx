@@ -2,133 +2,55 @@ import { CaretLeft, CaretRight, Lightbulb } from "@phosphor-icons/react";
 import "./styles.css";
 
 import { HintModal } from "../HintModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-const businessModelStep = [
-  {
-    title: "Proposta de Valor",
-    description:
-      "Quais beneficios seu produto (ou serviço) entrega para seus clientes?",
-    tag: "what",
-    label: "O que?",
-    hints: [
-      "dica 1",
-      "dica 1.1",
-      "dica 1.2",
-      "dica 1.3",
-      "dica 1.4",
-      "dica 1.5",
-    ],
-  },
-  {
-    title: "Fonte de Receitas",
-    description:
-      "Por quais maneiras o cliente pagará pelos benefícios recebidos?",
-    tag: "how-much",
-    label: "Quanto?",
-    hints: [
-      "dica 2",
-      "dica 2.1",
-      "dica 2.2",
-      "dica 2.3",
-      "dica 2.4",
-      "dica 2.5",
-    ],
-  },
-  {
-    title: "Canais",
-    description:
-      "Caminhos pelos quais a empresa comunica e entrega valor para o cliente.",
-    tag: "to-whom",
-    label: "Para Quem?",
-    hints: [
-      "dica 3",
-      "dica 3.1",
-      "dica 3.2",
-      "dica 3.3",
-      "dica 3.4",
-      "dica 3.5",
-    ],
-  },
-  {
-    title: "Relaciona",
-    description:
-      "Estratégias que evitam que seus clientes corram para o concorrente.",
-    tag: "to-whom",
-    label: "Para Quem?",
-    hints: [
-      "dica 4",
-      "dica 4.1",
-      "dica 4.2",
-      "dica 4.3",
-      "dica 4.4",
-      "dica 4.5",
-    ],
-  },
-
-  {
-    title: "Recursos Chave",
-    description: "Quais os ativos fundamentais para fazer o negócio funcionar?",
-    tag: "how",
-    label: "Como?",
-    hints: [
-      "dica 5",
-      "dica 5.1",
-      "dica 5.2",
-      "dica 5.3",
-      "dica 5.4",
-      "dica 5.5",
-    ],
-  },
-
-  {
-    title: "Parceiros Chave",
-    description: "Quem são os seus principais fornecedores (terceirizados)?",
-    tag: "how",
-    label: "Como?",
-    hints: [
-      "dica 6",
-      "dica 6.1",
-      "dica 6.2",
-      "dica 6.3",
-      "dica 6.4",
-      "dica 6.5",
-    ],
-  },
-
-  {
-    title: "Atividades Chave",
-
-    description: "Quais atividades mais importantes  para o seu negócio ?",
-    tag: "how",
-    label: "Como?",
-    hints: ["dica 1", "dica 2", "dica 3"],
-  },
-
-  {
-    title: "Estrutura de Custo",
-    description:
-      "Quais os principais custos que têm peso no financeiro e são derivados da operacionalização do negócio?",
-    tag: "how-much",
-    label: "Quanto?",
-    hints: ["dica 1", "dica 2", "dica 3"],
-  },
-
-  {
-    title: "Segmento de Mercado",
-    description: "É necessário que você defina um nicho de clientes.",
-    tag: "to-whom",
-    label: "Para Quem?",
-    hints: ["dica 1", "dica 2", "dica 3"],
-  },
-];
+import { businessModelStep } from "./steps";
+import { getUserData } from "../../utils/getUserData";
+import {
+  getBusinessModelController,
+  updateBusinessModelController,
+} from "../../pages/BusinessModel/controller";
 
 export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
+  const userData = getUserData();
   const [isOpen, setIsOpen] = useState(false);
-  
+  const [field, setField] = useState("");
+  const [formData, setFormData] = useState({
+    businessId: "",
+    mainPartnerships: [""],
+    mainActivities: [""],
+    mainResources: [""],
+    valueProposition: [""],
+    customerRelationship: [""],
+    channels: [""],
+    customerSegments: [""],
+    costs: [""],
+    revenue: [""],
+  });
+
   const navigate = useNavigate();
 
+  const fetchBusinessModel = async () => {
+    if (userData && userData.businesses) {
+      const res = await getBusinessModelController(userData.businesses[0].id);
+      if (res) {
+        setFormData(res.businessModel);
+        setField(res.businessModel[businessModelStep[step].name]);
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchBusinessModel();
+  }, []);
+  useEffect(() => {
+    if (step !== 1) setField(formData[businessModelStep[step].name]);
+  }, [step]);
+  const handleUpdateBusinessModel = async () => {
+    await updateBusinessModelController({
+      ...formData,
+    });
+  };
   return (
     <div class="canva-container">
       <HintModal
@@ -143,6 +65,11 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
         disabled={step === 0}
         onClick={() => {
           if (step - 1 >= 0) setStep(step - 1);
+          setFormData({
+            ...formData,
+            [businessModelStep[step].name]: field,
+          });
+          setField("");
         }}
       >
         <CaretLeft size={32} color="#fff" style={{ position: "absolute" }} />
@@ -166,7 +93,12 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
           <div class="canva-description">
             {businessModelStep[step].description}
           </div>
-          <textarea class="canva-input"></textarea>
+          <textarea
+            class="canva-input"
+            name={businessModelStep[step].name}
+            onChange={(e) => setField(e.target.value)}
+            value={field}
+          ></textarea>
         </div>
       </div>
 
@@ -174,12 +106,17 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
         class="btn"
         id="next"
         onClick={() => {
-          if(step === 8) {
+          if (step === 8) {
             console.log("Redirecionando!");
-            navigate('/business-model', { state: { finished: true } });
+            handleUpdateBusinessModel();
+            navigate("/business-model", { state: { finished: true } });
           }
-          if(step < 8) {
-            console.log(step + 1);
+          if (step < 8) {
+            setFormData({
+              ...formData,
+              [businessModelStep[step].name]: field,
+            });
+            setField("");
             setStep(step + 1);
           }
         }}

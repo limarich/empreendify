@@ -39,6 +39,7 @@ export const updateBusinessModelController = async (
     });
     await schema.validate(props);
     const res = await updateBusinessModel(props);
+    message("modelo de negócio atualizado com sucesso!", "success");
     return res;
   } catch (error) {
     if (error instanceof yup.ValidationError) {

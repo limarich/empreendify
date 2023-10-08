@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useRef, useState } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import "./styles.css";
 
 import html2canvas from "html2canvas";
@@ -13,34 +13,61 @@ import { CanvaCard } from "../../components/CanvaCard";
 
 import { DownloadSimple, PencilSimple } from "@phosphor-icons/react";
 import { Container } from "../../components/Container";
+import { getUserData } from "../../utils/getUserData";
+import { getBusinessModelController } from "./controller";
 
 export const BusinessModel = () => {
   const [step, setStep] = useState(0);
   const [enableHint, setEnableHint] = useState(false);
+  const [formData, setFormData] = useState({
+    businessId: "",
+    mainPartnerships: [""],
+    mainActivities: [""],
+    mainResources: [""],
+    valueProposition: [""],
+    customerRelationship: [""],
+    channels: [""],
+    customerSegments: [""],
+    costs: [""],
+    revenue: [""],
+  });
+
   const navigate = useNavigate();
   const pdfRef = useRef();
 
-  const userData = JSON.parse(localStorage.getItem("userData"));
-  const userName = "userData.user.name" ?? "";
+  const userData = getUserData();
+  const userName = userData?.name || "";
 
   const location = useLocation();
   const state = location.state;
   let finished = false;
-  if(!state) {
+  if (!state) {
     finished = false;
   } else {
     finished = state.finished;
   }
 
-  const downloadPDF = () => {
+  const fetchBusinessModel = async () => {
+    if (userData && userData.businesses) {
+      const res = await getBusinessModelController(userData.businesses[0].id);
+      if (res) {
+        setFormData(res.businessModel);
+        setField(res.businessModel[businessModelStep[step].name]);
+      }
+    }
+  };
 
+  useEffect(() => {
+    fetchBusinessModel();
+  }, []);
+
+  const downloadPDF = () => {
     const input = pdfRef.current;
     html2canvas(input).then((canvas) => {
+      const pdf = new jsPDF("l", "mm", "a4", false);
 
-      const pdf = new jsPDF('l', 'mm', 'a4', false);
-
-      canvas.style.width = '20px';
-      const imgData = canvas.toDataURL('image/png');
+      canvas.style.width = "20px";
+      const imgData = canvas.toDataURL("image/png");
 
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = pdf.internal.pageSize.getHeight();
@@ -53,17 +80,24 @@ export const BusinessModel = () => {
       /*
       pdf.addImage(imgData, 'PNG', 0, 0, 0, 0);
       */
-      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
-      pdf.save('Modelo de negócios.pdf');
-    })
-  }
+      pdf.addImage(
+        imgData,
+        "PNG",
+        imgX,
+        imgY,
+        imgWidth * ratio,
+        imgHeight * ratio
+      );
+      pdf.save("Modelo de negócios.pdf");
+    });
+  };
 
-  const items = []
-  
+  const items = [];
+
   console.log(`Página de redirecionamento: ${finished}`);
-  
+
   // Redirecionamento do modelo de negócios preenchido!
-  if(finished) {
+  if (finished) {
     return (
       <Container referenceTo={3}>
         <div id="business-model">
@@ -79,7 +113,7 @@ export const BusinessModel = () => {
                   cursor: "pointer",
                 }}
                 onClick={() => {
-                  navigate('/business-model', { state: { finished: false }});
+                  navigate("/business-model", { state: { finished: false } });
                 }}
               />
               <DownloadSimple
@@ -103,7 +137,7 @@ export const BusinessModel = () => {
                   description={
                     "Quem são os seus principais fornecedores (terceirizados)?"
                   }
-                  items={items}
+                  items={formData.mainPartnerships}
                 />
               </div>
               <div className={`grid-item${2}`}>
@@ -114,7 +148,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais atividades mais importantes para o seu negócio ?"
                   }
-                  items={items}
+                  items={formData.mainActivities}
                 />
               </div>
               <div className={`grid-item${3}`}>
@@ -125,7 +159,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais os ativos fundamentais para fazer o negócio funcionar?"
                   }
-                  items={items}
+                  items={formData.mainResources}
                 />
               </div>
               <div className={`grid-item${4}`}>
@@ -136,7 +170,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais beneficios seu produto (ou serviço) entrega para seus clientes?"
                   }
-                  items={items}
+                  items={formData.valueProposition}
                 />
               </div>
               <div className={`grid-item${5}`}>
@@ -147,7 +181,7 @@ export const BusinessModel = () => {
                   description={
                     "Estratégias que evitam que seus clientes corram para o concorrente."
                   }
-                  items={items}
+                  items={formData.customerRelationship}
                 />
               </div>
               <div className={`grid-item${6}`}>
@@ -158,7 +192,7 @@ export const BusinessModel = () => {
                   description={
                     "Caminhos pelos quais a empresa comunica e entrega valor para o cliente."
                   }
-                  items={items}
+                  items={formData.channels}
                 />
               </div>
               <div className={`grid-item${7}`}>
@@ -169,7 +203,7 @@ export const BusinessModel = () => {
                   description={
                     "É necessário que você defina um nicho de clientes."
                   }
-                  items={items}
+                  items={formData.customerSegments}
                 />
               </div>
               <div className={`grid-item${8}`}>
@@ -180,7 +214,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais os principais custos que têm peso no financeiro e são derivados da operacionalização do negócio?"
                   }
-                  items={items}
+                  items={formData.costs}
                 />
               </div>
               <div className={`grid-item${9}`}>
@@ -191,7 +225,7 @@ export const BusinessModel = () => {
                   description={
                     "Por quais maneiras o cliente pagará pelos benefícios recebidos?"
                   }
-                  items={items}
+                  items={formData.revenue}
                 />
               </div>
             </div>

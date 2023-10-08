@@ -27,14 +27,14 @@ export interface UpdateBusinessModelInput {
 }
 
 export const getBusinessModel = async (id: string) => {
-  const { data } = await api.get<BusinessModel[]>(
+  const { data } = await api.get<{ businessModel: BusinessModel }>(
     `/business/business-model?id=${id}`
   );
   return data;
 };
 
 export const updateBusinessModel = async (props: UpdateBusinessModelInput) => {
-  const { data } = await api.put<BusinessModel[]>("/business/business-model", {
+  const { data } = await api.put<BusinessModel[]>("/business-model", {
     ...props,
   });
   return data;
