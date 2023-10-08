@@ -20,7 +20,7 @@ export const BusinessPlan = () => {
   });
 
   return (
-    <Container referenceTo={3}>
+    <Container referenceTo={4}>
       <div id="businessPlan">
         <SectionHeader
           title={`Olá ${userName}! Esse é o seu Plano de Negócios 🙂`}

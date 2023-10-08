@@ -6,7 +6,7 @@ import "./styles.css";
 
 export const Swot = () => {
   return (
-    <Container referenceTo={0}>
+    <Container referenceTo={2}>
       <section id="swot">
         <SectionHeader
           title="Análise SWOT 🙂"
