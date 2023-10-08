@@ -66,6 +66,9 @@ export const LandingPage = () => {
         <Message 
           title={"Planeje seu trabalho, trabalhe seu plano!"}
           description={"Organize as principais definições do seu negócio! Identifique quem são seus fornecedores, clientes e consumidores!"}
+          handlePopUp={() => {
+            setShowPopup(true)
+          }}
         />
         <img src={Image1} alt="Image1" 
           className={styles.backgroundImage}
@@ -116,6 +119,9 @@ export const LandingPage = () => {
             title={"Tudo que você precisa em um só lugar!"}
             description={"Organize as principais definições do seu negócio! Identifique quem são seus fornecedores, clientes e consumidores!"}
             width={400}
+            handlePopUp={() => {
+              setShowPopup(true)
+            }}
           />
         </div>
       </div>
@@ -124,6 +130,9 @@ export const LandingPage = () => {
         <Message 
           title={"Um Plano de Negócios para quem tem pressa!"}
           description={"Um plano rápido e dinâmico para quem tem pressa. visualize, planeje e execute cada etapa fundamental do seu plano de negócios com facilidade."}
+          handlePopUp={() => {
+            setShowPopup(true)
+          }}
         />
         <div className={styles.imageContainer}>
           <img
