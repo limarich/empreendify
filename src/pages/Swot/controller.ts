@@ -27,6 +27,7 @@ export const updateSwotController = async (props: Swot) => {
     });
     await schema.validate(props);
     await updateSwot(props);
+    message("dados salvos com sucesso!", "success");
   } catch (error) {
     if (error instanceof yup.ValidationError) {
       message(error.message, "warning");

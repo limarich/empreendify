@@ -24,7 +24,7 @@ export const Login = () => {
         password,
       });
 
-      localStorage.setItem("userData", JSON.stringify(data));
+      localStorage.setItem("userData", JSON.stringify(data.user));
 
       navigate("/home");
     } catch (err) {

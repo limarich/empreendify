@@ -1,10 +1,46 @@
+import { useState } from "react";
 import { Container } from "../../components/Container";
 import { EditableList } from "../../components/EditableList";
 import { SectionHeader } from "../../components/SectionHeader";
+import { getUserData } from "../../utils/getUserData";
 
 import "./styles.css";
+import { getSwotController, updateSwotController } from "./controller";
 
 export const Swot = () => {
+  const [strengths, setStrengths] = useState([]);
+  const [weaknesses, setWeaknesses] = useState([]);
+  const [opportunities, setOpportunities] = useState([]);
+  const [threats, setThreats] = useState([]);
+  const [businessId, setBusinessId] = useState("");
+
+  const fetchSwot = async () => {
+    const userData = getUserData();
+    if (userData && userData.businesses) {
+      const res = await getSwotController(userData.businesses[0].id);
+      if (res && res.swot) {
+        const { swot } = res;
+        setStrengths(swot.strengths);
+        setThreats(swot.threats);
+        setWeaknesses(swot.weaknesses);
+        setOpportunities(swot.opportunities);
+        setBusinessId(res.swot.businessId);
+      }
+    }
+  };
+  const handleUpdateSwot = async () => {
+    await updateSwotController({
+      businessId,
+      opportunities,
+      strengths,
+      threats,
+      weaknesses,
+    });
+  };
+  useState(() => {
+    fetchSwot();
+  }, []);
+
   return (
     <Container referenceTo={2}>
       <section id="swot">
@@ -28,16 +64,35 @@ export const Swot = () => {
           <div className="list-row">
             <div className="header">Ambiente Interno</div>
             <div className="content">
-              <EditableList tag="Forças" />
-              <EditableList tag="Fraquezas" second />
+              <EditableList
+                tag="Forças"
+                value={strengths}
+                setValue={setStrengths}
+              />
+              <EditableList
+                tag="Fraquezas"
+                second
+                value={weaknesses}
+                setValue={setWeaknesses}
+              />
             </div>
           </div>
           <div className="list-row">
             <div className="header">Ambiente Externo</div>
             <div className="content">
-              <EditableList tag="Oportunidades" />
-              <EditableList tag="Ameaças" second />
+              <EditableList
+                tag="Oportunidades"
+                value={opportunities}
+                setValue={setOpportunities}
+              />
+              <EditableList
+                tag="Ameaças"
+                second
+                value={threats}
+                setValue={setThreats}
+              />
             </div>
+            <button onClick={handleUpdateSwot}> Salvar</button>
           </div>
         </div>
       </section>

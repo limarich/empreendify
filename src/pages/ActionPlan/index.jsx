@@ -50,8 +50,8 @@ export const ActionPlan = () => {
   };
   const fetchActionPlan = async () => {
     const userData = getUserData();
-    if (userData && userData.user && userData.user.businesses) {
-      const res = await getActionPlanController(userData.user.businesses[0].id);
+    if (userData && userData.businesses) {
+      const res = await getActionPlanController(userData.businesses[0].id);
       if (res && res.actionPlan) {
         setplanItems(res.actionPlan.items);
         setBusinessId(res.actionPlan.businessId);
