@@ -12,8 +12,7 @@ import { BusinessPlan } from "../pages/BusinessPlan";
 import { Form } from "../pages/Form";
 import { EntrepreneurialActivity } from "../pages/EntrepreneurialActivity";
 import { LandingPage } from "../pages/LandingPage";
-import { TextEntreprenaurialActivity } 
-from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
+import { TextEntreprenaurialActivity } from "../pages/EntrepreneurialActivity/TextEntreprenaurialActivity";
 import { Profile } from "../pages/Profile";
 import { EntrepreneurialProfile } from "../pages/EntrepreneurialProfile";
 
@@ -22,7 +21,9 @@ export const Routes = () => {
     <Switch>
       <Route path="*" Component={NotFound} />
 
+      <Route path="/" Component={LandingPage} />
       <Route path="/landing-page" Component={LandingPage} />
+
       <Route path="/login" Component={Login} />
 
       <Route path="/home" Component={Home} />
@@ -43,10 +44,7 @@ export const Routes = () => {
 
       {/* <Route path="/menu-action" Component={MenuAction} /> */}
       {/* <Route path="/menu-info" Component={MenuInfo} /> */}
-      <Route
-        path="/profile"
-        Component={Profile}
-      />
+      <Route path="/profile" Component={Profile} />
       <Route
         path="/entrepreneurial-profile"
         Component={EntrepreneurialProfile}
