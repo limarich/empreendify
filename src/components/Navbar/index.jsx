@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./styles.css";
 
@@ -12,11 +12,11 @@ import img4 from "../../assets/logos/PlanoDeNegocios.svg";
 import img5 from "../../assets/logos/AtividadeEmpreendedora.svg";
 import img6 from "../../assets/logos/SaibaMais.svg";
 
+import Gear from "../../assets/Gear.svg";
+
 import NestedList from "../NestedList";
 
-export const imagesForNavigation = [
-  img0, img1, img2, img3, img4, img5, img6
-];
+export const imagesForNavigation = [img0, img1, img2, img3, img4, img5, img6];
 export const navigationLinks = [
   "#",
   "/action-plan",
@@ -34,14 +34,14 @@ export const namesForDescription = [
   "Plano de Negócios",
   "Atividade Empreendedora",
   "Saiba Mais",
-]
+];
 
 export const Navbar = ({ referenceTo }) => {
   const [selectedIndex, setSelectedIndex] = useState(referenceTo);
   const navigate = useNavigate();
 
   function isNestOpen() {
-    if(selectedIndex >= 1 || selectedIndex <= 4) {
+    if (selectedIndex >= 1 || selectedIndex <= 4) {
       return true;
     }
     return false;
@@ -53,11 +53,20 @@ export const Navbar = ({ referenceTo }) => {
         <img className="logoImage" src={logo} alt="logo" />
       </div>
       <ul className="navUnorderedList">
-        <NestedList 
-          selectedIndex={selectedIndex} 
-          isNestOpen={isNestOpen()}
-        />
+        <NestedList selectedIndex={selectedIndex} isNestOpen={isNestOpen()} />
       </ul>
+      <Link to={"/profile"}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+          }}
+        >
+          <img src={Gear} alt="perfil" />
+          Editar Perfil
+        </div>
+      </Link>
     </header>
   );
 };

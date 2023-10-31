@@ -25,6 +25,7 @@ export const Login = () => {
       });
 
       localStorage.setItem("userData", JSON.stringify(data.user));
+      localStorage.setItem("accessToken", JSON.stringify(data.token));
 
       navigate("/home");
     } catch (err) {
