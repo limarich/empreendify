@@ -1,4 +1,3 @@
-
 .headerNavBar {
   display: flex;
   flex-direction: column;
@@ -22,12 +21,14 @@
 .logoContainer {
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
 .logoImage {
-  max-height: 100px;
+  max-height: 110px;
   width: auto;
+  aspect-ratio: 16 / 9;
 }
 
 .navUnorderedList {
@@ -39,7 +40,6 @@
 
   padding-top: 20px;
 }
-
 
 .navigationLi {
   list-style: none;

@@ -10,14 +10,18 @@
   position: absolute;
   top: 4rem;
   left: 4rem;
-  background-image: url("../.././assets/logo-white.png");
+}
+#login-section .logo img {
+  width: 200px;
+  background-color: #486a89;
 }
 
 #login-section .logo h1 {
   font-size: 3rem;
 }
 
-form, .form-body {
+form,
+.form-body {
   background-color: var(--light-white);
   display: flex;
   flex-direction: column;
@@ -62,7 +66,7 @@ form, .form-body {
 
 .form-submit-btn {
   width: 100%;
-  background-color:var(--normal-blue);
+  background-color: var(--normal-blue);
   color: var(--light-white);
   line-height: 5rem;
   border: none;

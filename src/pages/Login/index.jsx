@@ -4,16 +4,13 @@ import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 import { InputControl } from "../../components/InputControl";
-import { PopUp } from "./PopUp";
 
-import logo from "../../assets/logo-white.png";
+import logo from "../../assets/i9ender-logo.png";
 
 import api from "../../api";
 import message from "../../utils/message";
 
 export const Login = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -38,9 +35,9 @@ export const Login = () => {
 
   return (
     <section id="login-section">
-      <div className="logo">
+      {/* <div className="logo">
         <img src={logo} alt="logo" />
-      </div>
+      </div> */}
       <form>
         <div className="form-header">
           <h1>
@@ -83,8 +80,6 @@ export const Login = () => {
           Entrar
         </button>
       </form>
-
-      <PopUp showPopup={showPopup} setShowPopup={setShowPopup} />
     </section>
   );
 };

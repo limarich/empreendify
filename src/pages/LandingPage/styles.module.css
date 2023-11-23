@@ -1,4 +1,3 @@
-
 .landingPage {
   display: flex;
   flex-direction: column;
@@ -120,23 +119,23 @@
 }
 
 .ToolCardContainer1 {
-  grid-row: 1 / 2; 
-  grid-column: 1 / 2; 
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
 .ToolCardContainer2 {
-  grid-row: 1 / 2; 
-  grid-column: 2 / 3; 
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
 }
 
 .ToolCardContainer3 {
-  grid-row: 2 / 3; 
-  grid-column: 1 / 2; 
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
 }
 
 .ToolCardContainer4 {
-  grid-row: 2 / 3; 
-  grid-column: 2 / 3; 
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .Ellipse {
@@ -183,8 +182,7 @@
 }
 
 .navSectionContainer {
-
-  background-color: var(--normal-blue); 
+  background-color: var(--normal-blue);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -194,7 +192,7 @@
   width: 1050px;
   height: 200px;
   display: flex;
-  
+
   font-family: Source Sans Pro;
   font-size: 18px;
   font-weight: 400;
@@ -212,8 +210,9 @@
   justify-content: center;
 }
 
-.navLogoContainer {
-  border: 0px solid red;
+.logoContainer img {
+  width: 160px;
+  aspect-ratio: 16/9;
 }
 
 .navLogo {
@@ -239,61 +238,9 @@
   margin-bottom: 10px;
 }
 
-.fade {
-  width: calc(100% - 0px);
-  height: 100%;
-  background: rgba(0, 0, 0, 0.61);
-  
-  position: fixed;
-  z-index: 1;
-  right: 0;
-  top: 0;
-  
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup {
-  z-index: 2;
-
-  border: 0px solid red;
-  background-color: var(--light-white);
-
-  border-radius: 10px;
-  padding: 40px;
-  
-  display: flex;
-  flex-direction: column;
-
-  align-self: center;
-}
-
-.popupTitle {
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.popupDescription {
-  font-size: 15px;
-
-  margin-bottom: 15px;
-}
-
-.popupButton {
-  font-size: 18px;
-  color: var(--dark-gray);
-  font-size: bold;
-  
-  background-color: var(--normal-blue);
-  color: var(--light-white);
-  border-radius: 10px;
-  border: 0;
-  
+.navLogoContainer img {
+  width: 200px;
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  height: 70px;
-  width: 100%;
+  margin-left: 30px;
 }

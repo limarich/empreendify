@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./styles.css";
 
-import logo from "../../assets/logo-empreendify.png";
+import logo from "../../assets/i9ender-logo.png";
 
 import img0 from "../../assets/logos/CaretDown.svg";
 import img1 from "../../assets/logos/PlanoDeAcao.svg";

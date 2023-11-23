@@ -1,0 +1,21 @@
+.error {
+  border-color: red;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+  /* justify-content: center; */
+  width: 100%;
+}
+.container textarea {
+  width: 100%;
+  border: none;
+  border-radius: 3rem;
+  line-height: 5rem;
+  padding-left: 1rem;
+  background-color: var(--light-gray);
+  min-height: 100px;
+  margin-bottom: 1rem;
+}

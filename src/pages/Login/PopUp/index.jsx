@@ -48,7 +48,7 @@ export const PopUp = ({ showPopup, setShowPopup }) => {
               placeholder="email@gmail.com"
             />
             
-            <a 
+            {/* <a 
               href="#" 
               className={styles.popupButton}
               style={{
@@ -59,7 +59,7 @@ export const PopUp = ({ showPopup, setShowPopup }) => {
               onClick={() => setShowPopup(false)}
             >
               Solicitar nova senha
-            </a>
+            </a> */}
           </div>
         </div>
       }
