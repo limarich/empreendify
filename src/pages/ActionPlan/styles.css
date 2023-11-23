@@ -1,6 +1,6 @@
 #action-plan {
   background-color: var(--light-white);
-  
+
   width: 77%;
 }
 
@@ -12,7 +12,7 @@
 .editable-rows {
   overflow: auto;
   max-width: 100%;
-  
+
   border: 0px solid blue;
 
   padding: 0 40px;
@@ -31,4 +31,16 @@
 
 .editableRowButton:hover {
   font-weight: 600;
+}
+
+.saveButton {
+  all: unset;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: #29abe2;
+  color: #fff;
+  border-radius: 8px;
+  margin-left: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
 }

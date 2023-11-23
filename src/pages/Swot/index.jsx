@@ -92,7 +92,10 @@ export const Swot = () => {
                 setValue={setThreats}
               />
             </div>
-            <button onClick={handleUpdateSwot}> Salvar</button>
+            <button className="saveButton" onClick={handleUpdateSwot}>
+              {" "}
+              Salvar
+            </button>
           </div>
         </div>
       </section>
