@@ -9,96 +9,64 @@ export const texts = [
   {
     title: "Análise da atividade empreendedora",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "O processo de análise empreendedora vai além do Business Model Canvas, explorando a fundo a interconexão entre inovação, estratégia e implementação para impulsionar o sucesso empresarial.",
     text: `
-      TEXTO 1
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!`,
+    A análise da atividade empreendedora requer uma compreensão profunda do modelo de negócios. O Business Model Canvas oferece uma representação visual clara dos principais aspectos, desde segmentos de clientes até fontes de receita. Sua utilização revela insights valiosos sobre como estruturar e desenvolver um empreendimento com sucesso.`,
   },
   {
     title: "Quais os setores funcionais da empresa?",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "Identificar os setores funcionais é essencial para compreender a sinergia entre diferentes áreas de uma empresa. Este texto explora como o Business Model Canvas pode revelar a integração e a otimização desses setores.",
     text: `
-      TEXTO 2
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
-      `,
+    Identificar os setores funcionais de uma empresa é crucial para compreender sua dinâmica interna. O Business Model Canvas delineia claramente esses setores - como operações, marketing, recursos-chave - e como se interligam para impulsionar o funcionamento eficiente do negócio.  
+    `,
   },
   {
     title: "Entrevista com os coordenadores de cada setor",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "As entrevistas com coordenadores fornecem insights valiosos sobre desafios específicos enfrentados em áreas-chave da empresa. Este texto explora como esses insights se conectam à visão geral do Business Model Canvas.",
     text: `
-      TEXTO 3
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
-      `,
+    As entrevistas com coordenadores de setores são oportunidades para entender as complexidades individuais de cada área. Ao integrar suas percepções com a visão geral proporcionada pelo Business Model Canvas, é possível obter uma compreensão completa das necessidades e potenciais melhorias em cada setor.  
+    `,
   },
   {
     title: "Quais os principais problemas pós observação e diagnóstico?",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "A análise pós observação e diagnóstico identifica problemas cruciais que exigem atenção imediata. Este texto investiga como o Business Model Canvas pode ser usado para estruturar e resolver esses problemas.",
     text: `
-      TEXTO 4
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
-      `,
+    Após uma minuciosa observação e diagnóstico, é comum identificar problemas críticos que afetam o desempenho empresarial. O Business Model Canvas facilita a análise desses problemas, permitindo uma abordagem estratégica e direcionada para resolvê-los.  
+    `,
   },
   {
     title: "Observação e Diagnóstico",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "As etapas de observação e diagnóstico são fundamentais para identificar áreas de melhoria no funcionamento de um negócio. Este texto explora como o Business Model Canvas organiza e facilita esse processo.",
     text: `
-      TEXTO 5
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
-      `,
+    A observação minuciosa do funcionamento do negócio e um diagnóstico detalhado são fundamentais para aprimorar sua performance. Utilizando o Business Model Canvas, é possível estruturar e organizar as informações coletadas durante essas etapas para uma análise mais eficaz.  
+    `,
   },
   {
     title: "Análise da Atividade Empreendedora",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "A análise da atividade empreendedora é um processo complexo que transcende a simples avaliação de um plano de negócios.",
     text: `
-      TEXTO 6
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
-      `,
+    A análise da atividade empreendedora é um processo complexo que transcende a simples avaliação de um plano de negócios. Envolve uma profunda imersão na identificação, compreensão e exploração dos elementos essenciais que sustentam o tecido do empreendedorismo. Para além do Business Model Canvas, esta análise exige uma visão holística que permeia os alicerces da inovação, estratégia e execução.
+    `,
   },
   {
     title: "Ferramentas importantes para melhoria de processos",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "Além do Business Model Canvas, existem diversas ferramentas valiosas que contribuem para a melhoria contínua dos processos. Combinar várias abordagens e metodologias é fundamental para otimizar a operação e a gestão do negócio.",
     text: `
-      TEXTO 7
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
-      `,
+    Além do Business Model Canvas, existem diversas ferramentas valiosas que contribuem para a melhoria contínua dos processos. Combinar várias abordagens e metodologias é fundamental para otimizar a operação e a gestão do negócio.
+    `,
   },
   {
     title: "Ativos intangíveis",
     abstract:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa.",
+      "Os ativos intangíveis são pilares invisíveis que sustentam o valor de uma empresa. Este texto explora a importância estratégica desses ativos e como o Business Model Canvas pode destacar sua relevância.",
     text: `
-      TEXTO 8
-      
-      À primeira vista o Business Model Canvas parece um simples diagrama.
-
-      À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia. Obrigado pela ajuda!
+    Os ativos intangíveis, muitas vezes esquecidos, desempenham um papel crucial na criação de valor de uma empresa. Identificar e gerenciar esses ativos é tão importante quanto cuidar dos recursos físicos, e o Business Model Canvas pode ajudar a visualizar sua relevância estratégica.
       `,
   },
 ];

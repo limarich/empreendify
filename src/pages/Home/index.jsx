@@ -18,10 +18,9 @@ export const options = [
     img: imageCard1,
     title: "O que é empreender?",
     description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+      "Desbravando Fronteiras: O Significado e a Jornada do Empreendedorismo",
     activeButton: false,
-    text: 
-      `O Que É Empreender: Desbravando o Mundo dos Negócios
+    text: `O Que É Empreender: Desbravando o Mundo dos Negócios
 
       ---
       
@@ -55,18 +54,43 @@ export const options = [
     img: imageCard2,
     title: "Análise do Perfil de Empreendedor",
     description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+      "Descubra Seu DNA Empreendedor: Uma Análise Profunda de Suas Habilidades e Potencial",
     activeButton: true,
-    text: '',
+    text: `
+    O empreendedorismo é um universo vasto que abriga uma diversidade de perfis e habilidades. Identificar suas características empreendedoras pode ajudar a compreender melhor seus pontos fortes e áreas de desenvolvimento nesse campo dinâmico. Abaixo, estão alguns traços fundamentais associados aos empreendedores bem-sucedidos:
+
+    Visão e Inovação: Os empreendedores têm uma visão clara e são capazes de identificar oportunidades únicas. Eles costumam ser inovadores e estão sempre buscando maneiras de melhorar ou criar algo novo.
+    
+    Resiliência e Determinação: Lidar com desafios é uma característica-chave. Empreendedores enfrentam fracassos e obstáculos, mas persistem, aprendem com as experiências e seguem em frente.
+    
+    Habilidade de Tomar Decisões: A capacidade de tomar decisões rápidas e precisas é crucial. Empreendedores avaliam riscos e agem com base em informações disponíveis.
+    
+    Capacidade de Liderança: Empreendedores muitas vezes lideram equipes e inspiram outros com sua visão. São bons comunicadores e motivadores.
+    
+    Adaptabilidade e Flexibilidade: O ambiente empreendedor é dinâmico; portanto, adaptar-se a mudanças é essencial. Flexibilidade para ajustar estratégias é uma qualidade valorizada.
+    
+    Agora, vamos explorar um pouco mais sobre você. Responda às seguintes perguntas para identificar melhor seu perfil empreendedor:
+    
+    Qual é a sua abordagem diante de desafios ou obstáculos? Você costuma desistir facilmente ou procura soluções alternativas?
+    
+    Você se considera uma pessoa visionária? Tem facilidade em identificar oportunidades ou soluções inovadoras para problemas?
+    
+    Como você lida com a pressão e a incerteza? Acredita que consegue tomar decisões rápidas e eficazes em momentos de alto estresse?
+    
+    Já teve alguma experiência liderando projetos ou equipes? Como se sentiu nesse papel de liderança?
+    
+    Você se adapta facilmente a mudanças repentinas ou prefere seguir uma rotina mais estável?
+    
+    Ao responder a essas questões, você começará a compreender melhor seu perfil empreendedor e poderá identificar áreas em que já se destaca e outras que podem ser desenvolvidas. Lembre-se, o empreendedorismo é um processo de aprendizagem contínua e de constante autodesenvolvimento
+    `,
   },
   {
     img: imageCard3,
     title: "Tipos de Empresas, Porte e Regime Tributário",
     description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+      "Entendendo a Diversidade Empresarial: Tamanho, Classificação e Impostos",
     activeButton: false,
-    text: 
-      `Tipos de Empresas, Porte e Regime Tributário: Entendendo as Complexidades do Mundo Empresarial
+    text: `Tipos de Empresas, Porte e Regime Tributário: Entendendo as Complexidades do Mundo Empresarial
 
       ---
       
@@ -108,10 +132,9 @@ export const options = [
     img: imageCard4,
     title: "Trâmites para abertura de uma empresa",
     description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+      "Passos Fundamentais: Da Ideia ao Registro Legal - Abrindo Sua Empresa",
     activeButton: false,
-    text:
-      `Desvendando os Trâmites para a Abertura de uma Empresa: Um Guia Completo
+    text: `Desvendando os Trâmites para a Abertura de uma Empresa: Um Guia Completo
 
       ---
       
@@ -163,10 +186,9 @@ export const options = [
     img: imageCard5,
     title: "Formas de Financiamento",
     description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+      "Viabilizando Sonhos: Estratégias Inteligentes de Financiamento Empresarial",
     activeButton: false,
-    text:
-      `Explorando as Diferentes Formas de Financiamento: Escolhendo a Melhor Opção para o Seu Projeto
+    text: `Explorando as Diferentes Formas de Financiamento: Escolhendo a Melhor Opção para o Seu Projeto
 
       ---
       
@@ -213,11 +235,9 @@ export const options = [
   {
     img: imageCard6,
     title: "Ativos intangíveis",
-    description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+    description: "O Valor Oculto: Explorando o Poder dos Ativos Intangíveis",
     activeButton: false,
-    text:
-      `O Valor Inestimável dos Ativos Intangíveis nos Negócios
+    text: `O Valor Inestimável dos Ativos Intangíveis nos Negócios
 
       ---
       
@@ -271,10 +291,9 @@ export const options = [
     img: imageCard7,
     title: "Cuidados!",
     description:
-      "À primeira vista o Business Model Canvas parece um simples diagrama. A facilidade de análise que ele traz só passa a ser realmente compreendida à medida que começarmos a visualizar exemplos e a utilizá-lo em nosso dia-a-dia.",
+      "Manutenção do Potencial Empreendedor: Cuidados Essenciais para o Desenvolvimento",
     activeButton: false,
-    text:
-      `Cuidados Essenciais nos Negócios: O Caminho para o Sucesso Empresarial
+    text: `Cuidados Essenciais nos Negócios: O Caminho para o Sucesso Empresarial
 
       ---
       
@@ -331,7 +350,7 @@ export const Home = () => {
         <SectionHeader
           title={"Esse é o pontapé inicial para criação da sua empresa 🙂"}
           description={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+            "Desvendando seu Potencial Empreendedor: O Primeiro Passo Rumo à Sua Empresa dos Sonhos"
           }
         />
         <div className="menu-card-options">
