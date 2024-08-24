@@ -3,42 +3,43 @@ import "./styles.css";
 
 const steps = [
   "Proposta de Valor",
-  "Fonte de Receitas",
+  "Fonte de Receita",
   "Canais",
-  "Relacionamento com clientes",
+  "Relacionamento",
   "Recursos chave",
   "Atividades chave",
-  "Parceiros chave",
-  "Estrutura de custo",
-  "Segmento de mercado",
+  "Parcerias chave",
+  "Estrutura de custos",
+  "Cliente",
 ];
 
 export const ProgressBar = ({ active = 0, setActive, enableHint }) => {
-  console.log(enableHint)
+  console.log(enableHint);
 
   return (
     <div className="progress-container">
-      <div
-        className="progress"
-      >
-        <div className="progress-item"
+      <div className="progress">
+        <div
+          className="progress-item"
           style={{ flex: (1 / (steps.length - 1)) * active }}
         ></div>
-        <div className="notProgress-item"
-          style={{ flex: 1 - ((1 / (steps.length - 1)) * active) }}
+        <div
+          className="notProgress-item"
+          style={{ flex: 1 - (1 / (steps.length - 1)) * active }}
         ></div>
       </div>
 
       <div className="steps-container">
-      {
-        steps.map((step, index) => (
+        {steps.map((step, index) => (
           <div
             className="step"
             key={step}
             onClick={
               !enableHint
-              ? () => {setActive(index);}
-              : undefined
+                ? () => {
+                    setActive(index);
+                  }
+                : undefined
             }
           >
             <div className={`circle ${active >= index && "active"}`}>
@@ -46,8 +47,7 @@ export const ProgressBar = ({ active = 0, setActive, enableHint }) => {
             </div>
             <div className="label">{step}</div>
           </div>
-        ))
-      }
+        ))}
       </div>
     </div>
   );
