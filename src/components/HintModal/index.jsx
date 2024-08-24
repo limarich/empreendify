@@ -9,20 +9,21 @@ export const HintModal = ({ hints, isOpen, setIsOpen }) => {
 
   return (
     <>
-      <div className={`hint-container ${isOpen && "active"}`}
+      <div
+        className={`hint-container ${isOpen && "active"}`}
         style={{
           width: width,
-          left: `calc(50% - ${width / 2}px)`
+          left: `calc(50% - ${width / 2}px)`,
         }}
       >
-        <hint className="hint-header">
+        <span className="hint-header">
           <X
             size={32}
             color="#000"
             style={{ position: "absolute" }}
             onClick={() => setIsOpen(false)}
           />
-        </hint>
+        </span>
         <div className="hint-content">
           <div className="hint-image">
             <img src={hintIcon} alt="" />
@@ -36,7 +37,7 @@ export const HintModal = ({ hints, isOpen, setIsOpen }) => {
           <div className="hint-progress">
             {hints.map((item, index) => (
               <div
-                key={item}
+                key={`${item}-${index}`}
                 className={`hint-progress-bar  ${
                   index <= hint && "active-hint-bar"
                 }`}
@@ -46,7 +47,7 @@ export const HintModal = ({ hints, isOpen, setIsOpen }) => {
           <button
             className="hint-next-btn"
             onClick={() => {
-              if (hint < (hints.length - 1)) setHint(hint + 1);
+              if (hint < hints.length - 1) setHint(hint + 1);
               else setHint(0);
             }}
           >

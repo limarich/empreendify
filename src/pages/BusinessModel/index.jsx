@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./styles.css";
 
 import html2canvas from "html2canvas";
@@ -40,26 +40,29 @@ export const BusinessModel = () => {
 
   const location = useLocation();
   const state = location.state;
-  let finished = false;
-  if (!state) {
-    finished = false;
-  } else {
-    finished = state.finished;
-  }
+  const [finished, setFinished] = useState(false);
 
-  const fetchBusinessModel = async () => {
+  const fetchBusinessModel = useCallback(async () => {
     if (userData && userData.businesses) {
       const res = await getBusinessModelController(userData.businesses[0].id);
       if (res) {
         setFormData(res.businessModel);
-        setField(res.businessModel[businessModelStep[step].name]);
       }
     }
-  };
+  }, [userData.businesses]);
 
   useEffect(() => {
     fetchBusinessModel();
   }, []);
+
+  useEffect(() => {
+    if (state && state.finished) {
+      fetchBusinessModel();
+      setFinished(true);
+    } else {
+      setFinished(false);
+    }
+  }, [state]);
 
   const downloadPDF = () => {
     const input = pdfRef.current;
@@ -92,9 +95,33 @@ export const BusinessModel = () => {
     });
   };
 
-  const items = [];
-
-  console.log(`Página de redirecionamento: ${finished}`);
+  const customerSegments = useMemo(
+    () => formData.customerSegments || [],
+    [formData.customerSegments]
+  );
+  const mainPartnerships = useMemo(
+    () => formData.mainPartnerships || [],
+    [formData.mainPartnerships]
+  );
+  const mainActivities = useMemo(
+    () => formData.mainActivities || [],
+    [formData.mainActivities]
+  );
+  const mainResources = useMemo(
+    () => formData.mainResources || [],
+    [formData.mainResources]
+  );
+  const valueProposition = useMemo(
+    () => formData.valueProposition || [],
+    [formData.valueProposition]
+  );
+  const customerRelationship = useMemo(
+    () => formData.customerRelationship || [],
+    [formData.customerRelationship]
+  );
+  const channels = useMemo(() => formData.channels || [], [formData.channels]);
+  const costs = useMemo(() => formData.costs || [], [formData.costs]);
+  const revenue = useMemo(() => formData.revenue || [], [formData.revenue]);
 
   // Redirecionamento do modelo de negócios preenchido!
   if (finished) {
@@ -133,11 +160,11 @@ export const BusinessModel = () => {
                 <CanvaCard
                   label={"Como?"}
                   type={"how"}
-                  title={"Parceiros Chave"}
+                  title={"Parcerias Chave"}
                   description={
                     "Quem são os seus principais fornecedores (terceirizados)?"
                   }
-                  items={formData.mainPartnerships}
+                  items={mainPartnerships}
                 />
               </div>
               <div className={`grid-item${2}`}>
@@ -148,7 +175,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais atividades mais importantes para o seu negócio ?"
                   }
-                  items={formData.mainActivities}
+                  items={mainActivities}
                 />
               </div>
               <div className={`grid-item${3}`}>
@@ -159,7 +186,7 @@ export const BusinessModel = () => {
                   description={
                     "Quais os ativos fundamentais para fazer o negócio funcionar?"
                   }
-                  items={formData.mainResources}
+                  items={mainResources}
                 />
               </div>
               <div className={`grid-item${4}`}>
@@ -170,18 +197,18 @@ export const BusinessModel = () => {
                   description={
                     "Quais beneficios seu produto (ou serviço) entrega para seus clientes?"
                   }
-                  items={formData.valueProposition}
+                  items={valueProposition}
                 />
               </div>
               <div className={`grid-item${5}`}>
                 <CanvaCard
                   label={"Pra quem?"}
                   type={"to-whom"}
-                  title={"Relacionamento com Clientes"}
+                  title={"Relacionamento"}
                   description={
                     "Estratégias que evitam que seus clientes corram para o concorrente."
                   }
-                  items={formData.customerRelationship}
+                  items={customerRelationship}
                 />
               </div>
               <div className={`grid-item${6}`}>
@@ -192,40 +219,40 @@ export const BusinessModel = () => {
                   description={
                     "Caminhos pelos quais a empresa comunica e entrega valor para o cliente."
                   }
-                  items={formData.channels}
+                  items={channels}
                 />
               </div>
               <div className={`grid-item${7}`}>
                 <CanvaCard
                   label={"Pra quem?"}
                   type={"to-whom"}
-                  title={"Segmento de Mercado"}
+                  title={"Clientes"}
                   description={
                     "É necessário que você defina um nicho de clientes."
                   }
-                  items={formData.customerSegments}
+                  items={customerSegments}
                 />
               </div>
               <div className={`grid-item${8}`}>
                 <CanvaCard
                   label={"Quanto?"}
                   type={"how-much"}
-                  title={"Estrutura de Custo"}
+                  title={"Estrutura de Custos"}
                   description={
                     "Quais os principais custos que têm peso no financeiro e são derivados da operacionalização do negócio?"
                   }
-                  items={formData.costs}
+                  items={costs}
                 />
               </div>
               <div className={`grid-item${9}`}>
                 <CanvaCard
                   label={"Quanto?"}
                   type={"how-much"}
-                  title={"Fontes de Receita"}
+                  title={"Fonte de Receita"}
                   description={
                     "Por quais maneiras o cliente pagará pelos benefícios recebidos?"
                   }
-                  items={formData.revenue}
+                  items={revenue}
                 />
               </div>
             </div>

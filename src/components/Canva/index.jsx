@@ -13,7 +13,6 @@ import {
 
 export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
   const userData = getUserData();
-  const [isOpen, setIsOpen] = useState(false);
   const [field, setField] = useState("");
   const [formData, setFormData] = useState({
     businessId: "",
@@ -46,13 +45,15 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
   useEffect(() => {
     if (step !== 1) setField(formData[businessModelStep[step].name]);
   }, [step]);
-  const handleUpdateBusinessModel = async () => {
+
+  const handleUpdateBusinessModel = async (newFormData) => {
+    console.log("form data", newFormData);
     await updateBusinessModelController({
-      ...formData,
+      ...newFormData,
     });
   };
   return (
-    <div class="canva-container">
+    <div className="canva-container">
       <HintModal
         hints={businessModelStep[step].hints}
         isOpen={enableHint}
@@ -60,14 +61,14 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
       />
 
       <button
-        class="btn"
+        className="btn"
         id="previous"
         disabled={step === 0}
         onClick={() => {
           if (step - 1 >= 0) setStep(step - 1);
           setFormData({
             ...formData,
-            [businessModelStep[step].name]: field,
+            [businessModelStep[step].name]: `${field}`.split(","),
           });
           setField("");
         }}
@@ -75,13 +76,16 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
         <CaretLeft size={32} color="#fff" style={{ position: "absolute" }} />
       </button>
 
-      <div class="canva">
-        <div class="canva-content">
-          <div class="canva-header">
-            <div class={`canva-tag ${businessModelStep[step].tag}`}>
+      <div className="canva">
+        <div className="canva-content">
+          <div className="canva-header">
+            <div className={`canva-tag ${businessModelStep[step].tag}`}>
               {businessModelStep[step].label}
             </div>
-            <div class="canva-hint-icon" onClick={() => setEnableHint(true)}>
+            <div
+              className="canva-hint-icon"
+              onClick={() => setEnableHint(true)}
+            >
               <Lightbulb
                 size={32}
                 color="#000"
@@ -89,12 +93,12 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
               />
             </div>
           </div>
-          <div class="canva-title">{businessModelStep[step].title}</div>
-          <div class="canva-description">
+          <div className="canva-title">{businessModelStep[step].title}</div>
+          <div className="canva-description">
             {businessModelStep[step].description}
           </div>
           <textarea
-            class="canva-input"
+            className="canva-input"
             name={businessModelStep[step].name}
             onChange={(e) => setField(e.target.value)}
             value={field}
@@ -103,18 +107,22 @@ export const Canva = ({ step, setStep, enableHint, setEnableHint }) => {
       </div>
 
       <button
-        class="btn"
+        className="btn"
         id="next"
         onClick={() => {
           if (step === 8) {
-            console.log("Redirecionando!");
-            handleUpdateBusinessModel();
+            handleUpdateBusinessModel({
+              ...formData,
+              [businessModelStep[step].name]: `${field}`.split(","),
+            });
             navigate("/business-model", { state: { finished: true } });
+            window.location.reload();
           }
           if (step < 8) {
+            console.log("aqui: ", field);
             setFormData({
               ...formData,
-              [businessModelStep[step].name]: field,
+              [businessModelStep[step].name]: `${field}`.split(","),
             });
             setField("");
             setStep(step + 1);
