@@ -3,14 +3,14 @@ import "./styles.css";
 
 const steps = [
   "Proposta de Valor",
-  "Fonte de Receita",
+  "Cliente",
   "Canais",
   "Relacionamento",
-  "Recursos chave",
+  "Fonte de Receita",
   "Atividades chave",
+  "Recursos chave",
   "Parcerias chave",
   "Estrutura de custos",
-  "Cliente",
 ];
 
 export const ProgressBar = ({ active = 0, setActive, enableHint }) => {
