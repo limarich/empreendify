@@ -5,341 +5,203 @@ import { SectionHeader } from "../../components/SectionHeader";
 import { Container } from "../../components/Container";
 
 // assets
-import imageCard1 from "../../assets/card-img1.png";
-import imageCard2 from "../../assets/card-img2.png";
-import imageCard3 from "../../assets/card-img3.png";
-import imageCard4 from "../../assets/card-img4.png";
-import imageCard5 from "../../assets/card-img5.png";
-import imageCard6 from "../../assets/card-img6.png";
-import imageCard7 from "../../assets/card-img7.png";
+import ativos from "../../assets/Outros/ativos-intangiveis.jpg";
+import analise from "../../assets/Outros/analise-do-perfil.jpg";
+import cuidados from "../../assets/Outros/cuidados.jpg";
+import financiamento from "../../assets/Outros/formas-de-financiamento.jpg";
+import empreender from "../../assets/Outros/o-que-e-empreender.jpg";
+import empresas from "../../assets/Outros/tipos-de-empresas.jpg";
+import tramites from "../../assets/Outros/tramites.jpg";
+import voceSabia from "../../assets/Outros/voce-sabia.jpg";
 
 export const options = [
   {
-    img: imageCard1,
+    img: empreender,
     title: "O que é empreender?",
     description:
       "Desbravando Fronteiras: O Significado e a Jornada do Empreendedorismo",
     activeButton: false,
-    text: `O Que É Empreender: Desbravando o Mundo dos Negócios
-
-      ---
-      
-      O empreendedorismo é muito mais do que um simples termo do mundo dos negócios; é uma abordagem de vida, uma jornada de autodescoberta e uma força motriz que impulsiona a inovação e o progresso. Para muitos, o ato de empreender é uma experiência transformadora que transcende a criação de empresas e se estende à construção de sonhos e à realização de aspirações pessoais. Neste artigo, exploraremos o significado profundo de "o que é empreender" e como essa atividade pode moldar vidas e comunidades de maneira única.
-      
-      ### Definindo o Empreendedorismo
-      
-      Empreender é, essencialmente, a arte de identificar oportunidades e criar soluções para atender às necessidades do mercado. Pode se manifestar de várias formas, desde o lançamento de uma startup de tecnologia revolucionária até a abertura de uma pequena padaria local que se destaca pelo seu pão artesanal. O empreendedorismo não é restrito por tamanho, setor ou escopo; é uma mentalidade.
-      
-      Um empreendedor é alguém que busca constantemente maneiras de inovar, resolver problemas e, por fim, fazer a diferença. Eles estão dispostos a assumir riscos calculados, aprender com os fracassos e persistir mesmo diante das adversidades. Ser empreendedor é abraçar a incerteza com confiança, acreditando que cada desafio é uma oportunidade disfarçada.
-      
-      ### Empreender é Empoderamento
-      
-      Uma das facetas mais empolgantes do empreendedorismo é o poder que ele concede às pessoas. Torna possível que indivíduos transformem suas ideias em realidade e sigam seus próprios caminhos. O empreendedorismo empodera as pessoas a serem autônomas, criativas e a se tornarem líderes em seus campos escolhidos.
-      
-      Além disso, o empreendedorismo não conhece fronteiras. Qualquer um, independentemente de sua idade, gênero, formação acadêmica ou origem, pode se tornar um empreendedor de sucesso. Essa inclusividade é um dos aspectos mais inspiradores do empreendedorismo moderno.
-      
-      ### Impacto na Sociedade
-      
-      Empreender vai além do benefício pessoal; ele também tem um impacto profundo na sociedade. Muitas das inovações que transformaram nossas vidas foram trazidas à existência por empreendedores visionários. Desde a revolução tecnológica até avanços em medicina e educação, empreendedores desempenham um papel fundamental na formação do nosso mundo.
-      
-      Além disso, os negócios fundados por empreendedores frequentemente servem como catalisadores para o crescimento econômico e a criação de empregos. Eles contribuem para a vitalidade das comunidades, promovem a diversidade e estimulam a competição saudável, o que, por sua vez, leva à melhoria contínua dos produtos e serviços.
-      
-      ### Conclusão
-      
-      Em resumo, empreender é mais do que apenas criar empresas; é uma mentalidade, um estilo de vida e uma força motriz para a mudança. Envolve coragem, criatividade, resiliência e um compromisso inabalável com a busca de oportunidades e a resolução de problemas. Empreender não é apenas sobre o que fazemos, mas também sobre como moldamos o nosso mundo e inspiramos outros ao longo do caminho.
-      
-      Se você já é um empreendedor ou aspirante a empreendedor, lembre-se de que sua jornada é única e valiosa. Continue buscando seu propósito, inovando e impactando positivamente a sociedade. E se você ainda não deu o primeiro passo, saiba que o mundo do empreendedorismo está aberto para todos os que estão dispostos a sonhar, ousar e agir.`,
+    text: `Empreender é ousar e criar um novo negócio ou trazer mudança ao que já é existente no mercado.
+Para aceitar o desafio de empreender é imprescindível coragem para se correr riscos e cada vez mais estar aberto às mudanças que esse mundo empresarial impõe e “INOVAR” sempre. 
+`,
   },
   {
-    img: imageCard2,
+    img: analise,
     title: "Análise do Perfil de Empreendedor",
     description:
       "Descubra Seu DNA Empreendedor: Uma Análise Profunda de Suas Habilidades e Potencial",
     activeButton: true,
-    text: `
-    O empreendedorismo é um universo vasto que abriga uma diversidade de perfis e habilidades. Identificar suas características empreendedoras pode ajudar a compreender melhor seus pontos fortes e áreas de desenvolvimento nesse campo dinâmico. Abaixo, estão alguns traços fundamentais associados aos empreendedores bem-sucedidos:
+    text: `Aqui você responderá algumas perguntas e o resultado dirá se você já está pronto para empreender ou se precisará desenvolver algumas competências empreendedoras antes de abrir seu próprio negócio.
 
-    Visão e Inovação: Os empreendedores têm uma visão clara e são capazes de identificar oportunidades únicas. Eles costumam ser inovadores e estão sempre buscando maneiras de melhorar ou criar algo novo.
-    
-    Resiliência e Determinação: Lidar com desafios é uma característica-chave. Empreendedores enfrentam fracassos e obstáculos, mas persistem, aprendem com as experiências e seguem em frente.
-    
-    Habilidade de Tomar Decisões: A capacidade de tomar decisões rápidas e precisas é crucial. Empreendedores avaliam riscos e agem com base em informações disponíveis.
-    
-    Capacidade de Liderança: Empreendedores muitas vezes lideram equipes e inspiram outros com sua visão. São bons comunicadores e motivadores.
-    
-    Adaptabilidade e Flexibilidade: O ambiente empreendedor é dinâmico; portanto, adaptar-se a mudanças é essencial. Flexibilidade para ajustar estratégias é uma qualidade valorizada.
-    
-    Agora, vamos explorar um pouco mais sobre você. Responda às seguintes perguntas para identificar melhor seu perfil empreendedor:
-    
-    Qual é a sua abordagem diante de desafios ou obstáculos? Você costuma desistir facilmente ou procura soluções alternativas?
-    
-    Você se considera uma pessoa visionária? Tem facilidade em identificar oportunidades ou soluções inovadoras para problemas?
-    
-    Como você lida com a pressão e a incerteza? Acredita que consegue tomar decisões rápidas e eficazes em momentos de alto estresse?
-    
-    Já teve alguma experiência liderando projetos ou equipes? Como se sentiu nesse papel de liderança?
-    
-    Você se adapta facilmente a mudanças repentinas ou prefere seguir uma rotina mais estável?
-    
-    Ao responder a essas questões, você começará a compreender melhor seu perfil empreendedor e poderá identificar áreas em que já se destaca e outras que podem ser desenvolvidas. Lembre-se, o empreendedorismo é um processo de aprendizagem contínua e de constante autodesenvolvimento
-    `,
+Vamos começar?
+`,
   },
   {
-    img: imageCard3,
-    title: "Tipos de Empresas, Porte e Regime Tributário",
+    img: empresas,
+    title: "Tipos de Empresas",
     description:
       "Entendendo a Diversidade Empresarial: Tamanho, Classificação e Impostos",
     activeButton: false,
-    text: `Tipos de Empresas, Porte e Regime Tributário: Entendendo as Complexidades do Mundo Empresarial
+    text: `TIPOS DE EMPRESAS
 
-      ---
-      
-      O universo empresarial é diversificado e complexo, abrigando uma ampla variedade de tipos de empresas, cada uma com suas características únicas. Além disso, o porte da empresa e o regime tributário adotado são fatores cruciais que influenciam a maneira como um negócio opera e paga impostos. Neste artigo, vamos explorar os principais tipos de empresas, considerar como o porte afeta a estrutura e discutir os diferentes regimes tributários disponíveis.
-      
-      ### Tipos de Empresas
-      
-      1. **Empresário Individual (EI):** O empresário individual é a forma mais simples de empresa, geralmente composta por uma única pessoa que é responsável por todas as operações e dívidas da empresa. É uma escolha popular para pequenos negócios, mas também apresenta responsabilidade ilimitada, o que significa que o patrimônio pessoal do empresário pode ser usado para quitar dívidas da empresa.
-      
-      2. **Microempreendedor Individual (MEI):** O MEI é uma categoria específica para pequenos negócios que faturam até um determinado limite anual. Oferece benefícios fiscais simplificados e é popular entre autônomos e pequenos empreendedores.
-      
-      3. **Sociedade Limitada (Ltda):** As sociedades limitadas são estruturadas por dois ou mais sócios e oferecem limitação de responsabilidade, o que protege o patrimônio pessoal dos sócios. Cada sócio investe com uma parcela do capital e compartilha as responsabilidades e lucros.
-      
-      4. **Sociedade Anônima (SA):** As sociedades anônimas são frequentemente usadas por empresas de grande porte que desejam levantar capital por meio da venda de ações. Elas têm uma estrutura mais complexa, com acionistas, diretores e conselhos de administração.
-      
-      5. **Empresas Familiares:** Muitos negócios são administrados por famílias e, embora possam adotar diferentes estruturas legais, são caracterizados pela propriedade e gestão por membros da mesma família.
-      
-      ### Porte da Empresa
-      
-      O porte de uma empresa geralmente é classificado com base no seu faturamento anual e número de funcionários. Isso influencia não apenas a estrutura organizacional, mas também os requisitos regulatórios e tributários. As categorias comuns de porte de empresa incluem microempresa, pequena empresa, média empresa e grande empresa.
-      
-      ### Regime Tributário
-      
-      Os regimes tributários determinam como a empresa calculará e pagará seus impostos. No Brasil, os principais regimes tributários são:
-      
-      1. **Simples Nacional:** Um regime simplificado de tributação para micro e pequenas empresas que unifica vários impostos em uma única guia de pagamento. É conhecido por sua simplicidade, mas pode não ser vantajoso para todas as empresas, dependendo do faturamento e atividades.
-      
-      2. **Lucro Presumido:** Neste regime, a empresa presume um lucro com base em sua atividade e aplica uma alíquota de imposto sobre essa margem de lucro. É comum para empresas de médio porte.
-      
-      3. **Lucro Real:** Empresas que adotam o Lucro Real calculam os impostos com base nos lucros efetivos. É obrigatório para empresas com faturamento acima de um determinado limite ou que possuam atividades específicas.
-      
-      4. **Regime Especial:** Algumas empresas podem se beneficiar de regimes tributários especiais de acordo com suas atividades, como o Regime de Tributação Unificada (RTU) para empresas exportadoras.
-      
-      A escolha do regime tributário depende do porte da empresa, do tipo de atividade, da estrutura de custos e da complexidade da contabilidade.
-      
-      Em resumo, o mundo empresarial é diversificado, e a escolha do tipo de empresa, porte e regime tributário é fundamental para o sucesso e a conformidade regulatória de qualquer empreendimento. Cada opção tem suas vantagens e desafios, e é importante buscar orientação profissional para tomar decisões informadas que atendam às necessidades específicas do seu negócio. A compreensão desses aspectos é essencial para uma gestão eficaz e para o alcance dos objetivos empresariais.`,
+Para abertura de um negócio o empreendedor precisa definir o tipo de empresa que quer e que pode abrir de acordo com seu poder aquisitivo. A empresa pode ser individua ou em sociedade. Vamos conhecer agora esses tipos de empresas, porte e regime tributário.
+
+
+•	INDIVIDUAL
+Empreendedor Individual (EI)
+Microempreendedor Individual (MEI)
+
+
+•	EM SOCIEDADE
+Sociedade limitada unipessoal (SLU)
+Sociedade empresária limitada (LTDA)
+Sociedade simples (SS)
+Sociedade anônima (SA)
+
+
+•	PORTE E REGIME TRIBUTÁRIO
+
+Porte:
+Microempreendedor individual (MEI);
+Microempresa (ME);
+Empresa de pequeno porte (EPP);
+Empresa de médio porte;
+Grande empresa.
+
+Regime tributário
+Simples Nacional
+Lucro Presumido 
+Lucro Real
+`,
   },
   {
-    img: imageCard4,
+    img: tramites,
     title: "Trâmites para abertura de uma empresa",
     description:
       "Passos Fundamentais: Da Ideia ao Registro Legal - Abrindo Sua Empresa",
     activeButton: false,
-    text: `Desvendando os Trâmites para a Abertura de uma Empresa: Um Guia Completo
+    text: `Para abertura de uma empresa o empreendedor precisa compreender que um de seus maiores deveres será cumprir com as obrigações fiscais. Para caminhar de forma mais segura é importante este acompanhamento contido nesta metodologia para facilitar todo o processo. Obs.: Dependendo da empresa é imprescindível contar com o auxílio de um contador.
 
-      ---
-      
-      A decisão de abrir uma empresa é empolgante e cheia de promessas, mas também envolve uma série de trâmites e procedimentos burocráticos que podem parecer desafiadores à primeira vista. No entanto, com o conhecimento adequado e um plano bem elaborado, você pode navegar com sucesso por esse processo. Neste guia completo, vamos explorar os principais trâmites para a abertura de uma empresa e ajudá-lo a dar os primeiros passos no mundo do empreendedorismo.
-      
-      ### 1. Planejamento e Pesquisa
-      
-      Antes de qualquer outra coisa, é crucial definir claramente o tipo de negócio que você deseja abrir. Isso inclui a escolha do segmento, público-alvo, localização e estrutura legal. Realize uma pesquisa de mercado para avaliar a demanda pelo seu produto ou serviço, bem como para identificar concorrentes e oportunidades.
-      
-      ### 2. Registro de Nome e Marca
-      
-      Escolher um nome comercial único e fazer o registro desse nome é um passo essencial. Além disso, considere registrar sua marca, caso aplique, para proteger sua identidade comercial e evitar futuros conflitos legais.
-      
-      ### 3. Escolha da Estrutura Jurídica
-      
-      A estrutura jurídica da sua empresa terá implicações significativas em termos de responsabilidade legal e tributação. As opções comuns incluem Empresário Individual (EI), Microempreendedor Individual (MEI), Sociedade Limitada (Ltda) e Sociedade Anônima (SA). Escolha a estrutura que melhor se adapte ao seu modelo de negócios.
-      
-      ### 4. Registro na Junta Comercial
-      
-      Para formalizar legalmente sua empresa, você deve registrar-se na Junta Comercial do seu estado. Esse processo envolve a apresentação de documentos, como contrato social ou estatuto, e o pagamento das taxas de registro.
-      
-      ### 5. Obtenção do CNPJ
-      
-      O Cadastro Nacional da Pessoa Jurídica (CNPJ) é o número de identificação fiscal da sua empresa. É necessário para abrir uma conta bancária comercial, emitir notas fiscais e cumprir obrigações tributárias. Você pode obter o CNPJ por meio do site da Receita Federal.
-      
-      ### 6. Alvará de Funcionamento
-      
-      Dependendo do seu ramo de atividade e localização, você pode precisar de um alvará de funcionamento municipal. Verifique as regulamentações locais e solicite o alvará junto à prefeitura da sua cidade.
-      
-      ### 7. Inscrição Estadual
-      
-      Se o seu negócio envolver vendas de produtos ou serviços sujeitos à cobrança do ICMS (Imposto sobre Circulação de Mercadorias e Serviços), será necessário obter uma Inscrição Estadual junto à Secretaria da Fazenda estadual.
-      
-      ### 8. Licenças e Autorizações Especiais
-      
-      Algumas atividades empresariais requerem licenças ou autorizações especiais, como as relacionadas à saúde, alimentação, segurança ou meio ambiente. Certifique-se de verificar se o seu negócio requer essas licenças específicas.
-      
-      ### 9. Contabilidade e Obrigações Fiscais
-      
-      Contratar um contador é uma etapa fundamental para garantir que sua empresa cumpra suas obrigações fiscais e contábeis. Isso inclui a preparação e o pagamento de impostos, a manutenção de registros financeiros e a elaboração de relatórios financeiros.
-      
-      ### 10. Recursos Humanos e Registros de Funcionários
-      
-      Se você planeja contratar funcionários, deve registrar sua empresa junto ao Ministério do Trabalho e Emprego (MTE) e cumprir as obrigações trabalhistas, como o pagamento de salários e benefícios.
-      
-      Lembre-se de que os trâmites para abertura de uma empresa podem variar de acordo com o país e a região, e é fundamental consultar as autoridades locais e profissionais especializados para garantir que você esteja cumprindo todas as exigências legais. Com planejamento e paciência, você estará bem encaminhado para transformar seu sonho empresarial em realidade.`,
+Para abrir uma MEI, o empreendedor usará o site: portaldoempreendedor.gov.br. O Micro Empreendedor Individual (MEI) tem todo respaldo do governo para operar de forma segura e alinhada com as exigências de fisco.
+
+Para quem tem pretensão de abrir uma empresa com natureza diferente, isso ocorre pela JUNTA COMERCIAL de cada estado e, cada estado, possui suas diretrizes para abertura de empresa, alguns estados fazem esse serviço, quase que, cem por cento pelo site da junta comercial e outros de forma híbrida.
+
+No caso de Pernambuco, por exemplo, todos os requerimentos são realizados pelo site da junta comercial, sendo mais rápido o processo de abertura de empresa.
+
+Antes de fazer esse processo na junta que realiza os serviços on-line ou de forma híbrida, o futuro empreendedor vai precisar de uma “CERTIFICADORA DIGITAL”. Por meio dela, serão assinados os documentos necessários de forma digital para prosseguimento de todo o processo.
+`,
   },
   {
-    img: imageCard5,
+    img: financiamento,
     title: "Formas de Financiamento",
     description:
       "Viabilizando Sonhos: Estratégias Inteligentes de Financiamento Empresarial",
     activeButton: false,
-    text: `Explorando as Diferentes Formas de Financiamento: Escolhendo a Melhor Opção para o Seu Projeto
+    text: `Muitos quando pensam em abrir seu próprio negócio, de forma imediata, cogitam se desfazerem de algum bem material como automóvel e imóvel ou usar as economias da família.
 
-      ---
-      
-      Seja você um empreendedor em busca de capital para iniciar um novo negócio, um proprietário de uma pequena empresa procurando expandir suas operações ou alguém que deseja concretizar um projeto pessoal, entender as diversas formas de financiamento disponíveis é fundamental. Neste artigo, vamos explorar algumas das principais opções de financiamento que podem ajudá-lo a dar vida aos seus planos.
-      
-      ### 1. **Financiamento Próprio**
-      
-      O financiamento próprio envolve o uso de seus próprios recursos financeiros para financiar seu projeto. Isso pode incluir suas economias pessoais, investimentos, ou mesmo a venda de ativos. Uma vantagem do financiamento próprio é a independência financeira, mas também envolve riscos pessoais significativos.
-      
-      ### 2. **Empréstimos Bancários**
-      
-      Os empréstimos bancários são uma fonte comum de financiamento para empresas e projetos pessoais. Eles podem ser obtidos por meio de instituições financeiras tradicionais, como bancos, e são geralmente estruturados com taxas de juros e prazos específicos. Os empréstimos podem ser garantidos (com garantias) ou não garantidos (baseados na credibilidade do mutuário).
-      
-      ### 3. **Investidores Anjo**
-      
-      Os investidores anjo são indivíduos ou grupos de investidores que fornecem capital em troca de participação acionária ou participação nos lucros de uma empresa. Além do financiamento, eles também podem oferecer orientação e networking valiosos.
-      
-      ### 4. **Capital de Risco (Venture Capital)**
-      
-      O capital de risco é uma forma de financiamento para startups e empresas em crescimento. Investidores de capital de risco fornecem fundos em troca de participação acionária significativa e muitas vezes buscam retornos substanciais a longo prazo.
-      
-      ### 5. **Financiamento Coletivo (Crowdfunding)**
-      
-      O crowdfunding é uma maneira moderna de financiar projetos por meio da contribuição de várias pessoas pela internet. Plataformas como Kickstarter e Indiegogo permitem que criadores de projetos arrecadem dinheiro em troca de recompensas ou participação nos lucros.
-      
-      ### 6. **Empréstimos Peer-to-Peer (P2P)**
-      
-      Os empréstimos P2P conectam mutuários a investidores individuais por meio de plataformas online. Os empréstimos P2P podem oferecer taxas de juros competitivas e flexibilidade em termos de empréstimos pessoais ou empresariais.
-      
-      ### 7. **Subsídios e Incentivos Governamentais**
-      
-      Em muitos países, governos locais, estaduais e federais oferecem subsídios e incentivos fiscais para apoiar o crescimento de determinados setores ou promover atividades específicas. Esses programas podem variar amplamente, e é importante verificar se você se qualifica para tais benefícios.
-      
-      ### 8. **Financiamento por Fornecedores e Clientes**
-      
-      Negociar termos de pagamento com fornecedores ou obter pré-pagamentos de clientes pode fornecer financiamento direto para o seu negócio. Essa abordagem pode ajudar a gerenciar fluxos de caixa e melhorar a estabilidade financeira.
-      
-      ### 9. **Linhas de Crédito Comerciais**
-      
-      Linhas de crédito comerciais são créditos rotativos fornecidos por instituições financeiras para atender às necessidades de capital de giro de uma empresa. Eles são flexíveis e permitem que você retire e pague conforme necessário.
-      
-      A escolha da forma de financiamento certa depende da sua situação financeira, do estágio do seu projeto e das suas metas a longo prazo. Muitas vezes, uma combinação de várias fontes de financiamento pode ser a estratégia mais eficaz. Lembre-se de que cada opção tem seus próprios prós e contras, e é importante avaliar cuidadosamente os termos, custos e impactos de longo prazo antes de tomar uma decisão. Independentemente de qual opção você escolher, o financiamento adequado pode ser o catalisador que transforma suas ideias em realidade.`,
+O ideal é buscar formas de Financiamento que não comprometam seu capital pessoal e familiar de forma indevida.
+
+Aqui apresentaremos algumas formas de financiamento que te proporcionarão o crédito necessário para a abertura de seu empreendimento.
+
+1. Bancos e financeiras:
+   Esta forma de financiamento é bastante usada, porém, o empreendedor precisará ser bastante diligente porque este financiador parcelará todo o capital solicitado e se não se atentar em quitar fielmente este, pode comprometer o andamento empresarial. Dependendo do negócio, esta não é uma boa sugestão de financiamento.
+
+2. Sociedade:
+   Para abertura do tão sonhado negócio, você pode contar com uma parceria! Isso mesmo! Um Sócio! Esta é a forma de você não precisar se comprometer com uma empresa financiadora, se abstendo de pagar os juros decorrentes desse formato. Ainda, quando vai se abrir uma sociedade é importante buscar uma parceria com a qual você se relacionará bem, saber se ele possui alguma restrição que possa atrapalhar o andamento da empresa, destacando ainda a transparência que deve existir entre as partes, inclusive no que se refere a questões financeiras da empresa e demais questões e decisões que a comprometam. Isso deve estar bem alinhado em contrato social.
+
+3. Investidor Anjo:
+   Ao obter o investimento de um investidor anjo, o empreendedor terá uma grande vantagem porque este não se torna um sócio da empresa. Em contrapartida, assegurado por lei, o investidor anjo tem direito a 50% da lucratividade da empresa pelo período de cinco anos.
+`,
   },
   {
-    img: imageCard6,
+    img: ativos,
     title: "Ativos intangíveis",
     description: "O Valor Oculto: Explorando o Poder dos Ativos Intangíveis",
     activeButton: false,
-    text: `O Valor Inestimável dos Ativos Intangíveis nos Negócios
+    text: `Ao abrir sua empresa você começa a gerar alguns ativos como, por exemplo, a MARCA da sua empresa. A identificação visual do seu negócio é uma propriedade intelectual da sua empresa e, por isso, precisa ser protegida. Assim você evita futuros problemas. Um deles é ter sua marca tirada de sua propriedade.
 
-      ---
-      
-      Quando falamos sobre ativos nos negócios, muitos de nós imediatamente pensam em bens físicos, como propriedades, estoques ou equipamentos. No entanto, há um tipo de ativo que desafia a tradicional percepção de tangibilidade e se torna cada vez mais valioso nos cenários empresariais modernos: os ativos intangíveis. Neste artigo, vamos explorar o que são ativos intangíveis e por que eles desempenham um papel fundamental no sucesso e na valorização das empresas.
-      
-      ### Definindo Ativos Intangíveis
-      
-      Ativos intangíveis são recursos valiosos que uma empresa possui, mas que não têm presença física. Eles incluem elementos como:
-      
-      1. **Propriedade Intelectual:** Isso abrange patentes, marcas registradas, direitos autorais e segredos comerciais. Esses ativos protegem a propriedade intelectual da empresa e podem ser explorados comercialmente.
-      
-      2. **Reputação e Marca:** A reputação da empresa, sua imagem de marca e o reconhecimento da marca são ativos intangíveis que podem afetar diretamente a preferência do consumidor e a participação no mercado.
-      
-      3. **Relações com Clientes e Fornecedores:** Relacionamentos sólidos com clientes, fornecedores e parceiros de negócios podem ser inestimáveis. Eles podem levar a parcerias de longo prazo, fidelização de clientes e maior estabilidade operacional.
-      
-      4. **Tecnologia e Know-how:** O conhecimento técnico, a experiência da equipe e as tecnologias internas são ativos intangíveis que impulsionam a inovação e a eficiência.
-      
-      5. **Dados e Informações:** Dados de clientes, análises de mercado e insights estratégicos podem ser ativos valiosos que orientam a tomada de decisões e o desenvolvimento de produtos.
-      
-      ### O Valor dos Ativos Intangíveis
-      
-      Os ativos intangíveis desempenham um papel vital nos negócios por várias razões:
-      
-      1. **Diferenciação Competitiva:** Ter uma marca forte e uma reputação sólida pode diferenciar uma empresa em um mercado saturado, atraindo clientes fiéis.
-      
-      2. **Inovação e Crescimento:** O know-how tecnológico e a propriedade intelectual impulsionam a inovação, permitindo que as empresas criem produtos e serviços únicos e busquem oportunidades de crescimento.
-      
-      3. **Valor de Mercado:** Empresas com ativos intangíveis bem desenvolvidos muitas vezes têm um valor de mercado mais alto, o que pode atrair investidores e financiamento.
-      
-      4. **Geração de Receita:** Propriedade intelectual, como patentes e direitos autorais, pode gerar receita através de licenciamento ou venda.
-      
-      5. **Resiliência Empresarial:** Ter relacionamentos sólidos e dados valiosos pode ajudar as empresas a enfrentar desafios econômicos e adversidades.
-      
-      ### Gerenciamento de Ativos Intangíveis
-      
-      Para maximizar o valor dos ativos intangíveis, as empresas devem adotar uma abordagem estratégica de gestão. Isso envolve:
-      
-      1. **Identificação e Avaliação:** Identificar e avaliar todos os ativos intangíveis da empresa, atribuindo valores quando possível.
-      
-      2. **Proteção Legal:** Garantir que a propriedade intelectual esteja protegida por meio de patentes, marcas registradas e direitos autorais.
-      
-      3. **Desenvolvimento Contínuo:** Investir na construção e no aprimoramento dos ativos intangíveis, como desenvolvimento de marca, inovação e gestão de relacionamentos.
-      
-      4. **Monitoramento e Avaliação:** Acompanhar regularmente o desempenho dos ativos intangíveis e ajustar as estratégias conforme necessário.
-      
-      5. **Comunicação Estratégica:** Comunicar efetivamente a presença e o valor dos ativos intangíveis para partes interessadas internas e externas.
-      
-      Em resumo, os ativos intangíveis não são apenas parte integrante do mundo dos negócios modernos, mas também podem ser os impulsionadores críticos do sucesso empresarial. Reconhecer, proteger e otimizar esses ativos é essencial para construir uma empresa forte, competitiva e resiliente no cenário empresarial atual.`,
+Então? Você já possui uma marca?
+`,
   },
   {
-    img: imageCard7,
-    title: "Cuidados!",
+    img: cuidados,
+    title: "Cuidado!",
     description:
       "Manutenção do Potencial Empreendedor: Cuidados Essenciais para o Desenvolvimento",
     activeButton: false,
-    text: `Cuidados Essenciais nos Negócios: O Caminho para o Sucesso Empresarial
+    text: `• O proprietário de uma empresa não deve fazer retiradas indevidas para pagamento de contas pessoais. Deve-se estabelecer a remuneração do empresário, “PROLABORE” para se evitar transtornos futuramente. Importante destacar que se for uma empresa em sociedade o sócio só terá prolabore se desempenhar alguma atividade na empresa, se não, receberá por distribuição de lucro.
 
-      ---
-      
-      Abrir e gerenciar um negócio pode ser uma jornada emocionante e gratificante, mas também envolve uma série de desafios e riscos. Para garantir o sucesso a longo prazo, é fundamental adotar uma abordagem cuidadosa e estratégica em todas as fases da sua empresa. Neste artigo, vamos explorar alguns dos cuidados essenciais nos negócios que podem ajudá-lo a prosperar e alcançar seus objetivos empresariais.
-      
-      ### 1. **Planejamento Sólido**
-      
-      Antes de iniciar qualquer empreendimento, é vital criar um plano de negócios detalhado. Isso inclui definir sua visão, missão e metas claras, bem como identificar seu público-alvo, concorrentes e estratégias de marketing. O planejamento também envolve a projeção de fluxo de caixa e a análise de custos e receitas para garantir a sustentabilidade financeira.
-      
-      ### 2. **Estudo de Mercado**
-      
-      Conhecer o mercado em que você atua é essencial. Faça pesquisas de mercado para entender as tendências, as demandas dos clientes e a concorrência. Esse conhecimento ajudará a tomar decisões informadas e a adaptar suas estratégias de acordo com as necessidades do mercado.
-      
-      ### 3. **Gestão Financeira Eficiente**
-      
-      Manter um controle financeiro rigoroso é crucial. Isso inclui a criação de um orçamento, o acompanhamento de despesas e receitas, a gestão de fluxo de caixa e a busca de financiamento quando necessário. A gestão financeira eficiente garante que sua empresa permaneça financeiramente saudável.
-      
-      ### 4. **Atendimento ao Cliente de Qualidade**
-      
-      A satisfação do cliente é fundamental para o sucesso a longo prazo. Invista no atendimento ao cliente, esteja disponível para ouvir feedback e busque constantemente maneiras de melhorar a experiência do cliente. Clientes satisfeitos são mais propensos a retornar e recomendar sua empresa.
-      
-      ### 5. **Gestão de Pessoas**
-      
-      A equipe é um dos ativos mais valiosos de qualquer empresa. Contrate, treine e retenha talentos que compartilhem da visão e dos valores da sua empresa. Uma equipe motivada e bem gerenciada pode impulsionar o crescimento e a inovação.
-      
-      ### 6. **Compliance e Legalidade**
-      
-      Cumprir as leis e regulamentos é fundamental para evitar problemas legais e manter uma reputação sólida. Isso inclui questões tributárias, trabalhistas e regulamentações específicas do setor. Consultar profissionais jurídicos e contábeis é aconselhável para garantir o cumprimento adequado.
-      
-      ### 7. **Inovação e Adaptação**
-      
-      O ambiente de negócios está em constante evolução. Esteja disposto a inovar e adaptar-se às mudanças do mercado. Mantenha-se atualizado com as tendências e tecnologias emergentes e esteja preparado para ajustar suas estratégias conforme necessário.
-      
-      ### 8. **Plano de Continuidade**
-      
-      Tenha um plano de continuidade de negócios em vigor para enfrentar desafios imprevistos, como crises econômicas, desastres naturais ou pandemias. Isso ajuda a manter a resiliência e a sobrevivência do seu negócio em tempos difíceis.
-      
-      ### 9. **Marketing Efetivo**
-      
-      Invista em estratégias de marketing efetivas para promover sua marca e produtos/serviços. Isso inclui presença online, publicidade, mídias sociais e estratégias de conteúdo que atinjam seu público-alvo de maneira eficaz.
-      
-      ### 10. **Feedback e Melhoria Contínua**
-      
-      Esteja aberto ao feedback, tanto de clientes quanto de funcionários. Use as informações recebidas para fazer melhorias constantes nos produtos, serviços e processos da empresa.
-      
-      Lembre-se de que cuidados nos negócios não se limitam apenas ao início, mas são uma prática contínua. Adaptar-se às mudanças e aprender com os desafios é o que diferencia os negócios de sucesso. Com um foco constante na qualidade, inovação e gestão sólida, você estará no caminho certo para alcançar seus objetivos empresariais e prosperar em um mercado competitivo.`,
+• Se você vai abrir uma empresa em sociedade, precisará ter o cuidado de saber se seu sócio possui alguma restrição que o impedirá de assumir esse papel. É importante a diligência nesse aspecto, para não atravancar o andamento da empresa.
+`,
+  },
+  {
+    img: voceSabia,
+    title: "PLANO DE AÇÃO 5W2H",
+    description: "",
+    activeButton: false,
+    text: `O plano de ação 5W2H é uma ferramenta de gestão da qualidade. Nessa matriz são detalhadas quais serão as atividades, os responsáveis pela execução, prazos de cumprimento e recursos financeiros a serem usados. O quadro do 5W2H é formado por:
+
+What - O que deve ser feito?
+Why - Por que deve ser implementado?
+Who - Quem é o responsável pela ação?
+Where - Onde deve ser executado?
+When - Quando deve ser implementado?
+How - Como deve ser conduzido?
+How Much - Quanto vai custar a implementação?
+
+Assim, esta metodologia ajudará no planejamento. Nele será detalhado a ordem das atividades para a criação da empresa como: Análise SWOT, Canvas, Plano de Negócio e demais.
+
+PDF 5W2H (com exemplificação)
+`,
+  },
+  {
+    img: voceSabia,
+    title: "MATRIZ SWOT",
+    description: "",
+    activeButton: false,
+    text: `É outra ferramenta de gestão da qualidade, uma das mais utilizadas em empresas de diversos países e serve para fazer uma análise de ambiente interna e externa. 
+
+A análise SWOT é composta por quatro partes, essas que formam o acrônimo SWOT: (Strengths, Weaknesses, Opportunities, Threats). Significam respectivamente: força, fraqueza, oportunidade e ameaça. Sendo conhecida também por matriz FOFA, o acrônimo em português.
+
+Sua construção deixa evidente de forma bastante clara o que pode ser favorável ou comprometedor para o desenvolvimento do negócio no local em que ele se encontra.
+`,
+  },
+  {
+    img: voceSabia,
+    title: "BUSINESS MODEL CANVAS",
+    description: "(Modelo de Negócio)",
+    activeButton: false,
+    text: `O modelo de negócio tem por finalidade expor a ideia de criação de um negócio ou a inovação em um já existente de forma rápida, eficiente e com grande precisão. Usando esta ferramenta, que também é bastante utilizada no mundo inteiro, o empreendedor poderá apresentar sua proposta de valor de forma bastante objetiva e clara, com grande poder de convencimento. Os campos preenchidos nesse modelo de negócio são:
+
+1. PARCERIAS CHAVE 
+2. ATIVIDADES CHAVE
+3. RECURSOS CHAVE
+4. PROPOSTA DE VALOR 
+5. RELACIONAMENTO COM CLIENTE
+6. CANAIS 
+7. SEGMENTO DE CLIENTES 
+8. ESTRUTURA DE CUSTOS 
+9. FONTES DE RECEITA
+`,
+  },
+  {
+    img: voceSabia,
+    title: "Você Sabia?",
+    description: "",
+    activeButton: false,
+    text: `A metodologia japonesa 5S, conhecida também como os cinco sensos podem ajudar na organização de sua empresa, fazendo com que sua equipe trabalhe de forma mais eficiente e prazerosa?   
+
+O Estoque de sua empresa é dinheiro parado, é como se fosse uma conta poupança bancaria dentro de sua empresa. Por isso, todo cuidado é necessário. Sabia que existem ferramentas próprias para a gestão de seu estoque? Essas metodologias ajudarão no posicionamento da mercadoria por solicitação de demanda e facilitarão o relacionamento das partes no armazenamento: recursos materiais e humanos.
+
+`,
+  },
+  {
+    img: voceSabia,
+    title: "PRONTO PARA CRIAR SUA EMPRESA?",
+    description: "",
+    activeButton: false,
+    text: `Para a criação de uma empresa o mais importante é PLANEJAMENTO. Por isso, é necessário, antes da abertura do tão sonhado negócio, estabelecer as etapas que antecedem esse propósito em um PLANO DE AÇÃO. Neste plano de ação estarão designadas as atividades que deverão ser feitas e seu respectivo tempo de realização. 
+`,
   },
 ];
 
